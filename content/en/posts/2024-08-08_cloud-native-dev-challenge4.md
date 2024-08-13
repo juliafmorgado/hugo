@@ -7,9 +7,6 @@ image: https://blog-imgs-23.s3.amazonaws.com/cloud-native-dev-challenge.png
 toc: true
 tags: 
     - Kubernetes
-    - Cloud Native
-    - Tutorial
-    - DevOps
 slug: /challenge-4-getting-your-app-to-kubernetes-with-kind
 ---
 
@@ -21,12 +18,12 @@ Check the Challenge 4 [instructions](https://github.com/salaboy/cloud-native-dev
 ## Step 1: Copy the Files
 First things first, let’s set up our working directory for this challenge.
 
-1. Create a New Directory:
+**1. Create a New Directory:**
 
 Open your terminal or command prompt and run the following command to create a new directory for Challenge 4:
 `mkdir challenge-4`
 
-2. Copy Files
+**2. Copy Files**
  
 We need to copy the files from Challenge 3 to our new directory. You can copy them using:
 `cp -r challenge-3/* challenge-4/`
@@ -48,6 +45,8 @@ For this tutorial, we'll be using KinD (Kubernetes in Docker), and you can follo
 ## Step 3: Build Your Docker Images
 Next, we need to build Docker images for our `app` and `dashboard`. Docker images are like snapshots of our applications, which we’ll deploy to the cluster.
 
+> **Recommended:** If you want to build and push multi-architecture images follow these [quick steps](https://www.juliafmorgado.com/posts/building-multi-architecture-images-docker-builder/).
+
 Go to the `app` directory and build the Docker image:
 ```
 cd challenge-4/app
@@ -67,16 +66,18 @@ Remember to replace `dockerhub-username` with your Docker Hub username.
 ## Step 4: Push Docker Images to a Registry
 If you want to share your Docker images with others or need a centralized repository, you can push them to a registry, such as [Docker Hub](https://hub.docker.com/) or [Amazon ECR](https://aws.amazon.com/ecr/). We'll push our images to Docker Hub.
 
-1. Log In to Docker Hub
+**1. Log In to Docker Hub**
 `docker login`
 
-2. Push the Images
+**2. Push the Images**
 ```
 docker push dockerhub-username/challenge-4-app:latest
 docker push dockerhub-username/challenge-4-dashboard:latest
 ```
 
 ![](https://blog-imgs-23.s3.amazonaws.com/ch4-docker-push.png)
+
+You can check the App Docker Image [here](https://hub.docker.com/repository/docker/juliafmorgado/challenge-4-app/general), and the Dashboard Docker Image [here](https://hub.docker.com/repository/docker/juliafmorgado/challenge-4-dashboard/general).
 
 ## Step 5: Load Docker Images into KinD
 If you have pushed your images to Docker Hub or another registry, you can pull them directly into your Kind cluster. 
@@ -102,7 +103,7 @@ cd k8s
 ### App Manifests
 Let's create the Deployment and Service files for the app. Remember to replace `dockerhub-username` with your Docker Hub username.
 
-1. App Deployment File
+**1. App Deployment File**
 Create a file named `app-deployment.yaml` inside the `k8s` directory. This file defines how to deploy your app:
 
 ```
@@ -130,7 +131,7 @@ spec:
         - containerPort: 3000
 ```
 
-2. App Service File
+**2. App Service File**
 Create a file named `app-service.yaml` in the `k8s` directory. This file defines how to expose your app so it can be accessed from outside the cluster:
 ```
 apiVersion: v1
@@ -150,7 +151,7 @@ spec:
 ### Dashboard Manifests
 Let's create the Deployment and Service files for the dashboard. Remember to replace `dockerhub-username` with your Docker Hub username.
 
-1. Dashboard Deployment File
+**1. Dashboard Deployment File**
 
 Create a `dashboard-deployment.yaml`:
 
@@ -179,7 +180,7 @@ spec:
         - containerPort: 3001
 ```
 
-2. Dashboard Service File
+**2. Dashboard Service File**
 
 Create a `dashboard-service.yaml`:
 
@@ -201,7 +202,7 @@ spec:
 ### Database Manifests
 Let's create the Deployment, ConfigMap and Service files for the PostgreSQL database.
 
-1. Database Deployment and ConfigMap File
+**1. Database Deployment and ConfigMap File**
 
 Create a `db-deployment.yaml`:
 
@@ -260,7 +261,7 @@ The `ConfigMap` holds the SQL commands from `init.sql`, which is used to initial
 
 Using a `ConfigMap` is a standard practice in Kubernetes for managing configuration data, such as initialization scripts. It allows us to easily inject and manage configuration within our containers, ensuring that our database is properly set up each time it starts.
 
-2. Database Service File
+**2. Database Service File**
 Create a `db-service.yaml`:
 
 ```
