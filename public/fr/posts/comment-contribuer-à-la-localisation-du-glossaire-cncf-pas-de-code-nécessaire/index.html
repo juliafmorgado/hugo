@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Comment contribuer à la localisation du Glossaire CNCF - Pas de code nécessaire! | Julia Furst Morgado</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="Introduction 🔗Le Glossaire de la Cloud Native Computing Foundation (CNCF) est une ressource précieuse qui aide à clarifier la terminologie et le jargon utilisés dans le domaine Cloud Native.">
+<meta name="generator" content="Hugo 0.128.0">
+
+
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-google-analytics-id"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-google-analytics-id');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Accueil</a>
+	
+	<a href="/about">À propos</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="https://github.com/juliafmorgado/talks">Talks</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="/tags">Tags</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="/posts">Archive</a>
+
+	
+
+	
+
+	
+	
+		<ul class="sl-nav" aria-label="Language switcher">
+			<li>
+				<input type="checkbox" id="languagepicker" aria-label="switch language" hidden />
+				<label for="languagepicker"><a>French</a></label>
+				<label for="languagepicker"><i class="fa fa-angle-down" aria-hidden="true"></i></label>
+				<div class="triangle"></div>
+
+				<ul class="dropdown">
+					
+						<li>
+							<a href="/posts/how-to-contribute-to-cncf-glossary-localization-no-code/" title="English">
+								<span
+								
+								aria-label="English">
+								English
+								</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="/pt/posts/como-contribuir-%C3%A0-localiza%C3%A7%C3%A3o-do-gloss%C3%A1rio-da-cncf-sem-ter-que-codar/" title="Portuguese">
+								<span
+								
+								aria-label="Portuguese">
+								Portuguese
+								</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/" title="Spanish">
+								<span
+								
+								aria-label="Spanish">
+								Spanish
+								</span>
+							</a>
+						</li>
+					
+				</ul>
+			</li>
+		</ul>
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Comment contribuer à la localisation du Glossaire CNCF - Pas de code nécessaire!</h1>
+
+    <div class="tip">
+        <time datetime="2023-09-26 11:46:05.964 &#43;0000 UTC">26 septembre 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          Temps de lecture 7min
+        </span>
+    </div>
+
+    
+    
+        
+  
+    <aside class="toc">
+      <details>
+          <summary>Table of Contents
+          </summary>
+          <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#localisation-">Localisation ?</a></li>
+    <li><a href="#étapes-pour-contribuer">Étapes pour contribuer</a>
+      <ul>
+        <li><a href="#lisez-la-documentation"><strong>Lisez la documentation</strong></a></li>
+        <li><a href="#rejoignez-la-communauté"><strong>Rejoignez la communauté</strong></a></li>
+        <li><a href="#recherchez-les-issues-ouverts-qui-nont-pas-encore-été-assignés"><strong>Recherchez les issues ouverts qui n&rsquo;ont pas encore été assignés</strong></a></li>
+        <li><a href="#si-vous-ne-trouvez-aucun-issue-ouvert"><strong>Si vous ne trouvez aucun issue ouvert</strong></a></li>
+        <li><a href="#lorsque-vous-trouvez-un-issue"><strong>Lorsque vous trouvez un issue</strong></a></li>
+        <li><a href="#bifurquez-le-dépôt-github-du-glossaire-cloud-native"><strong>Bifurquez le dépôt GitHub du Glossaire Cloud Native</strong></a></li>
+        <li><a href="#clônez-le-dépôt-forké"><strong>Clônez le dépôt forké</strong></a></li>
+        <li><a href="#créez-un-nouveau-fichier-md"><strong>Créez un nouveau fichier .md</strong></a></li>
+        <li><a href="#traduisez-le-terme"><strong>Traduisez le terme</strong></a></li>
+        <li><a href="#validez-vos-modifications-et-les-pousser-vers-votre-dépôt-forké"><strong>Validez vos modifications et les pousser vers votre dépôt forké</strong></a></li>
+        <li><a href="#ouvrez-une-pull-request"><strong>Ouvrez une pull request</strong></a></li>
+        <li><a href="#facultatif">(facultatif)</a></li>
+        <li><a href="#attendez-que-votre-pull-request-soit-examinée"><strong>Attendez que votre pull request soit examinée</strong></a></li>
+        <li><a href="#effectuez-les-modifications-nécessaires-et-mettez-à-jour-votre-pull-request"><strong>Effectuez les modifications nécessaires et mettez à jour votre pull request</strong></a></li>
+        <li><a href="#fusionnez-votre-pull-request"><strong>Fusionnez votre pull request</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#conseils-finaux">Conseils finaux</a></li>
+  </ul>
+</nav>
+          </div>
+      </details>
+    </aside>
+  
+
+
+    
+
+
+    <div class="content">
+      <h2 id="introduction">Introduction <a href="#introduction" class="anchor">🔗</a></h2><p>Le <a href="https://glossary.cncf.io/" target="_blank" rel="noopener">Glossaire de la Cloud Native Computing Foundation (CNCF)</a> est une ressource précieuse qui aide à clarifier la terminologie et le jargon utilisés dans le domaine Cloud Native. Il propose des définitions concises et précises de termes essentiels, en faisant un outil indispensable à la fois pour les débutants et les professionnels chevronnés du domaine.</p>
+<p>J&rsquo;encourage toujours tout le monde à commencer à contribuer à l&rsquo;Open Source dès le début de leur carrière, car cela vous permettra de:</p>
+<ul>
+<li>Apprendre et acquérir de l&rsquo;expérience</li>
+<li>Rencontrer des personnes intéressées par des sujets similaires aux vôtres</li>
+<li>Trouver des mentors</li>
+<li>Développer votre réputation et valoriser votre carrière</li>
+<li>Obtenir les carrés verts sur GitHub</li>
+<li>Etc</li>
+</ul>
+<h2 id="localisation-">Localisation ? <a href="#localisation-" class="anchor">🔗</a></h2><p>La localisation est le processus de traduction et d&rsquo;adaptation d&rsquo;un produit ou service à une langue et une culture spécifiques. Dans le contexte du Glossaire de Cloud Native, la localisation consiste à traduire les termes et définitions du glossaire dans d&rsquo;autres langues. Vous pouvez également contribuer de <a href="https://glossary.cncf.io/contribute/#welcome" target="_blank" rel="noopener">différentes manières</a> si vous ne parlez qu&rsquo;anglais (et n&rsquo;oubliez pas de lire mon guide sur <a href="https://www.juliafmorgado.com/posts/guide-to-become-open-source-contributor/" target="_blank" rel="noopener">comment devenir contributeur Open Source</a>).</p>
+<p>Contribuer à la localisation du Glossaire CNCF est non seulement une excellente façon de redonner à la communauté Cloud Native, mais c&rsquo;est aussi une excellente occasion d&rsquo;approfondir votre compréhension de la technologie et de sa terminologie. En participant à ce projet Open Source, vous le rendez accessible à un public plus large, en particulier à ceux qui préfèrent consommer du contenu dans leur langue maternelle.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/glossary-webpage.png" alt=""  />
+</p></p>
+<h2 id="étapes-pour-contribuer">Étapes pour contribuer <a href="#%c3%a9tapes-pour-contribuer" class="anchor">🔗</a></h2><h3 id="lisez-la-documentation"><strong>Lisez la documentation</strong> <a href="#lisez-la-documentation" class="anchor">🔗</a></h3><p>Consultez la page <a href="https://glossary.cncf.io/contribute/" target="_blank" rel="noopener">Comment contribuer</a> sur le site Web du Glossaire Cloud Native. Cette page fournit des informations sur la manière de localiser le glossaire, y compris le guide de localisation, le guide de style et les meilleures pratiques.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/how-to-contribute-webpage.png" alt=""  />
+</p></p>
+<h3 id="rejoignez-la-communauté"><strong>Rejoignez la communauté</strong> <a href="#rejoignez-la-communaut%c3%a9" class="anchor">🔗</a></h3><p>Rejoignez l&rsquo;espace de travail <a href="https://cloud-native.slack.com/" target="_blank" rel="noopener">CNCF Slack</a> et participez aux canaux <a href="https://app.slack.com/client/T08PSQ7BQ/C02N2RGFXDF" target="_blank" rel="noopener">#glossary-localizations</a> et #glossary-localization-[nom de votre langue]. Ces canaux sont l&rsquo;endroit où vous pouvez vous connecter avec d&rsquo;autres membres de l&rsquo;équipe de localisation du Glossaire Cloud Native et obtenir de l&rsquo;aide pour toutes les questions que vous pourriez avoir. Si le projet Glossaire CNCF n&rsquo;a pas encore d&rsquo;équipe de localisation pour votre langue, lisez <a href="https://github.com/cncf/glossary/blob/main/LOCALIZATION.md#initiating-a-new-localization-team" target="_blank" rel="noopener">ceci</a>.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-slack.png" alt=""  />
+</p></p>
+<h3 id="recherchez-les-issues-ouverts-qui-nont-pas-encore-été-assignés"><strong>Recherchez les issues ouverts qui n&rsquo;ont pas encore été assignés</strong> <a href="#recherchez-les-issues-ouverts-qui-nont-pas-encore-%c3%a9t%c3%a9-assign%c3%a9s" class="anchor">🔗</a></h3><p>Vous pouvez trouver des problèmes ouverts en recherchant le <a href="https://github.com/cncf/glossary/issues?q=is%3Aissue&#43;is%3Aopen&#43;label%3Alang%2Fpt&#43;no%3Aassignee&#43;" target="_blank" rel="noopener">dépôt GitHub du Glossaire Cloud Native</a>, et en les filtrant avec les libellés <code>&quot;is:issue is:open label:lang/fr no:assignee&quot;</code>.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-issues.png" alt=""  />
+</p></p>
+<blockquote>
+<p><strong>Remarque :</strong> Dans cet exemple, &ldquo;pt&rdquo; est pour le portugais, mais vous pouvez changer le libellé pour votre langue. Par exemple, le hindi serait <code>label:lang/hi</code>, et le français serait <code>label:lang/fr</code>.</p>
+</blockquote>
+<h3 id="si-vous-ne-trouvez-aucun-issue-ouvert"><strong>Si vous ne trouvez aucun issue ouvert</strong> <a href="#si-vous-ne-trouvez-aucun-issue-ouvert" class="anchor">🔗</a></h3><p>Si vous ne trouvez aucun problème ouvert, vérifiez le canal Slack dédié à votre langue pour trouver des documents épinglés qui montrent les termes/pages qui doivent encore être traduits. Pensez également à envoyer un message amical et poli dans le canal Slack pour vous présenter, exprimer votre intérêt à contribuer au projet, et demander s&rsquo;il existe une liste ou un système de suivi des tâches de traduction disponibles.</p>
+<h3 id="lorsque-vous-trouvez-un-issue"><strong>Lorsque vous trouvez un issue</strong> <a href="#lorsque-vous-trouvez-un-issue" class="anchor">🔗</a></h3><p>Une fois que vous avez trouvé un problème, laissez un commentaire indiquant que vous souhaitez prendre en charge cet issue/travailler dessus. Un membre de l&rsquo;équipe de localisation du Glossaire Cloud Native examinera votre demande et l&rsquo;approuvera. Attendez d&rsquo;être accepté, car il peut arriver que quelqu&rsquo;un d&rsquo;autre travaille déjà dessus et que vous auriez fait du travail pour rien.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-issue-1209.png" alt=""  />
+</p></p>
+<h3 id="bifurquez-le-dépôt-github-du-glossaire-cloud-native"><strong>Bifurquez le dépôt GitHub du Glossaire Cloud Native</strong> <a href="#bifurquez-le-d%c3%a9p%c3%b4t-github-du-glossaire-cloud-native" class="anchor">🔗</a></h3><p>Cela créera une copie du dépôt sur votre propre compte GitHub.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-fork-repo.png" alt=""  />
+</p></p>
+<h3 id="clônez-le-dépôt-forké"><strong>Clônez le dépôt forké</strong> <a href="#cl%c3%b4nez-le-d%c3%a9p%c3%b4t-fork%c3%a9" class="anchor">🔗</a></h3><p>Utilisez la commande <code>git clone</code> pour cloner le dépôt forké dans l&rsquo;IDE de votre machine locale ou dans n&rsquo;importe quel IDE que vous utilisez. J&rsquo;utilise <a href="https://aws.amazon.com/cloud9/" target="_blank" rel="noopener">AWS Cloud9</a> depuis quelque temps et je l&rsquo;aime beaucoup.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-git-clone.png" alt=""  />
+</p></p>
+<h3 id="créez-un-nouveau-fichier-md"><strong>Créez un nouveau fichier .md</strong> <a href="#cr%c3%a9ez-un-nouveau-fichier-md" class="anchor">🔗</a></h3><p>À l&rsquo;intérieur du dossier de votre langue, créez un nouveau fichier pour le terme et nommez-le avec le nom en anglais (n&rsquo;oubliez pas le .md à la fin).</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-new-term.png" alt="Nouveau terme"  />
+</p></p>
+<h3 id="traduisez-le-terme"><strong>Traduisez le terme</strong> <a href="#traduisez-le-terme" class="anchor">🔗</a></h3><p>Assurez-vous de suivre le guide de localisation et le guide de style lors de la traduction des termes. Vérifiez les termes qui ont déjà été traduits pour utiliser les mêmes mots. N&rsquo;oubliez pas de traduire le titre, la catégorie et les tags. Une fois que vous avez terminés, relisez-le attentivement. Les examinateurs et les mainteneurs du projet ont des emplois du temps chargés, et il peut être fastidieux pour eux de demander des corrections mineures telles qu&rsquo;une virgule manquante ou un accent.</p>
+<blockquote>
+<p><strong>Important:</strong> Si votre terme inclut des liens hypertextes vers d&rsquo;autres termes déjà traduits, assurez-vous de modifier le lien hypertexte pour diriger vers le terme traduit. Par exemple, si vous traduisez un terme en Français, mettez à jour le lien hypertexte de <a href="https://glossary.cncf.io/abstraction/" target="_blank" rel="noopener">https://glossary.cncf.io/abstraction/</a> vers <a href="https://glossary.cncf.io/fr/abstraction/" target="_blank" rel="noopener">https://glossary.cncf.io/fr/abstraction/</a>. Cela contribue à maintenir une expérience fluide pour les utilisateurs accédant au glossaire dans leur langue préférée.</p>
+</blockquote>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-translated.png" alt="Terme traduit"  />
+</p></p>
+<h3 id="validez-vos-modifications-et-les-pousser-vers-votre-dépôt-forké"><strong>Validez vos modifications et les pousser vers votre dépôt forké</strong> <a href="#validez-vos-modifications-et-les-pousser-vers-votre-d%c3%a9p%c3%b4t-fork%c3%a9" class="anchor">🔗</a></h3><p>Tout d&rsquo;abord, écrivez dans votre terminal : <code>git add [chemin_vers_votre_fichier]</code> ou si vous venez de modifier seulement ce fichier, vous pouvez faire <code>git add .</code>
+Ensuite, écrivez : <code>git commit -m 'nouvelle traduction pour [terme]'</code>.
+Et enfin : <code>git push</code>.</p>
+<p>Une fois que vous avez poussé vos modifications vers votre dépôt forké, vous verrez que votre branche est en avance sur la branche cncf:main et que vous pouvez y contribuer en ouvrant une pull request (également appelée PR).</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-newcommit.png" alt="Nouvelle validation"  />
+</p></p>
+<h3 id="ouvrez-une-pull-request"><strong>Ouvrez une pull request</strong> <a href="#ouvrez-une-pull-request" class="anchor">🔗</a></h3><p>Pour ouvrir une PR, cliquez sur le bouton vert pour ouvrir une pull request pointant vers la branche de développement Française (dev-fr) - ou vers n&rsquo;importe quelle autre langue - afin de fusionner vos modifications dans le référentiel principal du Glossaire Cloud Native.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-newpr.png" alt="Nouvelle pull request"  />
+</p></p>
+<h3 id="facultatif">(facultatif) <a href="#facultatif" class="anchor">🔗</a></h3><p>Dans le canal Slack de l&rsquo;équipe (#glossary-localization-french), faites-leur savoir que vous avez soumis votre PR.</p>
+<h3 id="attendez-que-votre-pull-request-soit-examinée"><strong>Attendez que votre pull request soit examinée</strong> <a href="#attendez-que-votre-pull-request-soit-examin%c3%a9e" class="anchor">🔗</a></h3><p>Une fois que vous avez ouvert une pull request, les membres de l&rsquo;équipe de localisation du Glossaire Cloud Native dans votre langue examineront vos modifications. Ils peuvent fournir des commentaires ou suggérer des modifications à vos traductions. Surveillez fréquemment les notifications situées dans le coin supérieur droit de votre écran, c&rsquo;est là que vous les trouverez.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/cncf-glossary-pr.png" alt="PR du Glossaire CNCF"  />
+</p></p>
+<h3 id="effectuez-les-modifications-nécessaires-et-mettez-à-jour-votre-pull-request"><strong>Effectuez les modifications nécessaires et mettez à jour votre pull request</strong> <a href="#effectuez-les-modifications-n%c3%a9cessaires-et-mettez-%c3%a0-jour-votre-pull-request" class="anchor">🔗</a></h3><h3 id="fusionnez-votre-pull-request"><strong>Fusionnez votre pull request</strong> <a href="#fusionnez-votre-pull-request" class="anchor">🔗</a></h3><p>Une fois que votre pull request a été approuvée, vous pouvez la fusionner à au répertoire principal du Glossaire Cloud Native, et vos traductions seront publiées sur le site Web du Glossaire Cloud Native. Si vous avez créé une branche à l&rsquo;étape 8, vous pouvez également la supprimer maintenant. Et voilà!</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/ccncf-glossary-successfulpr.png" alt="Réussite de la PR du Glossaire CNCF"  />
+</p></p>
+<h2 id="conseils-finaux">Conseils finaux <a href="#conseils-finaux" class="anchor">🔗</a></h2><ul>
+<li>Commencez petit. N&rsquo;ayez pas l&rsquo;impression que vous devez traduire l&rsquo;ensemble du glossaire d&rsquo;un coup. Commencez par traduire quelques termes ou pages que vous connaissez ou qui sont pertinents pour vos intérêts.</li>
+<li>Utilisez les traductions existantes. Si un terme ou une page a déjà été traduit dans votre langue, vous pouvez utiliser cette traduction comme point de départ. Cependant, assurez-vous de la réviser et d&rsquo;apporter les modifications nécessaires.</li>
+<li>Soyez cohérent. Lors de la traduction des termes, essayez d&rsquo;être aussi cohérent que possible. Utilisez la même terminologie dans tout le glossaire et évitez d&rsquo;utiliser des traductions différentes pour un même terme.</li>
+<li>Si vous avez des questions ou avez besoin d&rsquo;aide, envoyez un message dans le canal Slack. Si vous avez des questions ou avez besoin d&rsquo;aide, n&rsquo;hésitez pas à demander de l&rsquo;aide dans le canal Slack #glossary-localizations ou dans le canal Slack de votre langue. Les autres membres de l&rsquo;équipe sont toujours heureux d&rsquo;aider les nouveaux contributeurs. N&rsquo;ayez pas honte et n&rsquo;attendez pas trop longtemps, sinon les examinateurs/mainteneurs du projet penseront que vous l&rsquo;avez abandonné.</li>
+</ul>
+<p>Bonne chance et faites-moi savoir si vous souhaitez connaître d&rsquo;autres projets auxquels vous pouvez contribuer de cette manière !</p>
+<p>*** Si vous avez aimé cet article, suivez-moi sur <a href="https://twitter.com/juliafmorgado" target="_blank" rel="noopener">Twitter</a> (où je partage mon parcours tech) au quotidien, connectez-vous avec moi sur <a href="https://www.linkedin.com/in/juliafmorgado/" target="_blank" rel="noopener">LinkedIn</a>, consultez mon <a href="https://www.instagram.com/juliafmorgado/" target="_blank" rel="noopener">IG</a>, et assurez-vous de vous abonner à ma chaîne <a href="https://www.youtube.com/c/JuliaFMorgado" target="_blank" rel="noopener">Youtube</a> pour plus de contenu incroyable!!</p>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="http://localhost:1313/tags/cncf">CNCF</a>
+            
+                <a href="http://localhost:1313/tags/open-source">Open Source</a>
+            
+                <a href="http://localhost:1313/tags/tutoriel">Tutoriel</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="https://github.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg fill="#bbbbbb" width="28" height="28"  viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>Github</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Social-Icons---Rounded-Black" transform="translate(-264.000000, -939.000000)">
+            <g id="Github" transform="translate(264.000000, 939.000000)">
+                <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" id="Rounded" fill="#bbbbbb"></path>
+                <path d="M35.9985,13 C22.746,13 12,23.7870921 12,37.096644 C12,47.7406712 18.876,56.7718301 28.4145,59.9584121 C29.6145,60.1797862 30.0525,59.4358488 30.0525,58.7973276 C30.0525,58.2250681 30.0315,56.7100863 30.0195,54.6996482 C23.343,56.1558981 21.9345,51.4693938 21.9345,51.4693938 C20.844,48.6864054 19.2705,47.9454799 19.2705,47.9454799 C17.091,46.4500754 19.4355,46.4801943 19.4355,46.4801943 C21.843,46.6503662 23.1105,48.9634994 23.1105,48.9634994 C25.2525,52.6455377 28.728,51.5823398 30.096,50.9649018 C30.3135,49.4077535 30.9345,48.3460615 31.62,47.7436831 C26.2905,47.1352808 20.688,45.0691228 20.688,35.8361671 C20.688,33.2052792 21.6225,31.0547881 23.1585,29.3696344 C22.911,28.7597262 22.0875,26.3110578 23.3925,22.9934585 C23.3925,22.9934585 25.4085,22.3459017 29.9925,25.4632101 C31.908,24.9285993 33.96,24.6620468 36.0015,24.6515052 C38.04,24.6620468 40.0935,24.9285993 42.0105,25.4632101 C46.5915,22.3459017 48.603,22.9934585 48.603,22.9934585 C49.9125,26.3110578 49.089,28.7597262 48.8415,29.3696344 C50.3805,31.0547881 51.309,33.2052792 51.309,35.8361671 C51.309,45.0917119 45.6975,47.1292571 40.3515,47.7256117 C41.2125,48.4695491 41.9805,49.9393525 41.9805,52.1877301 C41.9805,55.4089489 41.9505,58.0067059 41.9505,58.7973276 C41.9505,59.4418726 42.3825,60.1918338 43.6005,59.9554002 C53.13,56.7627944 60,47.7376593 60,37.096644 C60,23.7870921 49.254,13 35.9985,13" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://www.instagram.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+  <rect width="28" height="28" fill="#bbbbbb" rx="5"/>
+  <path fill="white" d="M19.2 8.5C19.2 9.32843 18.5284 10 17.7 10C16.8716 10 16.2 9.32843 16.2 8.5C16.2 7.67157 16.8716 7 17.7 7C18.5284 7 19.2 7.67157 19.2 8.5Z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M14 18C16.7614 18 19 15.7614 19 13C19 10.2386 16.7614 8 14 8C11.2386 8 9 10.2386 9 13C9 15.7614 11.2386 18 14 18ZM14 16C15.6569 16 17 14.6569 17 13C17 11.3431 15.6569 10 14 10C12.3431 10 11 11.3431 11 13C11 14.6569 12.3431 16 14 16Z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M5 12.6C5 9.23966 5 7.55945 5.65396 6.27606C6.2292 5.14708 7.14708 4.2292 8.27606 3.65396C9.55945 3 11.2397 3 14.6 3H15.4C18.7603 3 20.4405 3 21.7239 3.65396C22.8529 4.2292 23.7708 5.14708 24.346 6.27606C25 7.55945 25 9.23966 25 12.6V13.4C25 16.7603 25 18.4405 24.346 19.7239C23.7708 20.8529 22.8529 21.7708 21.7239 22.346C20.4405 23 18.7603 23 15.4 23H14.6C11.2397 23 9.55945 23 8.27606 22.346C7.14708 21.7708 6.2292 20.8529 5.65396 19.7239C5 18.4405 5 16.7603 5 13.4V12.6ZM14.6 6H15.4C17.1132 6 18.2777 6.00156 19.1779 6.0751C20.0548 6.14674 20.5032 6.27659 20.816 6.43597C21.5686 6.81947 22.1805 7.43139 22.564 8.184C22.7234 8.4968 22.8533 8.9452 22.9249 9.8221C22.9984 10.7223 23 11.8868 23 13.6V14.4C23 16.1132 22.9984 17.2777 22.9249 18.1779C22.8533 19.0548 22.7234 19.5032 22.564 19.816C22.1805 20.5686 21.5686 21.1805 20.816 21.564C20.5032 21.7234 20.0548 21.8533 19.1779 21.9249C18.2777 21.9984 17.1132 22 15.4 22H14.6C12.8868 22 11.7223 21.9984 10.8221 21.9249C9.9452 21.8533 9.4968 21.7234 9.184 21.564C8.43139 21.1805 7.81947 20.5686 7.43597 19.816C7.27659 19.5032 7.14674 19.0548 7.0751 18.1779C7.00156 17.2777 7 16.1132 7 14.4V13.6C7 11.8868 7.00156 10.7223 7.0751 9.8221C7.14674 8.9452 7.27659 8.4968 7.43597 8.184C7.81947 7.43139 8.43139 6.81947 9.184 6.43597C9.4968 6.27659 9.9452 6.14674 10.8221 6.0751C11.7223 6.00156 12.8868 6 14.6 6Z"/>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://www.linkedin.com/in/juliafmorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 500 500">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="500" height="500" fill="#bbbbbb" rx="50"/>
+    <path fill="#FFF" d="M154.703 100.183c-19.121 0-34.689 15.565-34.703 34.701 0 19.136 15.568 34.704 34.703 34.704 19.128 0 34.688-15.568 34.688-34.704 0-19.134-15.561-34.701-34.688-34.701zm26.045 83.348h-52.094a4.488 4.488 0 0 0-4.488 4.489v167.675a4.488 4.488 0 0 0 4.488 4.488h52.093a4.49 4.49 0 0 0 4.489-4.488V188.02a4.486 4.486 0 0 0-4.488-4.489zm133.176-1.974c-19.064 0-35.817 5.805-46.04 15.271v-8.808c0-2.48-2.01-4.489-4.489-4.489h-49.971a4.489 4.489 0 0 0-4.489 4.489v167.675a4.488 4.488 0 0 0 4.489 4.488h52.044a4.49 4.49 0 0 0 4.489-4.488v-82.957c0-23.802 4.378-38.555 26.227-38.555 21.526.026 23.137 15.846 23.137 39.977v81.535a4.489 4.489 0 0 0 4.49 4.488h52.068a4.489 4.489 0 0 0 4.488-4.488v-91.977c-.001-38.253-7.553-82.161-66.443-82.161z"/>
+  </g>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://twitter.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg fill="#bbbbbb" width="28" height="28" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="438.536px" height="438.536px" viewBox="0 0 438.536 438.536" style="enable-background:new 0 0 438.536 438.536;"
+	 xml:space="preserve">
+<g>
+	<path d="M414.41,24.123C398.333,8.042,378.963,0,356.315,0H82.228C59.58,0,40.21,8.042,24.126,24.123
+		C8.045,40.207,0.003,59.576,0.003,82.225v274.084c0,22.647,8.042,42.018,24.123,58.102c16.084,16.084,35.454,24.126,58.102,24.126
+		h274.084c22.648,0,42.018-8.042,58.095-24.126c16.084-16.084,24.126-35.454,24.126-58.102V82.225
+		C438.532,59.576,430.49,40.204,414.41,24.123z M335.471,168.735c0.191,1.713,0.288,4.278,0.288,7.71
+		c0,15.989-2.334,32.025-6.995,48.104c-4.661,16.087-11.8,31.504-21.416,46.254c-9.606,14.749-21.074,27.791-34.396,39.115
+		c-13.325,11.32-29.311,20.365-47.968,27.117c-18.648,6.762-38.637,10.143-59.953,10.143c-33.116,0-63.76-8.952-91.931-26.836
+		c4.568,0.568,9.329,0.855,14.275,0.855c27.6,0,52.439-8.565,74.519-25.7c-12.941-0.185-24.506-4.179-34.688-11.991
+		c-10.185-7.803-17.273-17.699-21.271-29.691c4.947,0.76,8.658,1.137,11.132,1.137c4.187,0,9.042-0.76,14.56-2.279
+		c-13.894-2.669-25.598-9.562-35.115-20.697c-9.519-11.136-14.277-23.84-14.277-38.114v-0.571
+		c10.085,4.755,19.602,7.229,28.549,7.422c-17.321-11.613-25.981-28.265-25.981-49.963c0-10.66,2.758-20.747,8.278-30.264
+		c15.035,18.464,33.311,33.213,54.816,44.252c21.507,11.038,44.54,17.227,69.092,18.558c-0.95-3.616-1.427-8.186-1.427-13.704
+		c0-16.562,5.853-30.692,17.56-42.399c11.703-11.706,25.837-17.561,42.394-17.561c17.515,0,32.079,6.283,43.688,18.846
+		c13.134-2.474,25.892-7.33,38.26-14.56c-4.757,14.652-13.613,25.788-26.55,33.402c12.368-1.716,23.88-4.95,34.537-9.708
+		C357.458,149.793,347.462,160.166,335.471,168.735z"/>
+</g>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://www.youtube.com/c/JuliaFMorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+    <rect width="28" height="28" fill="#bbbbbb" rx="5"/>
+    <g transform="scale(0.061, 0.061) translate(0, 0)">
+        <path fill="white" d="M370.257,67.393H100.744C47.866,67.393,5,110.259,5,163.137v134.728c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137C465.001,110.259,422.135,67.393,370.257,67.393z M305.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C309.363,229.873,309.298,235.248,305.506,237.056z"/>
+    </g>
+</svg>
+
+    </a>
+
+
+</div>
+
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       Julia Furst Morgado
+    
+    </div>
+
+    
+</footer>
+
+
+
+  </body>
+</html>

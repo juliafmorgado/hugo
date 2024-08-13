@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Julia Furst Morgado</title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 08 Aug 2024 06:46:05 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes</title>
+      <link>//localhost:1313/tags/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kasten</title>
+      <link>//localhost:1313/tags/kasten/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/kasten/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>//localhost:1313/tags/aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EKS</title>
+      <link>//localhost:1313/tags/eks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/eks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>KubeCon</title>
+      <link>//localhost:1313/tags/kubecon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/kubecon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Public Speaking</title>
+      <link>//localhost:1313/tags/public-speaking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/public-speaking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Veeam</title>
+      <link>//localhost:1313/tags/veeam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/veeam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>//localhost:1313/tags/devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud</title>
+      <link>//localhost:1313/tags/cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Containers</title>
+      <link>//localhost:1313/tags/containers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/containers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>//localhost:1313/tags/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CNCF</title>
+      <link>//localhost:1313/tags/cncf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/cncf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open Source</title>
+      <link>//localhost:1313/tags/open-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>//localhost:1313/tags/tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ESports</title>
+      <link>//localhost:1313/tags/esports/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/esports/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gaming</title>
+      <link>//localhost:1313/tags/gaming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/gaming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>//localhost:1313/tags/automation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terraform</title>
+      <link>//localhost:1313/tags/terraform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/terraform/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backup</title>
+      <link>//localhost:1313/tags/backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/backup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Protection</title>
+      <link>//localhost:1313/tags/data-protection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/data-protection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>//localhost:1313/tags/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub</title>
+      <link>//localhost:1313/tags/github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conference</title>
+      <link>//localhost:1313/tags/conference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/conference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure</title>
+      <link>//localhost:1313/tags/azure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/azure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certification</title>
+      <link>//localhost:1313/tags/certification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft</title>
+      <link>//localhost:1313/tags/microsoft/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>//localhost:1313/tags/guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips</title>
+      <link>//localhost:1313/tags/tips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remote Jobs</title>
+      <link>//localhost:1313/tags/remote-jobs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/remote-jobs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Empowerment</title>
+      <link>//localhost:1313/tags/empowerment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/empowerment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google</title>
+      <link>//localhost:1313/tags/google/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/google/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Motivation</title>
+      <link>//localhost:1313/tags/motivation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/motivation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Native</title>
+      <link>//localhost:1313/tags/cloud-native/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/cloud-native/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conferences</title>
+      <link>//localhost:1313/tags/conferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/conferences/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>//localhost:1313/tags/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>YouTube</title>
+      <link>//localhost:1313/tags/youtube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/youtube/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Community</title>
+      <link>//localhost:1313/tags/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/community/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>//localhost:1313/tags/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Learning to Code</title>
+      <link>//localhost:1313/tags/learning-to-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/learning-to-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mistakes</title>
+      <link>//localhost:1313/tags/mistakes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/mistakes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Netlify</title>
+      <link>//localhost:1313/tags/netlify/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/netlify/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Career</title>
+      <link>//localhost:1313/tags/career/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/career/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MongoDB</title>
+      <link>//localhost:1313/tags/mongodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NodeJS</title>
+      <link>//localhost:1313/tags/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>//localhost:1313/tags/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>List</title>
+      <link>//localhost:1313/tags/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/list/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>News</title>
+      <link>//localhost:1313/tags/news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/news/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Freelancing</title>
+      <link>//localhost:1313/tags/freelancing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/freelancing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technical Articles</title>
+      <link>//localhost:1313/tags/technical-articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/technical-articles/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writing</title>
+      <link>//localhost:1313/tags/writing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/writing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jobs</title>
+      <link>//localhost:1313/tags/jobs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/jobs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codewars</title>
+      <link>//localhost:1313/tags/codewars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/codewars/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Anki</title>
+      <link>//localhost:1313/tags/anki/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/anki/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity</title>
+      <link>//localhost:1313/tags/productivity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/productivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>//localhost:1313/tags/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>100Devs</title>
+      <link>//localhost:1313/tags/100devs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/100devs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding Bootcamp</title>
+      <link>//localhost:1313/tags/coding-bootcamp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/coding-bootcamp/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

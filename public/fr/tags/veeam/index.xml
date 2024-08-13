@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Veeam on Julia Furst Morgado</title>
+    <link>http://localhost:1313/fr/tags/veeam/</link>
+    <description>Recent content in Veeam on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Thu, 08 Feb 2024 10:46:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/fr/tags/veeam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comment Mettre à Niveau Veeam Backup and Replication du 12.0 au 12.1</title>
+      <link>http://localhost:1313/fr/posts/comment-mettre-%C3%A0-niveau-veeam-backup-and-replication-du-12.0-au-12.1/</link>
+      <pubDate>Thu, 08 Feb 2024 10:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/fr/posts/comment-mettre-%C3%A0-niveau-veeam-backup-and-replication-du-12.0-au-12.1/</guid>
+      <description>Veeam Backup and Replication a publié la version 12.</description>
+    </item>
+  </channel>
+</rss>

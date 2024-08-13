@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gaming on Julia Furst Morgado</title>
+    <link>http://localhost:1313/tags/gaming/</link>
+    <description>Recent content in Gaming on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 07 Sep 2023 11:46:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Ultimate eSports Experience: Inside the AWS VALORANT Champions VIP Hospitality 2023</title>
+      <link>http://localhost:1313/posts/the-ultimate-esports-experience-inside-the-aws-valorant-champions-vip-hospitality-2023/</link>
+      <pubDate>Thu, 07 Sep 2023 11:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-ultimate-esports-experience-inside-the-aws-valorant-champions-vip-hospitality-2023/</guid>
+      <description>If you think Los Angeles is only about Hollywood celebrities and palm trees, think again.</description>
+    </item>
+  </channel>
+</rss>

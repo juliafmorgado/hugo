@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Veeam on Julia Furst Morgado</title>
+    <link>//localhost:1313/categories/veeam/</link>
+    <description>Recent content in Veeam on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 22 Jul 2024 06:46:05 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/veeam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Kubernetes Backup Solutions Are Essential for Modern Infrastructure</title>
+      <link>//localhost:1313/posts/why-kubernetes-backup-solutions-are-essential-for-modern-infrastructure/</link>
+      <pubDate>Mon, 22 Jul 2024 06:46:05 +0000</pubDate>
+      <guid>//localhost:1313/posts/why-kubernetes-backup-solutions-are-essential-for-modern-infrastructure/</guid>
+      <description>As Kubernetes becomes the cornerstone of modern infrastructure, implementing a robust, Kubernetes-native backup solution is no longer optional—it&amp;rsquo;s imperative.</description>
+    </item>
+    <item>
+      <title>How to Upgrade to Veeam Backup for AWS v8.0</title>
+      <link>//localhost:1313/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</link>
+      <pubDate>Tue, 09 Jul 2024 06:46:05 +0000</pubDate>
+      <guid>//localhost:1313/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</guid>
+      <description>How and Why to Update Veeam Backup for AWS to Version 8 🔗With the recent launch of Veeam Backup for AWS (VB for AWS) version 8 on July 2nd, it&amp;rsquo;s time to update your setup to take advantage of the latest features and improvements.</description>
+    </item>
+  </channel>
+</rss>

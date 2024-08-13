@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automation on Julia Furst Morgado</title>
+    <link>http://localhost:1313/es/tags/automation/</link>
+    <description>Recent content in Automation on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Tue, 11 Jul 2023 17:46:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Veeam Backup para AWS: Protege tus datos en la nube de manera sencilla</title>
+      <link>http://localhost:1313/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</link>
+      <pubDate>Tue, 11 Jul 2023 17:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</guid>
+      <description>Introducción 🔗En el mundo actual, donde la computación en la nube desempeña un papel fundamental en la infraestructura de muchas empresas, la protección de datos se vuelve cada vez más crítica.</description>
+    </item>
+  </channel>
+</rss>

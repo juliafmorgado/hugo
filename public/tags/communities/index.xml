@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Communities on Julia Furst Morgado</title>
+    <link>http://localhost:1313/tags/communities/</link>
+    <description>Recent content in Communities on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 07 Sep 2023 11:46:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/communities/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Ultimate eSports Experience: Inside the AWS VALORANT Champions VIP Hospitality 2023</title>
+      <link>http://localhost:1313/posts/the-ultimate-esports-experience-inside-the-aws-valorant-champions-vip-hospitality-2023/</link>
+      <pubDate>Thu, 07 Sep 2023 11:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-ultimate-esports-experience-inside-the-aws-valorant-champions-vip-hospitality-2023/</guid>
+      <description>If you think Los Angeles is only about Hollywood celebrities and palm trees, think again.</description>
+    </item>
+    <item>
+      <title>My VeeamON 2023 Experience</title>
+      <link>http://localhost:1313/posts/my-veeamon-2023-experience/</link>
+      <pubDate>Tue, 30 May 2023 17:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/posts/my-veeamon-2023-experience/</guid>
+      <description>Reflections on My First VeeamON 🔗Attending my first VeeamON was an exhilarating experience that exceeded all my expectations.</description>
+    </item>
+    <item>
+      <title>I am Remarkable, and so are You!</title>
+      <link>http://localhost:1313/posts/i-am-remarkable-and-so-are-you/</link>
+      <pubDate>Mon, 21 Nov 2022 17:01:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/i-am-remarkable-and-so-are-you/</guid>
+      <description>On November 9th, I went to a workshop at Google called #IamRemarkable for “Women in Cloud”, facilitated by Gautami Nadkarni and Naomi Klamen.</description>
+    </item>
+    <item>
+      <title>From KubeCon to my first keynote as a DevRel</title>
+      <link>http://localhost:1313/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</link>
+      <pubDate>Mon, 14 Nov 2022 13:47:21 +0000</pubDate>
+      <guid>http://localhost:1313/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</guid>
+      <description>Last month I went to Detroit for my first big open source conference — KubeCon.</description>
+    </item>
+    <item>
+      <title>Tech communities you should join! (online and in person)</title>
+      <link>http://localhost:1313/posts/tech-communities-you-should-join-online-and-in-person/</link>
+      <pubDate>Thu, 29 Sep 2022 12:25:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tech-communities-you-should-join-online-and-in-person/</guid>
+      <description>Software development is such a challenging field that it’s almost impossible to succeed in it without having some sort of support system.</description>
+    </item>
+  </channel>
+</rss>

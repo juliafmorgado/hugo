@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Public Speaking on Julia Furst Morgado</title>
+    <link>http://localhost:1313/tags/public-speaking/</link>
+    <description>Recent content in Public Speaking on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 11 Mar 2024 06:46:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/public-speaking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The What, Who, Why, Where and How of Public Speaking</title>
+      <link>http://localhost:1313/posts/the-what-who-why-where-and-how-of-public-speaking/</link>
+      <pubDate>Mon, 11 Mar 2024 06:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-what-who-why-where-and-how-of-public-speaking/</guid>
+      <description>Alright alright, are you thinking about stepping into the world of public speaking?</description>
+    </item>
+  </channel>
+</rss>

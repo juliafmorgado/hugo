@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Containers on Julia Furst Morgado</title>
+    <link>//localhost:1313/tags/containers/</link>
+    <description>Recent content in Containers on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 30 Sep 2023 17:46:05 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/containers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Easy Way to Understand Docker</title>
+      <link>//localhost:1313/posts/an-easy-way-to-understand-docker/</link>
+      <pubDate>Sat, 30 Sep 2023 17:46:05 +0000</pubDate>
+      <guid>//localhost:1313/posts/an-easy-way-to-understand-docker/</guid>
+      <description>Docker is renowned worldwide as an open-source container service provider, that excels in packaging applications and their components, along with dependencies, simplifying the deployment process.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning to Code on Julia Furst Morgado</title>
+    <link>//localhost:1313/tags/learning-to-code/</link>
+    <description>Recent content in Learning to Code on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 08 Jan 2023 10:34:19 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/learning-to-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>17 Mistakes Self-Taught Programmers and Developers Make When Learning to code</title>
+      <link>//localhost:1313/posts/17-mistakes-self-taught-programmers-and-developers-make-when-learning-to-code/</link>
+      <pubDate>Mon, 19 Sep 2022 21:41:34 +0000</pubDate>
+      <guid>//localhost:1313/posts/17-mistakes-self-taught-programmers-and-developers-make-when-learning-to-code/</guid>
+      <description>I want to start by saying that if you took the initiative to start learning to code, you should pat yourself on the back.</description>
+    </item>
+    <item>
+      <title>Balancing a full-time job while learning to code</title>
+      <link>//localhost:1313/posts/balancing-a-full-time-job-while-learning-to-code/</link>
+      <pubDate>Fri, 08 Jul 2022 17:52:23 +0000</pubDate>
+      <guid>//localhost:1313/posts/balancing-a-full-time-job-while-learning-to-code/</guid>
+      <description>If you really want something, you’ll find a way.</description>
+    </item>
+    <item>
+      <title>Want To Be a Programmer? Stop Overthinking It.</title>
+      <link>//localhost:1313/posts/want-to-be-a-programmer-stop-overthinking-it./</link>
+      <pubDate>Wed, 06 Jul 2022 17:46:05 +0000</pubDate>
+      <guid>//localhost:1313/posts/want-to-be-a-programmer-stop-overthinking-it./</guid>
+      <description>Which path to take?</description>
+    </item>
+    <item>
+      <title>#100Devs Software Engineering Bootcamp</title>
+      <link>//localhost:1313/posts/%23100devs-software-engineering-bootcamp/</link>
+      <pubDate>Mon, 28 Feb 2022 17:46:05 +0000</pubDate>
+      <guid>//localhost:1313/posts/%23100devs-software-engineering-bootcamp/</guid>
+      <description>Check out my Youtube videos about 100Devs: How to join 100Devs and What is 100Devs</description>
+    </item>
+  </channel>
+</rss>

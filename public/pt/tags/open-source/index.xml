@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Source on Julia Furst Morgado</title>
+    <link>http://localhost:1313/pt/tags/open-source/</link>
+    <description>Recent content in Open Source on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Tue, 26 Sep 2023 11:46:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como Contribuir à Localização do Glossário da CNCF - Sem Ter Que Codar!</title>
+      <link>http://localhost:1313/pt/posts/como-contribuir-%C3%A0-localiza%C3%A7%C3%A3o-do-gloss%C3%A1rio-da-cncf-sem-ter-que-codar/</link>
+      <pubDate>Tue, 26 Sep 2023 11:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/como-contribuir-%C3%A0-localiza%C3%A7%C3%A3o-do-gloss%C3%A1rio-da-cncf-sem-ter-que-codar/</guid>
+      <description>Introdução 🔗O Glossário da Cloud Native Computing Foundation (CNCF) é um recurso valioso que ajuda a esclarecer a terminologia e a gíria usada no mundo da computação nativa da nuvem.</description>
+    </item>
+  </channel>
+</rss>

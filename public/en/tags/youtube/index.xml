@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>YouTube on Julia Furst Morgado</title>
+    <link>//localhost:1313/tags/youtube/</link>
+    <description>Recent content in YouTube on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 08 Jan 2023 10:34:02 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automatically Embed Latest Youtube Videos on your Website with JavaScript (step by step)</title>
+      <link>//localhost:1313/posts/automatically-embed-latest-youtube-videos-on-your-website-with-javascript-step-by-step/</link>
+      <pubDate>Mon, 03 Oct 2022 17:46:05 +0000</pubDate>
+      <guid>//localhost:1313/posts/automatically-embed-latest-youtube-videos-on-your-website-with-javascript-step-by-step/</guid>
+      <description>In this tutorial, you’ll learn how to make an HTTP request to Youtube with the JavaScript fetch() method to dynamically embed new video on your website as you publish it on youtube.</description>
+    </item>
+  </channel>
+</rss>

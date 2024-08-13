@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Julia Furst Morgado</title>
+    <link>http://localhost:1313/es/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Tue, 26 Sep 2023 11:46:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como contribuir a la localización del glosario de la CNCF - sin código!</title>
+      <link>http://localhost:1313/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/</link>
+      <pubDate>Tue, 26 Sep 2023 11:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/</guid>
+      <description>Introducción 🔗El Glosario de la Fundación de Computación Nativa en la Nube (CNCF) es un recurso valioso que ayuda a aclarar la terminología y el argot utilizados en el mundo de la informática nativa en la nube.</description>
+    </item>
+  </channel>
+</rss>

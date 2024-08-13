@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Connecting MongoDB to your app using Node.js | Julia Furst Morgado</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="MongoDB is an open source NoSQL database management program.">
+<meta name="generator" content="Hugo 0.128.0">
+
+
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-google-analytics-id"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-google-analytics-id');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/about">About</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="https://github.com/juliafmorgado/talks">Talks</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="/tags">Tags</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="/posts">Archive</a>
+
+	
+
+	
+
+	
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Connecting MongoDB to your app using Node.js</h1>
+
+    <div class="tip">
+        <time datetime="2022-09-12 17:42:30.36 &#43;0000 UTC">Sep 12, 2022</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          7 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+    <aside class="toc">
+      <details>
+          <summary>Table of Contents
+          </summary>
+          <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#step-1-create-anaccount">Step 1. Create an account</a></li>
+        <li><a href="#step-2-deploy-your-firstcluster">Step 2. Deploy your first cluster</a></li>
+        <li><a href="#step-3-create-a-username-andpassword">Step 3. Create a username and password</a></li>
+        <li><a href="#step-4-add-your-ipaddress">Step 4. Add your IP Address</a></li>
+        <li><a href="#5-homepage">5. Homepage</a></li>
+        <li><a href="#step-6-create-a-collection">Step 6. Create a collection</a></li>
+        <li><a href="#step-7-generate-a-connection-string">Step 7. Generate a connection string</a></li>
+        <li><a href="#step-8-initialize-yourproject">Step 8. Initialize your project</a></li>
+        <li><a href="#step-9-install-localpackages">Step 9. Install local packages</a></li>
+        <li><a href="#step-10-require-dependencies">Step 10. Require dependencies</a></li>
+        <li><a href="#step-11-connectdatabase">Step 11. Connect database</a></li>
+        <li><a href="#step-12-set-upenv">Step 12. Set up .env</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+          </div>
+      </details>
+    </aside>
+  
+
+
+    
+
+
+    <div class="content">
+      <p>MongoDB is an open source NoSQL database management program. NoSQL databases are quite useful for working with large sets of distributed data. We can store information in this database, manage it and then retrieve it and display it to people who view our app.</p>
+<p>Now, to connect to a Mongo database from a Node.js server, you can either use:</p>
+<ul>
+<li>Mongo, official driver npm package</li>
+<li>Mongoose, elegant object modeling tool for mongo in nodejs</li>
+</ul>
+<p>Most online tutorials teach how to set up a Node/Express app with MongoDB using mongoose, which isn’t very helpful for beginners.</p>
+<p>In this tutorial, I’ll walk you through the basics of setting up a MongoDB account, generating a connection string, and connecting your MongoDB database to your app without mongoose.</p>
+<p>If you prefer to watch a video, check out the tutorial <a href="https://youtu.be/Bcg6C0G_tAA" target="_blank" rel="noopener">here</a>.</p>
+<p><a href="https://youtu.be/Bcg6C0G_tAA" title="Share link"  target="_blank" rel="noopener">https://youtu.be/Bcg6C0G_tAA</a></p>
+<p>Let’s get started!</p>
+<h3 id="step-1-create-anaccount">Step 1. Create an account <a href="#step-1-create-anaccount" class="anchor">🔗</a></h3><p>Head to MongoDB Atlas’s <a href="https://www.mongodb.com/try" target="_blank" rel="noopener">website</a> and sign up with your email.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_1.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<p>You might have to answer a short questionnaire to create your account.</p>
+<h3 id="step-2-deploy-your-firstcluster">Step 2. Deploy your first cluster <a href="#step-2-deploy-your-firstcluster" class="anchor">🔗</a></h3><p>At a high level, a cluster is a set of nodes where copies of your database will be stored.</p>
+<p>Click on build a database, and choose the shared database type (the free one!).</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_2.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<p>It will give you options to customize your cluster, but you can go with the default. Just make sure you’re still in the free tier. After that, click on Create Cluster.</p>
+<h3 id="step-3-create-a-username-andpassword">Step 3. Create a username and password <a href="#step-3-create-a-username-andpassword" class="anchor">🔗</a></h3><p>While your cluster is being created in the background, you must create a database user. The username and password differ from the one you used to login into MongoDB Atlas; they will be used ONLY for this particular database (it helps keep the data secure and helps control who has access to what data).</p>
+<p>Make sure to store your password safely since we’ll need it to connect to the database.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_3.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<h3 id="step-4-add-your-ipaddress">Step 4. Add your IP Address <a href="#step-4-add-your-ipaddress" class="anchor">🔗</a></h3><p>You need to whitelist your IP address before connecting to your cluster. This is a security feature built into MongoDB Atlas. Go ahead and click Add your Current IP Address.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_4.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<p>After that, just click on Finish and Close, and when the dialog box opens, click on Go to Databases.</p>
+<h3 id="5-homepage">5. Homepage <a href="#5-homepage" class="anchor">🔗</a></h3><p>Welcome to your database’s homepage; you should see your cluster there. Before connecting it to your app, you have to create a collection inside it.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_5.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<h3 id="step-6-create-a-collection">Step 6. Create a collection <a href="#step-6-create-a-collection" class="anchor">🔗</a></h3><p>Click on Browse Collections, then Add My Own Data</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_6.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<p>Type the name of your database and the collection name. In my case, my database name will be ‘to-do-app’, and the collection name ‘tasks’. Click on Create.</p>
+<p>Great, you have created a collection where all your objects will be saved.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_7.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<h3 id="step-7-generate-a-connection-string">Step 7. Generate a connection string <a href="#step-7-generate-a-connection-string" class="anchor">🔗</a></h3><p>Go back to your database homepage (top left, under DEPLOYMENT), and on your cluster’s main page, click Connect. You’ll get three methods to connect to your database.</p>
+<p>Choose the “Connect your application” method.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_8.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<p>The provided connection string will be used on your app (so your app can connect and manipulate the database).</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_9.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<h3 id="step-8-initialize-yourproject">Step 8. Initialize your project <a href="#step-8-initialize-yourproject" class="anchor">🔗</a></h3><p>Now go to your IDE (I use VS Code) and start your app.</p>
+<p>If this is your first time developing a full-stack web application, you’ll need to download Node.js to your computer.</p>
+<p>You can download it from the <a href="https://nodejs.org/en/" target="_blank" rel="noopener">official node website</a>, which will also install npm (Node Package Manager).</p>
+<blockquote>
+<p>npm is a package manager for Node.js with hundreds of thousands of packages. Although it does create some of your directory structure/organization, this is not the main purpose.</p>
+</blockquote>
+<blockquote>
+<p>Its main goal is automated dependency and package management. This means that you can specify all of your project’s dependencies inside your package.json file. Any time you (or anyone else) need to get started with your project, they can just run npm install and immediately have all of the dependencies installed. On top of this, it is also possible to specify what versions your project depends upon to prevent updates from breaking your project.</p>
+</blockquote>
+<p>To initialize your first project with npm, create a project folder, and change the directory to your project’s folder.</p>
+<p>Once this is done, you are ready to initialize your first project with:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>npm init ## triggers the initialization of a project
+</span></span></code></pre></div><h3 id="step-9-install-localpackages">Step 9. Install local packages <a href="#step-9-install-localpackages" class="anchor">🔗</a></h3><p>Once you install any package using npm, the package is installed as a dependency in your app inside your package.json file, and its modules are stored inside node_modules folder.</p>
+<p>npm install is the standard NPM command to install a package of your choice.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>npm install &lt;<span style="color:#a2f;font-weight:bold">package</span> name&gt;
+</span></span></code></pre></div><p>Now let’s install the packages we will use for this project.</p>
+<p>Express:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>npm install express
+</span></span></code></pre></div><p>MongoDB:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>npm install mongodb
+</span></span></code></pre></div><p>Dotenv:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>npm install dotenv
+</span></span></code></pre></div><blockquote>
+<p>The dotenv package stores sensitive information that we don’t want to share. It creates environment variables and hides them from our main code, so for example, you can secure private keys in an env file and keep it out of sight when pushing it to GitHub.</p>
+</blockquote>
+<p>You can check that everything was successfully installed on your package-lock.json (under packages).</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_10.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<h3 id="step-10-require-dependencies">Step 10. Require dependencies <a href="#step-10-require-dependencies" class="anchor">🔗</a></h3><p>Once the packages are installed, create a new server.js file and open it with your code editor. Then, add the following lines of code:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">const</span> express <span style="color:#666">=</span> require(<span style="color:#b44">&#39;express&#39;</span>)    <span style="color:#080;font-style:italic">#1const app = express()                        #2const MongoClient = require(&#39;mongodb&#39;).MongoClient.     #3</span>
+</span></span></code></pre></div><p>Code Explanation:</p>
+<ol>
+<li>In your first line of code, you use the require function to include the “express module.”</li>
+<li>Before you use the express module, you need to make an object of it.</li>
+<li>The MongoDB module exports MongoClient, which you’ll use to connect to a MongoDB database. You can use an instance of MongoClient to connect to a cluster, access the database, and close the connection to that cluster.</li>
+</ol>
+<h3 id="step-11-connectdatabase">Step 11. Connect database <a href="#step-11-connectdatabase" class="anchor">🔗</a></h3><p>You have to declare a variable for the string given by MongoDB. IMPORTANT: Replace the with the actual password that you created previously.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">const</span> connectionString <span style="color:#666">=</span> <span style="color:#b44">&#39;mongodb+srv://juliafm:&lt;password&gt;@cluster0.qvesujr.mongodb.net/?retryWrites=true&amp;w=majority&#39;</span>
+</span></span></code></pre></div><p>To finish connecting to the external database, add the following lines of code:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>MongoClient<span style="color:#666">.</span>connect(connectionString)    <span style="color:#666">.</span>then(client <span style="color:#666">=&gt;</span> {    console<span style="color:#666">.</span>log(<span style="">`</span>Connected to Database<span style="">`</span>)    <span style="color:#a2f;font-weight:bold">const</span> db <span style="color:#666">=</span> client<span style="color:#666">.</span>db(<span style="color:#b44">&#39;to-do-app&#39;</span>)    <span style="color:#a2f;font-weight:bold">const</span> tasksCollection <span style="color:#666">=</span> db<span style="color:#666">.</span>collection(<span style="color:#b44">&#39;tasks&#39;</span>)    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#666">//</span>CRUD requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">.</span>catch(error <span style="color:#666">=&gt;</span> console<span style="color:#666">.</span>error(error))
+</span></span></code></pre></div><p>Code Explanation:</p>
+<ol>
+<li>Create a function with a promise</li>
+<li>Tell what to do next (then) client</li>
+<li>Pass it as a parameter to the arrow function</li>
+<li>Create a console.log statement to make sure you’re connected</li>
+<li>Specify which database and collection you’re connecting to</li>
+<li>Add a catch statement to see if we get any errors</li>
+</ol>
+<p>Awesome, you’re all set. If you run your server now, you should see “Connected to Database” on your terminal.</p>
+<p>This is the code you have so far:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">const</span> express <span style="color:#666">=</span> require(<span style="color:#b44">&#39;express&#39;</span>)<span style="color:#a2f;font-weight:bold">const</span> app <span style="color:#666">=</span> express()<span style="color:#a2f;font-weight:bold">const</span> MongoClient <span style="color:#666">=</span> require(<span style="color:#b44">&#39;mongodb&#39;</span>)<span style="color:#666">.</span>MongoClientconst connectionString <span style="color:#666">=</span> <span style="color:#b44">&#39;mongodb+srv://juliafm:helloworld@cluster0.jgbyhks.mongodb.net/?retryWrites=true&amp;w=majority&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MongoClient<span style="color:#666">.</span>connect(connectionString)<span style="color:#666">.</span>then(client <span style="color:#666">=&gt;</span> {    console<span style="color:#666">.</span>log(<span style="color:#b44">&#39;Connected to database&#39;</span>)    <span style="color:#a2f;font-weight:bold">const</span> db <span style="color:#666">=</span> client<span style="color:#666">.</span>db(<span style="color:#b44">&#39;to-do-app&#39;</span>)    <span style="color:#a2f;font-weight:bold">const</span> taskCollection <span style="color:#666">=</span> db<span style="color:#666">.</span>collection(<span style="color:#b44">&#39;tasks&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">//</span>CRUD request})<span style="color:#666">.</span>catch(error<span style="color:#666">=&gt;</span> console<span style="color:#666">.</span>error(error))
+</span></span></code></pre></div><h3 id="step-12-set-upenv">Step 12. Set up .env <a href="#step-12-set-upenv" class="anchor">🔗</a></h3><p>For safety reasons, I want to show you how to move your MongoDB connection string to a .env file.</p>
+<p>For that, you have to create a .env file inside your project’s folder. In this file, create a variable DB_STRING and paste your connection string (don’t forget to change the placeholder to your actual password).</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_11.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<p>Go back to your server.js file, remove the variable that holds the connection string, and add this instead:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>require(<span style="color:#b44">&#39;dotenv&#39;</span>)<span style="color:#666">.</span>config()<span style="color:#a2f;font-weight:bold">const</span> connectionString <span style="color:#666">=</span> process<span style="color:#666">.</span>env<span style="color:#666">.</span>DB_STRING;
+</span></span></code></pre></div><p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_12.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<p>Finally, create a .gitignore file and add the .env there (you’ll see I’ve added the node_modules because they are so heavy, and there’s no need to push them to Github).</p>
+<blockquote>
+<p>A .gitignore file specifies intentionally untracked files that Git should ignore.</p>
+</blockquote>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/2022-09-12_connecting-mongodb-to-your-app-using-node.js_13.jpg#layoutTextWidth" alt=""  />
+</p></p>
+<p>Just remember, if you’re pushing to Heroku, you must remove the .env from the .gitignore file because it needs access to the database. Alternatively, you can add this config var via your app’s “Settings” tab in the Heroku Dashboard.</p>
+<h3 id="conclusion">Conclusion <a href="#conclusion" class="anchor">🔗</a></h3><p>I hope this tutorial was helpful. Please let me know if you still have any questions; I am always happy to help!</p>
+<hr>
+<p>If you liked this article, go follow me on <a href="https://twitter.com/juliafmorgado" target="_blank" rel="noopener">Twitter</a> (where I share my tech journey) daily, connect with me on on <a href="https://www.linkedin.com/in/juliafmorgado/" target="_blank" rel="noopener">LinkedIn</a>, check out my <a href="https://www.instagram.com/juliafmorgado/" target="_blank" rel="noopener">IG</a>, and make sure to subscribe to my <a href="https://www.youtube.com/c/JuliaFMorgado" target="_blank" rel="noopener">Youtube</a> channel for more amazing content!!</p>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="http://localhost:1313/tags/tutorial">Tutorial</a>
+            
+                <a href="http://localhost:1313/tags/nodejs">NodeJS</a>
+            
+                <a href="http://localhost:1313/tags/databases">Databases</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="https://github.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg fill="#bbbbbb" width="28" height="28"  viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>Github</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Social-Icons---Rounded-Black" transform="translate(-264.000000, -939.000000)">
+            <g id="Github" transform="translate(264.000000, 939.000000)">
+                <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" id="Rounded" fill="#bbbbbb"></path>
+                <path d="M35.9985,13 C22.746,13 12,23.7870921 12,37.096644 C12,47.7406712 18.876,56.7718301 28.4145,59.9584121 C29.6145,60.1797862 30.0525,59.4358488 30.0525,58.7973276 C30.0525,58.2250681 30.0315,56.7100863 30.0195,54.6996482 C23.343,56.1558981 21.9345,51.4693938 21.9345,51.4693938 C20.844,48.6864054 19.2705,47.9454799 19.2705,47.9454799 C17.091,46.4500754 19.4355,46.4801943 19.4355,46.4801943 C21.843,46.6503662 23.1105,48.9634994 23.1105,48.9634994 C25.2525,52.6455377 28.728,51.5823398 30.096,50.9649018 C30.3135,49.4077535 30.9345,48.3460615 31.62,47.7436831 C26.2905,47.1352808 20.688,45.0691228 20.688,35.8361671 C20.688,33.2052792 21.6225,31.0547881 23.1585,29.3696344 C22.911,28.7597262 22.0875,26.3110578 23.3925,22.9934585 C23.3925,22.9934585 25.4085,22.3459017 29.9925,25.4632101 C31.908,24.9285993 33.96,24.6620468 36.0015,24.6515052 C38.04,24.6620468 40.0935,24.9285993 42.0105,25.4632101 C46.5915,22.3459017 48.603,22.9934585 48.603,22.9934585 C49.9125,26.3110578 49.089,28.7597262 48.8415,29.3696344 C50.3805,31.0547881 51.309,33.2052792 51.309,35.8361671 C51.309,45.0917119 45.6975,47.1292571 40.3515,47.7256117 C41.2125,48.4695491 41.9805,49.9393525 41.9805,52.1877301 C41.9805,55.4089489 41.9505,58.0067059 41.9505,58.7973276 C41.9505,59.4418726 42.3825,60.1918338 43.6005,59.9554002 C53.13,56.7627944 60,47.7376593 60,37.096644 C60,23.7870921 49.254,13 35.9985,13" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://www.instagram.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+  <rect width="28" height="28" fill="#bbbbbb" rx="5"/>
+  <path fill="white" d="M19.2 8.5C19.2 9.32843 18.5284 10 17.7 10C16.8716 10 16.2 9.32843 16.2 8.5C16.2 7.67157 16.8716 7 17.7 7C18.5284 7 19.2 7.67157 19.2 8.5Z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M14 18C16.7614 18 19 15.7614 19 13C19 10.2386 16.7614 8 14 8C11.2386 8 9 10.2386 9 13C9 15.7614 11.2386 18 14 18ZM14 16C15.6569 16 17 14.6569 17 13C17 11.3431 15.6569 10 14 10C12.3431 10 11 11.3431 11 13C11 14.6569 12.3431 16 14 16Z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M5 12.6C5 9.23966 5 7.55945 5.65396 6.27606C6.2292 5.14708 7.14708 4.2292 8.27606 3.65396C9.55945 3 11.2397 3 14.6 3H15.4C18.7603 3 20.4405 3 21.7239 3.65396C22.8529 4.2292 23.7708 5.14708 24.346 6.27606C25 7.55945 25 9.23966 25 12.6V13.4C25 16.7603 25 18.4405 24.346 19.7239C23.7708 20.8529 22.8529 21.7708 21.7239 22.346C20.4405 23 18.7603 23 15.4 23H14.6C11.2397 23 9.55945 23 8.27606 22.346C7.14708 21.7708 6.2292 20.8529 5.65396 19.7239C5 18.4405 5 16.7603 5 13.4V12.6ZM14.6 6H15.4C17.1132 6 18.2777 6.00156 19.1779 6.0751C20.0548 6.14674 20.5032 6.27659 20.816 6.43597C21.5686 6.81947 22.1805 7.43139 22.564 8.184C22.7234 8.4968 22.8533 8.9452 22.9249 9.8221C22.9984 10.7223 23 11.8868 23 13.6V14.4C23 16.1132 22.9984 17.2777 22.9249 18.1779C22.8533 19.0548 22.7234 19.5032 22.564 19.816C22.1805 20.5686 21.5686 21.1805 20.816 21.564C20.5032 21.7234 20.0548 21.8533 19.1779 21.9249C18.2777 21.9984 17.1132 22 15.4 22H14.6C12.8868 22 11.7223 21.9984 10.8221 21.9249C9.9452 21.8533 9.4968 21.7234 9.184 21.564C8.43139 21.1805 7.81947 20.5686 7.43597 19.816C7.27659 19.5032 7.14674 19.0548 7.0751 18.1779C7.00156 17.2777 7 16.1132 7 14.4V13.6C7 11.8868 7.00156 10.7223 7.0751 9.8221C7.14674 8.9452 7.27659 8.4968 7.43597 8.184C7.81947 7.43139 8.43139 6.81947 9.184 6.43597C9.4968 6.27659 9.9452 6.14674 10.8221 6.0751C11.7223 6.00156 12.8868 6 14.6 6Z"/>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://www.linkedin.com/in/juliafmorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 500 500">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="500" height="500" fill="#bbbbbb" rx="50"/>
+    <path fill="#FFF" d="M154.703 100.183c-19.121 0-34.689 15.565-34.703 34.701 0 19.136 15.568 34.704 34.703 34.704 19.128 0 34.688-15.568 34.688-34.704 0-19.134-15.561-34.701-34.688-34.701zm26.045 83.348h-52.094a4.488 4.488 0 0 0-4.488 4.489v167.675a4.488 4.488 0 0 0 4.488 4.488h52.093a4.49 4.49 0 0 0 4.489-4.488V188.02a4.486 4.486 0 0 0-4.488-4.489zm133.176-1.974c-19.064 0-35.817 5.805-46.04 15.271v-8.808c0-2.48-2.01-4.489-4.489-4.489h-49.971a4.489 4.489 0 0 0-4.489 4.489v167.675a4.488 4.488 0 0 0 4.489 4.488h52.044a4.49 4.49 0 0 0 4.489-4.488v-82.957c0-23.802 4.378-38.555 26.227-38.555 21.526.026 23.137 15.846 23.137 39.977v81.535a4.489 4.489 0 0 0 4.49 4.488h52.068a4.489 4.489 0 0 0 4.488-4.488v-91.977c-.001-38.253-7.553-82.161-66.443-82.161z"/>
+  </g>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://twitter.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg fill="#bbbbbb" width="28" height="28" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="438.536px" height="438.536px" viewBox="0 0 438.536 438.536" style="enable-background:new 0 0 438.536 438.536;"
+	 xml:space="preserve">
+<g>
+	<path d="M414.41,24.123C398.333,8.042,378.963,0,356.315,0H82.228C59.58,0,40.21,8.042,24.126,24.123
+		C8.045,40.207,0.003,59.576,0.003,82.225v274.084c0,22.647,8.042,42.018,24.123,58.102c16.084,16.084,35.454,24.126,58.102,24.126
+		h274.084c22.648,0,42.018-8.042,58.095-24.126c16.084-16.084,24.126-35.454,24.126-58.102V82.225
+		C438.532,59.576,430.49,40.204,414.41,24.123z M335.471,168.735c0.191,1.713,0.288,4.278,0.288,7.71
+		c0,15.989-2.334,32.025-6.995,48.104c-4.661,16.087-11.8,31.504-21.416,46.254c-9.606,14.749-21.074,27.791-34.396,39.115
+		c-13.325,11.32-29.311,20.365-47.968,27.117c-18.648,6.762-38.637,10.143-59.953,10.143c-33.116,0-63.76-8.952-91.931-26.836
+		c4.568,0.568,9.329,0.855,14.275,0.855c27.6,0,52.439-8.565,74.519-25.7c-12.941-0.185-24.506-4.179-34.688-11.991
+		c-10.185-7.803-17.273-17.699-21.271-29.691c4.947,0.76,8.658,1.137,11.132,1.137c4.187,0,9.042-0.76,14.56-2.279
+		c-13.894-2.669-25.598-9.562-35.115-20.697c-9.519-11.136-14.277-23.84-14.277-38.114v-0.571
+		c10.085,4.755,19.602,7.229,28.549,7.422c-17.321-11.613-25.981-28.265-25.981-49.963c0-10.66,2.758-20.747,8.278-30.264
+		c15.035,18.464,33.311,33.213,54.816,44.252c21.507,11.038,44.54,17.227,69.092,18.558c-0.95-3.616-1.427-8.186-1.427-13.704
+		c0-16.562,5.853-30.692,17.56-42.399c11.703-11.706,25.837-17.561,42.394-17.561c17.515,0,32.079,6.283,43.688,18.846
+		c13.134-2.474,25.892-7.33,38.26-14.56c-4.757,14.652-13.613,25.788-26.55,33.402c12.368-1.716,23.88-4.95,34.537-9.708
+		C357.458,149.793,347.462,160.166,335.471,168.735z"/>
+</g>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://www.youtube.com/c/JuliaFMorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+    <rect width="28" height="28" fill="#bbbbbb" rx="5"/>
+    <g transform="scale(0.061, 0.061) translate(0, 0)">
+        <path fill="white" d="M370.257,67.393H100.744C47.866,67.393,5,110.259,5,163.137v134.728c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137C465.001,110.259,422.135,67.393,370.257,67.393z M305.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C309.363,229.873,309.298,235.248,305.506,237.056z"/>
+    </g>
+</svg>
+
+    </a>
+
+
+</div>
+
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       Julia Furst Morgado
+    
+    </div>
+
+    
+</footer>
+
+
+
+  </body>
+</html>

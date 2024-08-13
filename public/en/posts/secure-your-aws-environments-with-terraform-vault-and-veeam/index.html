@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Secure Your AWS Environments with Terraform, Vault, and Veeam | Julia Furst Morgado</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="I&rsquo;m thrilled to present the first post in my blog series focused on optimizing cloud infrastructure management, data security, and backup automation in your AWS environment.">
+<meta name="generator" content="Hugo 0.128.0">
+
+
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-google-analytics-id"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-google-analytics-id');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/about">About</a>
+	<a href="https://github.com/juliafmorgado/talks">Talks</a>
+	<a href="/tags">Tags</a>
+	<a href="/posts">Archive</a>
+
+	
+
+	
+
+	
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Secure Your AWS Environments with Terraform, Vault, and Veeam</h1>
+
+    <div class="tip">
+        <time datetime="2023-07-20 09:06:05.964 &#43;0000 UTC">Jul 20, 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          8 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+    <aside class="toc">
+      <details>
+          <summary>Table of Contents
+          </summary>
+          <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1-install-the-aws-cli">Step 1: Install the AWS CLI</a></li>
+    <li><a href="#step-2-configure-aws-cli">Step 2: Configure AWS CLI</a></li>
+    <li><a href="#step-3-install-terraform">Step 3: Install Terraform</a></li>
+    <li><a href="#step-4-install-hashicorp-vault">Step 4: Install HashiCorp Vault</a></li>
+    <li><a href="#step-5-configure-and-initialize-vault">Step 5: Configure and Initialize Vault</a></li>
+    <li><a href="#step-6-use-vault-for-secure-secret-management-and-access-control">Step 6: Use Vault for Secure Secret Management and Access Control</a></li>
+    <li><a href="#step-7-integrate-terraform-with-vault">Step 7: Integrate Terraform with Vault</a></li>
+    <li><a href="#step-8-using-veeam-backup-for-aws-with-terraform">Step 8: Using Veeam Backup for AWS with Terraform</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+          </div>
+      </details>
+    </aside>
+  
+
+
+    
+
+
+    <div class="content">
+      <p>I&rsquo;m thrilled to present the first post in my blog series focused on optimizing cloud infrastructure management, data security, and backup automation in your AWS environment. In this post, I&rsquo;ll provide you with a step-by-step guide to start using Terraform, Hashicorp Vault, and Veeam on AWS.</p>
+<p>Let&rsquo;s get started!</p>
+<h2 id="step-1-install-the-aws-cli">Step 1: Install the AWS CLI <a href="#step-1-install-the-aws-cli" class="anchor">🔗</a></h2><p>If you haven&rsquo;t installed the AWS Command Line Interface (CLI) yet, don&rsquo;t worry. You can easily follow the official AWS CLI installation guide for your operating system by visiting this <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank" rel="noopener">link</a>.</p>
+<p>The AWS CLI provides a unified command-line interface to interact with various AWS services, making it easier to manage your AWS resources.</p>
+<h2 id="step-2-configure-aws-cli">Step 2: Configure AWS CLI <a href="#step-2-configure-aws-cli" class="anchor">🔗</a></h2><p>To allow Terraform to interact with your AWS account, you need to set up your AWS credentials. Here&rsquo;s how you can do it:</p>
+<ol>
+<li>
+<p>Create an AWS IAM user with appropriate permissions and generate an access key and secret key. Alternatively, you can create an IAM user role or use IAM Identity Center, which is preferred for accessing the CLI.</p>
+</li>
+<li>
+<p>Configure your AWS CLI or set environment variables for the access key and secret key.</p>
+</li>
+</ol>
+<p>To configure the AWS CLI with your AWS credentials, open your terminal or command prompt and run the following command:
+<code>aws configure</code></p>
+<p>When prompted, provide your AWS access key ID, secret access key, default region, and output format. This command will create a configuration file (<del>/.aws/config) and a credentials file (</del>/.aws/credentials) on your local machine. The AWS CLI will use these files to authenticate requests to AWS services.</p>
+<p>To see which IAM (Identity and Access Management) user is being used in the CLI (Command Line Interface), you can use the following command:
+<code>aws sts get-caller-identity</code></p>
+<p>After executing the command, you will receive a JSON response containing information about the IAM entity, including the UserId, Account, and Arn. The UserId will indicate the IAM user being used.</p>
+<p>Here&rsquo;s an example of the output:</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/iam-cli-output.jpeg" alt=""  />
+</p></p>
+<h2 id="step-3-install-terraform">Step 3: Install Terraform <a href="#step-3-install-terraform" class="anchor">🔗</a></h2><p>To leverage the power of Terraform, you need to install it. Here&rsquo;s how:</p>
+<ol>
+<li>
+<p>Download the appropriate Terraform package for your operating system from the official website by visiting this <a href="https://developer.hashicorp.com/terraform/downloads" target="_blank" rel="noopener">link</a>.</p>
+</li>
+<li>
+<p>Follow the installation instructions provided for your specific operating system.</p>
+</li>
+</ol>
+<p>Terraform is a powerful tool for managing cloud infrastructure and automating deployment processes. It allows you to define and provision your infrastructure as code, making it easier to manage, version control, and reproduce your infrastructure configurations. In combination with other tools like Vault and Veeam Backup for AWS, you can enhance the security and backup capabilities of your AWS environment.</p>
+<h2 id="step-4-install-hashicorp-vault">Step 4: Install HashiCorp Vault <a href="#step-4-install-hashicorp-vault" class="anchor">🔗</a></h2><p>To further enhance the security of your infrastructure and effectively manage secrets, encryption keys, and other sensitive data, we recommend installing HashiCorp Vault. Vault provides a centralized solution for secret management and encryption. Here&rsquo;s how you can install Vault:</p>
+<p>Download the appropriate Vault package for your operating system from the official HashiCorp website by visiting this <a href="https://developer.hashicorp.com/vault/downloads" target="_blank" rel="noopener">link</a>.</p>
+<p>I&rsquo;m using a Mac so I&rsquo;ll install Vault with Homebrew.</p>
+<ol>
+<li>First, install the HashiCorp tap, a repository of all our Homebrew packages:</li>
+</ol>
+<p><code>brew tap hashicorp/tap</code></p>
+<ol start="2">
+<li>Now, install Vault with <code>hashicorp/tap/vault</code>:</li>
+</ol>
+<p><code>brew install hashicorp/tap/vault</code></p>
+<p>Once the installation is complete, verify the installation by running the following command in your terminal or command prompt:
+<code>vault --version</code></p>
+<p>This command will display the version of Vault installed on your machine.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/vault-version.jpeg" alt=""  />
+</p></p>
+<h2 id="step-5-configure-and-initialize-vault">Step 5: Configure and Initialize Vault <a href="#step-5-configure-and-initialize-vault" class="anchor">🔗</a></h2><p>After installing Vault, you need to configure and initialize it. Here&rsquo;s how you can do it:</p>
+<ol>
+<li>Start the Vault Server.</li>
+</ol>
+<p>Open a terminal session and start a Vault server in development mode (dev server) by running the following command:
+<code>vault server -dev</code></p>
+<p>The dev server is a built-in, pre-configured server that is not very secure but useful for local testing and development.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/vault-server-dev.jpeg" alt=""  />
+</p></p>
+<ol start="2">
+<li>Set Environment Variables</li>
+</ol>
+<p>Open a new terminal session. Copy and run the <code>export VAULT_ADDR ...</code> command from the terminal output. This command configures the Vault client to communicate with the dev server.</p>
+<p><code>export VAULT_ADDR='http://127.0.0.1:8200'</code></p>
+<p>This sets the <code>VAULT_ADDR</code> environment variable to the address of the Vault server. Make sure to save the unseal key provided in the terminal output. Although this is not a secure method, for the purposes of local testing, you can save it anywhere for now.</p>
+<ol start="3">
+<li>Configure Authentication
+Set the <code>VAULT_TOKEN</code> environment variable to the generated root token value displayed in the terminal output. This token is required to authenticate with Vault.</li>
+</ol>
+
+<p>This sets the VAULT_TOKEN environment variable to the root token value.</p>
+<blockquote>
+<p>Note: In a production environment, you would use proper authentication methods and manage tokens securely. However, for the dev server, the root token is automatically generated and used for authentication.</p>
+</blockquote>
+<ol start="4">
+<li>Verify the Vault Server
+To ensure that the Vault server is running and accessible, run the following command:
+<code>vault status</code>
+This command will display the status and details of the Vault server.</li>
+</ol>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/vault-status.jpeg" alt=""  />
+</p></p>
+<h2 id="step-6-use-vault-for-secure-secret-management-and-access-control">Step 6: Use Vault for Secure Secret Management and Access Control <a href="#step-6-use-vault-for-secure-secret-management-and-access-control" class="anchor">🔗</a></h2><p>Vault provides a secure way to store and manage secrets, access credentials, and other sensitive data. Let&rsquo;s explore how to leverage Vault for secret management and access control.</p>
+<ol>
+<li>Enable Secrets Engine
+Vault uses secrets engines to store and manage secrets. You can enable different secrets engines based on your needs. For example, to enable the key-value secrets engine, run the following command:
+<code>vault secrets enable -path=kv kv</code></li>
+</ol>
+<p>This enables the key-value secrets engine at the path <code>kv</code>.</p>
+<ol start="2">
+<li>Write Secrets to Vault
+Now, let&rsquo;s write some secrets to Vault. Run the following command to write a secret to the key-value secrets engine:
+<code>vault kv put kv/mysecret username=&quot;myuser&quot; password=&quot;mypassword&quot;</code></li>
+</ol>
+<p>This command writes a secret with a username and password to the kv/mysecret path in the key-value secrets engine.</p>
+<p>Congratulations! You have successfully installed and configured HashiCorp Vault. Vault provides a secure way to store and manage your secrets and sensitive data. In the next steps, we will explore how to integrate Terraform with Vault to securely retrieve and manage secrets within your Terraform infrastructure code.</p>
+<h2 id="step-7-integrate-terraform-with-vault">Step 7: Integrate Terraform with Vault <a href="#step-7-integrate-terraform-with-vault" class="anchor">🔗</a></h2><p>Integrating Terraform with Vault allows you to securely manage secrets and access credentials required for your infrastructure deployments. To integrate Terraform with Vault, follow these steps:</p>
+<ol>
+<li>In your Terraform configuration, define the necessary provider configuration for Vault. Specify the Vault address and authentication method using the following code snippet:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>provider &#34;vault&#34; {
+</span></span><span style="display:flex;"><span>  address = &#34;http://&lt;vault_address&gt;:8200&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  auth {
+</span></span><span style="display:flex;"><span>    method = &#34;token&#34;
+</span></span><span style="display:flex;"><span>    token  = &#34;&lt;vault_token&gt;&#34;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Replace &lt;vault_address&gt; with the address of your Vault server and &lt;vault_token&gt; with the Vault token you obtained during the Vault initialization step.</p>
+<ol start="2">
+<li>Use Terraform&rsquo;s Vault provider to securely retrieve and manage secrets within your infrastructure code. You can use Vault&rsquo;s key-value store, secrets engines, and dynamic secrets to securely manage credentials and sensitive data required by your infrastructure.</li>
+</ol>
+<p>Here&rsquo;s an example of retrieving a secret from Vault and using it in your Terraform configuration:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>data &#34;vault_generic_secret&#34; &#34;example&#34; {
+</span></span><span style="display:flex;"><span>  path = &#34;kv/mysecret&#34;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>resource &#34;aws_instance&#34; &#34;example&#34; {
+</span></span><span style="display:flex;"><span>  // ...
+</span></span><span style="display:flex;"><span>  user_data = data.vault_generic_secret.example.data[&#34;username&#34;]
+</span></span><span style="display:flex;"><span>  // ...
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example, the secret located at <code>kv/mysecret</code> in Vault is retrieved using the Vault provider. The secret data is then used within the Terraform configuration, such as setting the username for an AWS EC2 instance.</p>
+<p>By integrating Terraform with Vault, you can securely manage and retrieve secrets, access credentials, and other sensitive data required for your infrastructure deployments.</p>
+<h2 id="step-8-using-veeam-backup-for-aws-with-terraform">Step 8: Using Veeam Backup for AWS with Terraform <a href="#step-8-using-veeam-backup-for-aws-with-terraform" class="anchor">🔗</a></h2><p>Veeam Backup for AWS provides comprehensive backup and recovery capabilities for your AWS workloads. By integrating Veeam Backup for AWS with Terraform, you can automate the deployment and management of your backup infrastructure. Here&rsquo;s how you can get started:</p>
+<ol>
+<li>
+<p>Clone the Veeam Backup for AWS Terraform GitHub repository. This repository contains the necessary Terraform configuration files to deploy Veeam Backup for AWS. You can find the repository <a href="https://github.com/VeeamHub/veeam-terraform/tree/master/veeam-backup-aws" target="_blank" rel="noopener">here</a>.</p>
+</li>
+<li>
+<p>Update the <code>terraform.tfvars</code> file with your AWS access key, secret key, and region. This configuration allows Terraform to interact with your AWS account to provision and manage the necessary resources.</p>
+</li>
+</ol>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/terraform-tfvars.jpeg" alt=""  />
+</p></p>
+<ol start="3">
+<li>
+<p>Update the <code>variables.tf</code> file with your Veeam Backup for AWS license key. This license key enables Veeam Backup for AWS functionality within your deployment.</p>
+</li>
+<li>
+<p>Run <code>terraform init</code> to initialize the Terraform environment and download the necessary provider plugins.</p>
+</li>
+<li>
+<p>Run <code>terraform apply</code> to apply the Terraform configuration and deploy Veeam Backup for AWS. This command will create the required AWS resources and configure Veeam Backup for AWS based on the provided configuration.</p>
+</li>
+<li>
+<p>Once the deployment is complete, you can access the Veeam Backup for AWS console by navigating to the URL provided in the Terraform output. From there, you can configure your backup jobs and start protecting your AWS workloads.</p>
+</li>
+</ol>
+<h2 id="summary">Summary <a href="#summary" class="anchor">🔗</a></h2><p>In this blog post, we covered the installation and configuration steps for the AWS CLI, Terraform, and HashiCorp Vault. We also explored how to integrate Terraform with Vault to securely manage secrets, as well as how to deploy Veeam Backup for AWS using Terraform.</p>
+<p>By leveraging Terraform, Vault, and Veeam Backup for AWS together, you can automate the deployment and management of your infrastructure, securely manage secrets and access credentials, and ensure the protection of your AWS workloads.</p>
+<p>Stay tuned for future posts where we will delve deeper into using Terraform, Vault, and Veeam to manage and protect your AWS infrastructure. Remember to stay updated with the latest changes and announcements in the <a href="https://docs.aws.amazon.com/" target="_blank" rel="noopener">AWS</a>, <a href="https://developer.hashicorp.com/terraform/docs" target="_blank" rel="noopener">Terraform</a>, and <a href="https://www.veeam.com/documentation-guides-datasheets.html?productId=8&amp;version=product%3A8%2F221" target="_blank" rel="noopener">Veeam</a> documentation to ensure you&rsquo;re using the most recent features and best practices.</p>
+<p>If you have any questions or encounter any issues, feel free to reach out to us. Happy coding!</p>
+<hr>
+<p>If you liked this article, go follow me on <a href="https://twitter.com/juliafmorgado" target="_blank" rel="noopener">Twitter</a> (where I share my tech journey) daily, connect with me on <a href="https://www.linkedin.com/in/juliafmorgado/" target="_blank" rel="noopener">LinkedIn</a>, check out my <a href="https://www.instagram.com/juliafmorgado/" target="_blank" rel="noopener">IG</a>, and make sure to subscribe to my <a href="https://www.youtube.com/c/JuliaFMorgado" target="_blank" rel="noopener">Youtube</a> channel for more amazing content!!</p>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="//localhost:1313/tags/aws">AWS</a>
+            
+                <a href="//localhost:1313/tags/automation">Automation</a>
+            
+                <a href="//localhost:1313/tags/terraform">Terraform</a>
+            
+                <a href="//localhost:1313/tags/veeam">Veeam</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="https://github.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg fill="#bbbbbb" width="28" height="28"  viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>Github</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Social-Icons---Rounded-Black" transform="translate(-264.000000, -939.000000)">
+            <g id="Github" transform="translate(264.000000, 939.000000)">
+                <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" id="Rounded" fill="#bbbbbb"></path>
+                <path d="M35.9985,13 C22.746,13 12,23.7870921 12,37.096644 C12,47.7406712 18.876,56.7718301 28.4145,59.9584121 C29.6145,60.1797862 30.0525,59.4358488 30.0525,58.7973276 C30.0525,58.2250681 30.0315,56.7100863 30.0195,54.6996482 C23.343,56.1558981 21.9345,51.4693938 21.9345,51.4693938 C20.844,48.6864054 19.2705,47.9454799 19.2705,47.9454799 C17.091,46.4500754 19.4355,46.4801943 19.4355,46.4801943 C21.843,46.6503662 23.1105,48.9634994 23.1105,48.9634994 C25.2525,52.6455377 28.728,51.5823398 30.096,50.9649018 C30.3135,49.4077535 30.9345,48.3460615 31.62,47.7436831 C26.2905,47.1352808 20.688,45.0691228 20.688,35.8361671 C20.688,33.2052792 21.6225,31.0547881 23.1585,29.3696344 C22.911,28.7597262 22.0875,26.3110578 23.3925,22.9934585 C23.3925,22.9934585 25.4085,22.3459017 29.9925,25.4632101 C31.908,24.9285993 33.96,24.6620468 36.0015,24.6515052 C38.04,24.6620468 40.0935,24.9285993 42.0105,25.4632101 C46.5915,22.3459017 48.603,22.9934585 48.603,22.9934585 C49.9125,26.3110578 49.089,28.7597262 48.8415,29.3696344 C50.3805,31.0547881 51.309,33.2052792 51.309,35.8361671 C51.309,45.0917119 45.6975,47.1292571 40.3515,47.7256117 C41.2125,48.4695491 41.9805,49.9393525 41.9805,52.1877301 C41.9805,55.4089489 41.9505,58.0067059 41.9505,58.7973276 C41.9505,59.4418726 42.3825,60.1918338 43.6005,59.9554002 C53.13,56.7627944 60,47.7376593 60,37.096644 C60,23.7870921 49.254,13 35.9985,13" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://www.instagram.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+  <rect width="28" height="28" fill="#bbbbbb" rx="5"/>
+  <path fill="white" d="M19.2 8.5C19.2 9.32843 18.5284 10 17.7 10C16.8716 10 16.2 9.32843 16.2 8.5C16.2 7.67157 16.8716 7 17.7 7C18.5284 7 19.2 7.67157 19.2 8.5Z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M14 18C16.7614 18 19 15.7614 19 13C19 10.2386 16.7614 8 14 8C11.2386 8 9 10.2386 9 13C9 15.7614 11.2386 18 14 18ZM14 16C15.6569 16 17 14.6569 17 13C17 11.3431 15.6569 10 14 10C12.3431 10 11 11.3431 11 13C11 14.6569 12.3431 16 14 16Z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M5 12.6C5 9.23966 5 7.55945 5.65396 6.27606C6.2292 5.14708 7.14708 4.2292 8.27606 3.65396C9.55945 3 11.2397 3 14.6 3H15.4C18.7603 3 20.4405 3 21.7239 3.65396C22.8529 4.2292 23.7708 5.14708 24.346 6.27606C25 7.55945 25 9.23966 25 12.6V13.4C25 16.7603 25 18.4405 24.346 19.7239C23.7708 20.8529 22.8529 21.7708 21.7239 22.346C20.4405 23 18.7603 23 15.4 23H14.6C11.2397 23 9.55945 23 8.27606 22.346C7.14708 21.7708 6.2292 20.8529 5.65396 19.7239C5 18.4405 5 16.7603 5 13.4V12.6ZM14.6 6H15.4C17.1132 6 18.2777 6.00156 19.1779 6.0751C20.0548 6.14674 20.5032 6.27659 20.816 6.43597C21.5686 6.81947 22.1805 7.43139 22.564 8.184C22.7234 8.4968 22.8533 8.9452 22.9249 9.8221C22.9984 10.7223 23 11.8868 23 13.6V14.4C23 16.1132 22.9984 17.2777 22.9249 18.1779C22.8533 19.0548 22.7234 19.5032 22.564 19.816C22.1805 20.5686 21.5686 21.1805 20.816 21.564C20.5032 21.7234 20.0548 21.8533 19.1779 21.9249C18.2777 21.9984 17.1132 22 15.4 22H14.6C12.8868 22 11.7223 21.9984 10.8221 21.9249C9.9452 21.8533 9.4968 21.7234 9.184 21.564C8.43139 21.1805 7.81947 20.5686 7.43597 19.816C7.27659 19.5032 7.14674 19.0548 7.0751 18.1779C7.00156 17.2777 7 16.1132 7 14.4V13.6C7 11.8868 7.00156 10.7223 7.0751 9.8221C7.14674 8.9452 7.27659 8.4968 7.43597 8.184C7.81947 7.43139 8.43139 6.81947 9.184 6.43597C9.4968 6.27659 9.9452 6.14674 10.8221 6.0751C11.7223 6.00156 12.8868 6 14.6 6Z"/>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://www.linkedin.com/in/juliafmorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 500 500">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="500" height="500" fill="#bbbbbb" rx="50"/>
+    <path fill="#FFF" d="M154.703 100.183c-19.121 0-34.689 15.565-34.703 34.701 0 19.136 15.568 34.704 34.703 34.704 19.128 0 34.688-15.568 34.688-34.704 0-19.134-15.561-34.701-34.688-34.701zm26.045 83.348h-52.094a4.488 4.488 0 0 0-4.488 4.489v167.675a4.488 4.488 0 0 0 4.488 4.488h52.093a4.49 4.49 0 0 0 4.489-4.488V188.02a4.486 4.486 0 0 0-4.488-4.489zm133.176-1.974c-19.064 0-35.817 5.805-46.04 15.271v-8.808c0-2.48-2.01-4.489-4.489-4.489h-49.971a4.489 4.489 0 0 0-4.489 4.489v167.675a4.488 4.488 0 0 0 4.489 4.488h52.044a4.49 4.49 0 0 0 4.489-4.488v-82.957c0-23.802 4.378-38.555 26.227-38.555 21.526.026 23.137 15.846 23.137 39.977v81.535a4.489 4.489 0 0 0 4.49 4.488h52.068a4.489 4.489 0 0 0 4.488-4.488v-91.977c-.001-38.253-7.553-82.161-66.443-82.161z"/>
+  </g>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://twitter.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg fill="#bbbbbb" width="28" height="28" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="438.536px" height="438.536px" viewBox="0 0 438.536 438.536" style="enable-background:new 0 0 438.536 438.536;"
+	 xml:space="preserve">
+<g>
+	<path d="M414.41,24.123C398.333,8.042,378.963,0,356.315,0H82.228C59.58,0,40.21,8.042,24.126,24.123
+		C8.045,40.207,0.003,59.576,0.003,82.225v274.084c0,22.647,8.042,42.018,24.123,58.102c16.084,16.084,35.454,24.126,58.102,24.126
+		h274.084c22.648,0,42.018-8.042,58.095-24.126c16.084-16.084,24.126-35.454,24.126-58.102V82.225
+		C438.532,59.576,430.49,40.204,414.41,24.123z M335.471,168.735c0.191,1.713,0.288,4.278,0.288,7.71
+		c0,15.989-2.334,32.025-6.995,48.104c-4.661,16.087-11.8,31.504-21.416,46.254c-9.606,14.749-21.074,27.791-34.396,39.115
+		c-13.325,11.32-29.311,20.365-47.968,27.117c-18.648,6.762-38.637,10.143-59.953,10.143c-33.116,0-63.76-8.952-91.931-26.836
+		c4.568,0.568,9.329,0.855,14.275,0.855c27.6,0,52.439-8.565,74.519-25.7c-12.941-0.185-24.506-4.179-34.688-11.991
+		c-10.185-7.803-17.273-17.699-21.271-29.691c4.947,0.76,8.658,1.137,11.132,1.137c4.187,0,9.042-0.76,14.56-2.279
+		c-13.894-2.669-25.598-9.562-35.115-20.697c-9.519-11.136-14.277-23.84-14.277-38.114v-0.571
+		c10.085,4.755,19.602,7.229,28.549,7.422c-17.321-11.613-25.981-28.265-25.981-49.963c0-10.66,2.758-20.747,8.278-30.264
+		c15.035,18.464,33.311,33.213,54.816,44.252c21.507,11.038,44.54,17.227,69.092,18.558c-0.95-3.616-1.427-8.186-1.427-13.704
+		c0-16.562,5.853-30.692,17.56-42.399c11.703-11.706,25.837-17.561,42.394-17.561c17.515,0,32.079,6.283,43.688,18.846
+		c13.134-2.474,25.892-7.33,38.26-14.56c-4.757,14.652-13.613,25.788-26.55,33.402c12.368-1.716,23.88-4.95,34.537-9.708
+		C357.458,149.793,347.462,160.166,335.471,168.735z"/>
+</g>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://www.youtube.com/c/JuliaFMorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+    <rect width="28" height="28" fill="#bbbbbb" rx="5"/>
+    <g transform="scale(0.061, 0.061) translate(0, 0)">
+        <path fill="white" d="M370.257,67.393H100.744C47.866,67.393,5,110.259,5,163.137v134.728c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137C465.001,110.259,422.135,67.393,370.257,67.393z M305.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C309.363,229.873,309.298,235.248,305.506,237.056z"/>
+    </g>
+</svg>
+
+    </a>
+
+
+</div>
+
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       Julia Furst Morgado
+    
+    </div>
+
+    
+</footer>
+
+
+
+  </body>
+</html>

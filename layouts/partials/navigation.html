@@ -1,0 +1,54 @@
+<nav class="navigation">
+	{{ if not .IsHome }}
+		<a href="{{ "/" | relURL }}"> <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}{{ i18n "home" }}{{ end }}</a>
+	{{ end }}
+	<a href="{{ "/about" | relURL }}">{{ with .Site.Params.about }}{{ . }}{{ else }}{{ i18n "about" }}{{ end }}</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="https://github.com/juliafmorgado/talks">Talks</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="{{ "/tags" | relURL }}">{{ with .Site.Params.tags }}{{ . }}{{ else }}{{ i18n "tags" }}{{ end }}</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="{{ "/posts" | relURL }}">{{ with .Site.Params.archive }}{{ . }}{{ else }}{{ i18n "archive" }}{{ end }}</a>
+
+	{{ range $element := .Site.Params.Links }}
+		<a href="{{ $element.path }}">{{ $element.name }}</a>
+	{{ end }}
+
+	{{ if .Site.Params.enableRSS }}
+	  <a class="button" href="{{ .Site.RSSLink }}">{{ with .Site.Params.subscribe }}{{ . }}{{ else }}{{ i18n "subscribe" }}{{ end }}</a>
+	{{ end }}
+
+	<!-- Language Switcher -->
+	{{ if and .IsTranslated .Site.IsMultiLingual }}
+		<ul class="sl-nav" aria-label="Language switcher">
+			<li>
+				<input type="checkbox" id="languagepicker" aria-label="switch language" hidden />
+				<label for="languagepicker"><a>{{ .Site.Language.LanguageName }}</a></label>
+				<label for="languagepicker"><i class="fa fa-angle-down" aria-hidden="true"></i></label>
+				<div class="triangle"></div>
+
+				<ul class="dropdown">
+					{{ range $.Translations }}
+						<li>
+							<a href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}">
+								<span
+								{{ if eq . $.Site.Language }}
+									class="active"
+								{{ end }}
+								aria-label="{{ i18n "ariaLanguage" }}{{ .Language.LanguageName }}">
+								{{ .Language.LanguageName }}
+								</span>
+							</a>
+						</li>
+					{{ end }}
+				</ul>
+			</li>
+		</ul>
+	{{ end }}
+</nav>

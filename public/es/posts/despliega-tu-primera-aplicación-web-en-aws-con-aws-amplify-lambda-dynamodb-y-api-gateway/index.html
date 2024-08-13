@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Despliega tu primera aplicación web en AWS con AWS Amplify, Lambda, DynamoDB y API Gateway | Julia Furst Morgado</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="¡Hola!">
+<meta name="generator" content="Hugo 0.128.0">
+
+
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-google-analytics-id"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-google-analytics-id');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Inicio</a>
+	
+	<a href="/about">Acerca</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="https://github.com/juliafmorgado/talks">Talks</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="/tags">Etiquetas</a>
+	<span class="split">
+		·
+	  </span>
+	<a href="/posts">Archive</a>
+
+	
+
+	
+
+	
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Despliega tu primera aplicación web en AWS con AWS Amplify, Lambda, DynamoDB y API Gateway</h1>
+
+    <div class="tip">
+        <time datetime="2024-03-01 06:46:05.964 &#43;0000 UTC">03/03/2024</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          Lectura de 10 minutos
+        </span>
+    </div>
+
+    
+    
+        
+  
+    <aside class="toc">
+      <details>
+          <summary>Table of Contents
+          </summary>
+          <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#paso-1-desplegar-el-código-frontend-en-aws-amplify">Paso 1: Desplegar el código frontend en AWS Amplify</a></li>
+    <li><a href="#paso-2-crear-una-función-sin-servidor-aws-lambda">Paso 2: Crear una función sin servidor AWS Lambda</a></li>
+    <li><a href="#paso-3-crear-api-rest-con-api-gateway">Paso 3: Crear API Rest con API Gateway</a></li>
+    <li><a href="#paso-4-crear-una-tabla-en-dynamodb">Paso 4: Crear una tabla en DynamoDB</a></li>
+    <li><a href="#paso-5-configurar-políticas-y-permisos-de-iam">Paso 5: Configurar políticas y permisos de IAM</a></li>
+    <li><a href="#paso-6-actualizar-el-código-frontal-con-la-api-rest">Paso 6: Actualizar el código frontal con la API Rest</a></li>
+    <li><a href="#conclusión">Conclusión</a></li>
+  </ul>
+</nav>
+          </div>
+      </details>
+    </aside>
+  
+
+
+    
+
+
+    <div class="content">
+      <p>¡Hola!</p>
+<p>Si has decidido aprender más sobre AWS, ¡entonces has llegado al artículo correcto!</p>
+<p>Esta guía está diseñada para principiantes o desarrolladores con alguna experiencia en la nube que deseen aprender los fundamentos de la construcción de aplicaciones web en la plataforma de nube de AWS. Te guiaremos a través del despliegue de un sistema básico de gestión de contactos, presentándote servicios clave de AWS en el camino.</p>
+<p>En este proyecto, como puedes adivinar por el título, utilizaremos AWS, que significa Amazon Web Services; una excelente plataforma en la nube con servicios infinitos para tantos casos de uso diversos, desde entrenar modelos de aprendizaje automático hasta alojar sitios web y aplicaciones.</p>
+<blockquote>
+<p>La computación en la nube proporciona acceso bajo demanda a recursos informáticos como servidores, almacenamiento y bases de datos.
+Las funciones sin servidor son un tipo de servicio de computación en la nube que te permite ejecutar código sin gestionar servidores.</p>
+</blockquote>
+<p>Al final de este tutorial, serás capaz de:</p>
+<ul>
+<li>Desplegar un sitio web estático en AWS Amplify.</li>
+<li>Crear una función sin servidor usando AWS Lambda.</li>
+<li>Construir una API REST con API Gateway.</li>
+<li>Almacenar datos en una base de datos NoSQL usando DynamoDB.</li>
+<li>Gestionar permisos con políticas de IAM.
+Integrar tu código frontend con los servicios backend.</li>
+</ul>
+<p>Te recomiendo seguir el tutorial una vez y luego intentarlo por ti mismo la segunda vez. Y antes de comenzar, asegúrate de tener una cuenta de AWS. Regístrate para una cuenta gratuita si aún no lo has hecho.</p>
+<p>¡Ahora empecemos!</p>
+<h2 id="paso-1-desplegar-el-código-frontend-en-aws-amplify">Paso 1: Desplegar el código frontend en AWS Amplify <a href="#paso-1-desplegar-el-c%c3%b3digo-frontend-en-aws-amplify" class="anchor">🔗</a></h2><p>En este paso, aprenderemos a desplegar recursos estáticos para nuestra aplicación web utilizando la consola de AWS Amplify.</p>
+<p>Conocimientos básicos de desarrollo web serán útiles para esta parte. Crearemos nuestro archivo HTML con el código CSS (estilo) y Javascript (funcionalidad) incrustados en él. He dejado comentarios a lo largo para explicar qué hace cada parte.</p>
+<p>Aquí tienes el fragmento de código de la página:</p>
+<script src="https://gist.github.com/juliafmorgado/30d1c59739a8405b86cc107c17d78b05.js"></script>
+
+<p>Hay múltiples formas de subir nuestro código a la consola de Amplify. Por ejemplo, me gusta usar Git y Github. Para mantener simple este artículo, te mostraré cómo hacerlo directamente por el método de arrastrar y soltar en Amplify. Para hacer esto, tenemos que comprimir nuestro archivo HTML.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/compress-index.png" alt=""  />
+</p></p>
+<p>Ahora, asegúrate de estar en la región más cercana a donde vives. Puedes ver el nombre de la región en la parte superior derecha de la página, justo al lado del nombre de la cuenta. Luego, vamos a la consola de AWS Amplify. Se verá algo así:</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-amplify-main-page.png" alt=""  />
+</p></p>
+<p>Cuando hagamos clic en “Empezar”, nos llevará a la siguiente pantalla (iremos con Alojamiento de Amplify en esta pantalla):</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-amplify-host-web-app.png" alt=""  />
+</p></p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-amplify-deploy-wo-git.png" alt=""  />
+</p></p>
+<p>Iniciarás un despliegue manual. Dale a tu aplicación un nombre, yo la llamaré &ldquo;Sistema de Gestión de Contactos&rdquo;, e ignora el nombre del entorno. Luego, suelta el archivo índice comprimido y haz clic en Guardar y Desplegar.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-amplify-manual-deployment.png" alt=""  />
+</p></p>
+<p>Amplify desplegará el código y devolverá una URL de dominio donde podemos acceder al sitio web.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-amplify-domain-web-app.png" alt=""  />
+</p></p>
+<p>Haz clic en el enlace y deberías ver esto:</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-amplify-clicked-web-app.png" alt="Sitio web en vivo por AWS Amplify"  />
+</p></p>
+<h2 id="paso-2-crear-una-función-sin-servidor-aws-lambda">Paso 2: Crear una función sin servidor AWS Lambda <a href="#paso-2-crear-una-funci%c3%b3n-sin-servidor-aws-lambda" class="anchor">🔗</a></h2><p>En este paso, crearemos una función sin servidor usando el servicio AWS Lambda. Una función Lambda es una función sin servidor que ejecuta código en respuesta a eventos. No necesitas gestionar servidores ni preocuparte por la escalabilidad, lo que la convierte en una solución rentable para tareas simples. Para darte una idea, un gran ejemplo de computación sin servidor en la vida real son las máquinas expendedoras. Envían la solicitud a la nube y procesan el trabajo solo cuando alguien comienza a usar la máquina.</p>
+<p>Vamos al servicio Lambda dentro de la consola de AWS. Por cierto, asegúrate de estar creando la función en la misma región en la que desplegaste el código de la aplicación web en Amplify.</p>
+<p>Es hora de crear una función. Asígnale un nombre, yo la llamaré &ldquo;my-web-app-function&rdquo;, y para los parámetros de lenguaje de programación en tiempo de ejecución: he elegido Python 3.12, pero siéntete libre de elegir un lenguaje y versión con los que te sientas más cómodo y familiarizado.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-lambda-create-function.png" alt=""  />
+</p></p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-lambda-create-function-step.png" alt=""  />
+</p></p>
+<p>Después de que nuestra función lambda esté creada, desplázate hacia abajo y verás la siguiente pantalla:</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-lambda-new-function.png" alt=""  />
+</p></p>
+<p>Ahora, vamos a editar la función lambda. Aquí tienes una función que extrae los nombres y apellidos del input JSON del evento. Y luego devuelve un diccionario de contexto. La clave body almacena el JSON, que es una cadena de saludo.</p>
+<script src="https://gist.github.com/juliafmorgado/7e1275b8b00d1dd70c62db47efeec418.js"></script>
+
+<p>Después de editar, haz clic en Desplegar para guardar &ldquo;my-web-app-function&rdquo;, y luego haz clic en Probar para crear un evento.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-lambda-deploy-test.png" alt=""  />
+</p></p>
+<p>Para configurar un evento de prueba, da un nombre al evento como &ldquo;MyEventTest&rdquo;, modifica los atributos del JSON del evento y guárdalo.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-lambda-test-event.png" alt=""  />
+</p></p>
+<p>Ahora haz clic en el gran botón azul de prueba para que podamos probar la función Lambda.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-lambda-test-succeeded.png" alt=""  />
+</p></p>
+<p>El resultado de la ejecución tiene los siguientes elementos:</p>
+<ul>
+<li>Nombre del Evento de Prueba</li>
+<li>Respuesta</li>
+<li>Registros de la Función</li>
+<li>ID de Solicitud</li>
+</ul>
+<h2 id="paso-3-crear-api-rest-con-api-gateway">Paso 3: Crear API Rest con API Gateway <a href="#paso-3-crear-api-rest-con-api-gateway" class="anchor">🔗</a></h2><p>Ahora vamos a avanzar y desplegar nuestra función Lambda en la Aplicación Web. Utilizaremos Amazon API Gateway para crear una API REST que nos permita hacer solicitudes desde el navegador web. API Gateway actúa como un puente entre tus servicios backend (como funciones Lambda) y tu aplicación frontend. Te permite crear APIs que exponen funcionalidad a tu aplicación web.</p>
+<blockquote>
+<p>REST: Transferencia de Estado Representacional.</p>
+</blockquote>
+<blockquote>
+<p>API: Interfaz de Programación de Aplicaciones.</p>
+</blockquote>
+<p>Ve a Amazon API Gateway para crear una nueva API REST.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-rest-api.png" alt=""  />
+</p></p>
+<p>En la página de creación de la API, tenemos que darle un nombre, por ejemplo &ldquo;Web App API&rdquo;, y elegir un tipo de protocolo y tipo de punto final para la API REST (selecciona optimizado por Edge).</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-api-creation.png" alt=""  />
+</p></p>
+<p>Ahora tenemos que crear un método POST así que haz clic en Crear método.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-create-method.png" alt=""  />
+</p></p>
+<p>En la página Crear método, selecciona el tipo de método como POST, el tipo de integración debe ser función Lambda, asegúrate de que la Región sea la misma Región que has usado para crear la función lambda y selecciona la función Lambda que acabamos de crear. Termina haciendo clic en Crear método en la parte inferior de la página.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-method-type-post.png" alt=""  />
+</p></p>
+<p>Ahora necesitamos habilitar CORS, así que selecciona el / y luego haz clic en habilitar CORS</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-path-cors.png" alt=""  />
+</p></p>
+<p>En la configuración de CORS, simplemente marca la casilla POST y deja todo lo demás por defecto, luego haz clic en guardar.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-cors-settings.png" alt=""  />
+</p></p>
+<p>Después de habilitar los encabezados CORS, haz clic en el botón naranja Desplegar API.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-deploy-api2.png" alt=""  />
+</p></p>
+<p>Aparecerá una ventana, bajo etapa selecciona nueva etapa y da un nombre a la etapa, por ejemplo &ldquo;web-app-stage&rdquo;, luego haz clic en desplegar.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-new-stage2.png" alt=""  />
+</p></p>
+<p>Cuando veas la etapa, habrá una URL denominada Invoke URL. Asegúrate de copiar esa URL; la utilizaremos para invocar nuestra función lambda en el paso final de este proyecto.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/api-gateway-invoke-url.png" alt=""  />
+</p></p>
+<h2 id="paso-4-crear-una-tabla-en-dynamodb">Paso 4: Crear una tabla en DynamoDB <a href="#paso-4-crear-una-tabla-en-dynamodb" class="anchor">🔗</a></h2><p>En este paso, crearemos una tabla de datos en Amazon DynamoDB, otro servicio de AWS. DynamoDB es un servicio de base de datos NoSQL que almacena datos en pares clave-valor. Es altamente escalable y flexible, lo que lo hace adecuado para diversas aplicaciones. Haz clic en el botón naranja crear tabla.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/dynamodb-create-table.png" alt=""  />
+</p></p>
+<p>Ahora tenemos que completar información sobre nuestra tabla de datos, como el nombre &ldquo;contact-management-system-table&rdquo;, y la clave de partición es ID. El resto déjalo por defecto. Haz clic en Crear tabla.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/dynamodb-table-settings.png" alt=""  />
+</p></p>
+<p>Una vez que la tabla se haya creado correctamente, haz clic en ella y se abrirá una nueva ventana con los detalles de la tabla. Expande la Información adicional y copia el Nombre de recurso de Amazon (ARN). Utilizaremos el ARN en el siguiente paso al crear las políticas de acceso IAM.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/dynamodb-table-arn.png" alt=""  />
+</p></p>
+<h2 id="paso-5-configurar-políticas-y-permisos-de-iam">Paso 5: Configurar políticas y permisos de IAM <a href="#paso-5-configurar-pol%c3%adticas-y-permisos-de-iam" class="anchor">🔗</a></h2><p>IAM de AWS es una de las cosas más básicas e importantes que se deben configurar, sin embargo, muchas personas lo descuidan. Para mejorar la seguridad, siempre se recomienda un modelo de acceso de privilegios mínimos, lo que significa no dar a un usuario más acceso del necesario. Por ejemplo, incluso para este proyecto de aplicación web simple, ya hemos trabajado en múltiples servicios de AWS: Amplify, Lambda, DynamoDB y API Gateway. Es esencial comprender cómo se comunican entre sí y qué tipo de información comparten.</p>
+<p>Ahora volvamos a nuestro proyecto, tenemos que definir una política IAM para dar acceso a nuestra función lambda para escribir/actualizar los datos en la tabla DynamoDB.</p>
+<p>Así que regresa a la consola de AWS Lambda, y haz clic en la función lambda que acabamos de crear. Luego ve a la pestaña de configuración, y en el menú izquierdo haz clic en Permisos. Bajo Rol de ejecución, verás un nombre de Rol.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/aws-lambda-permissions.png" alt=""  />
+</p></p>
+<p>Haz clic en el enlace, lo que nos llevará a la configuración de permisos de este rol IAM. Ahora haz clic en Agregar permisos, luego crea una política en línea.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/iam-role-permissions.png" alt=""  />
+</p></p>
+<p>Luego haz clic en JSON, elimina lo que está en el editor de Política y pega lo siguiente.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>&#34;Version&#34;: &#34;2012-10-17&#34;,
+</span></span><span style="display:flex;"><span>&#34;Statement&#34;: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        &#34;Sid&#34;: &#34;VisualEditor0&#34;,
+</span></span><span style="display:flex;"><span>        &#34;Effect&#34;: &#34;Allow&#34;,
+</span></span><span style="display:flex;"><span>        &#34;Action&#34;: [
+</span></span><span style="display:flex;"><span>            &#34;dynamodb:PutItem&#34;,
+</span></span><span style="display:flex;"><span>            &#34;dynamodb:DeleteItem&#34;,
+</span></span><span style="display:flex;"><span>            &#34;dynamodb:GetItem&#34;,
+</span></span><span style="display:flex;"><span>            &#34;dynamodb:Scan&#34;,
+</span></span><span style="display:flex;"><span>            &#34;dynamodb:Query&#34;,
+</span></span><span style="display:flex;"><span>            &#34;dynamodb:UpdateItem&#34;
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        &#34;Resource&#34;: &#34;YOUR-DB-TABLE-ARN&#34;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Asegúrate de sustituir &ldquo;TU-ARN-DE-TABLA-DB&rdquo; con el ARN real de tu tabla DynamoDB. Haz clic en Siguiente, dale a la política un nombre, como &ldquo;lambda-dynamodb&rdquo;, y luego haz clic en Crear política. Esta política permitirá que nuestra función Lambda lea, edite, elimine y actualice elementos de la tabla de datos DynamoDB.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/iam-role-json-permissions.png" alt=""  />
+</p></p>
+<p>Ahora cierra esta ventana, y vuelve a la función Lambda, ve a la pestaña de Código y actualizaremos el código Python de la función lambda con lo siguiente.</p>
+<script src="https://gist.github.com/juliafmorgado/8eb027cb9502b88d91d2710fbe99b347.js"></script>
+
+<p>La respuesta está en formato de API REST. Después de hacer los cambios, asegúrate de desplegar el código. Después de que se concluya el despliegue, podemos Probar el programa haciendo clic en el botón azul de prueba.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/lambda-test-new.png" alt=""  />
+</p></p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/lambda-test-succeeded.png" alt=""  />
+</p></p>
+<p>También podemos verificar los resultados en la tabla DynamoDB. Cuando ejecutamos la función, actualiza los datos en nuestra tabla. Así que ve a AWS DynamoDB, haz clic en explorar elementos en la barra de navegación izquierda, haz clic en tu tabla. Aquí está el objeto devuelto por la función lambda:</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/dynamodb-explore-items.png" alt=""  />
+</p></p>
+<h2 id="paso-6-actualizar-el-código-frontal-con-la-api-rest">Paso 6: Actualizar el código frontal con la API Rest <a href="#paso-6-actualizar-el-c%c3%b3digo-frontal-con-la-api-rest" class="anchor">🔗</a></h2><p>¡Felicidades por haber llegado tan lejos!</p>
+<p>En este último paso, veremos todo lo que acabamos de construir en acción. Actualizaremos el frontend para poder invocar la API REST con la ayuda de nuestra función lambda y recibir datos.</p>
+<p>Primero, vuelve a tu index.html en tu editor de código. ¿Ves en la línea 68 que tenías &ldquo;API_KEY&rdquo;? Adelante y cámbialo por la URL de invocación que copiaste del servicio de API Gateway en los detalles de tu API REST. Una vez que hayas hecho eso, guarda y comprime el archivo nuevamente, como hicimos en el paso 1, y súbelo nuevamente a AWS usando la consola.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/index-code-vscode.png" alt=""  />
+</p></p>
+<p>Haz clic en el nuevo enlace que obtuviste y vamos a probarlo.</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/web-app-test.png" alt=""  />
+</p></p>
+<p>Nuestras tablas de datos reciben la solicitud POST con los datos introducidos. La función lambda invoca la API cuando se hace clic en el botón “Llamar API”. Luego, utilizando javascript, enviamos los datos en formato JSON a la API. Puedes encontrar los pasos bajo la función callAPI.</p>
+<p>Puedes encontrar los elementos devueltos a mi tabla de datos a continuación:</p>
+<p><p class="markdown-image">
+  <img src="https://blog-imgs-23.s3.amazonaws.com/dynamodb-final-result.png" alt=""  />
+</p></p>
+<h2 id="conclusión">Conclusión <a href="#conclusi%c3%b3n" class="anchor">🔗</a></h2><p>¡Felicidades! Has creado una aplicación web simple utilizando la plataforma de la nube de AWS. La informática en la nube está creciendo y se está convirtiendo cada vez más en parte del desarrollo de nuevos software y tecnologías.</p>
+<p>Si te sientes preparado para un desafío, a continuación podrías:</p>
+<ul>
+<li>Mejorar el diseño del frontend</li>
+<li>Agregar autenticación y autorización de usuarios</li>
+<li>Configurar paneles de monitoreo y análisis</li>
+<li>Implementar canalizaciones de CI/CD para automatizar los procesos de compilación, prueba y despliegue de tu aplicación web utilizando servicios como AWS CodePipeline, AWS CodeBuild y AWS CodeDeploy.</li>
+</ul>
+<p>Trabajar en proyectos de programación prácticos es la mejor manera de mejorar tus habilidades.</p>
+<p>Estaré cubriendo algunos otros escenarios en AWS en mis próximas publicaciones en el blog, ¡así que estate atento!</p>
+<p>Y nuevamente, siéntete libre de darme retroalimentación, y si estoy fuera de rumbo, no dudes en hacérmelo saber. Todos estamos juntos en esto, aprendiendo y creciendo como comunidad.</p>
+<hr>
+<p>Si te gustó este artículo, sígueme en <a href="https://twitter.com/juliafmorgado" target="_blank" rel="noopener">Twitter</a> (donde comparto mi viaje tecnológico diario), conéctate conmigo en <a href="https://www.linkedin.com/in/juliafmorgado/" target="_blank" rel="noopener">LinkedIn</a>, visita mi <a href="https://www.instagram.com/juliafmorgado/" target="_blank" rel="noopener">IG</a>, y asegúrate de suscribirte a mi canal de <a href="https://www.youtube.com/c/JuliaFMorgado" target="_blank" rel="noopener">Youtube</a> para más contenido increíble!</p>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="http://localhost:1313/tags/aws">AWS</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="https://github.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg fill="#bbbbbb" width="28" height="28"  viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>Github</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Social-Icons---Rounded-Black" transform="translate(-264.000000, -939.000000)">
+            <g id="Github" transform="translate(264.000000, 939.000000)">
+                <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" id="Rounded" fill="#bbbbbb"></path>
+                <path d="M35.9985,13 C22.746,13 12,23.7870921 12,37.096644 C12,47.7406712 18.876,56.7718301 28.4145,59.9584121 C29.6145,60.1797862 30.0525,59.4358488 30.0525,58.7973276 C30.0525,58.2250681 30.0315,56.7100863 30.0195,54.6996482 C23.343,56.1558981 21.9345,51.4693938 21.9345,51.4693938 C20.844,48.6864054 19.2705,47.9454799 19.2705,47.9454799 C17.091,46.4500754 19.4355,46.4801943 19.4355,46.4801943 C21.843,46.6503662 23.1105,48.9634994 23.1105,48.9634994 C25.2525,52.6455377 28.728,51.5823398 30.096,50.9649018 C30.3135,49.4077535 30.9345,48.3460615 31.62,47.7436831 C26.2905,47.1352808 20.688,45.0691228 20.688,35.8361671 C20.688,33.2052792 21.6225,31.0547881 23.1585,29.3696344 C22.911,28.7597262 22.0875,26.3110578 23.3925,22.9934585 C23.3925,22.9934585 25.4085,22.3459017 29.9925,25.4632101 C31.908,24.9285993 33.96,24.6620468 36.0015,24.6515052 C38.04,24.6620468 40.0935,24.9285993 42.0105,25.4632101 C46.5915,22.3459017 48.603,22.9934585 48.603,22.9934585 C49.9125,26.3110578 49.089,28.7597262 48.8415,29.3696344 C50.3805,31.0547881 51.309,33.2052792 51.309,35.8361671 C51.309,45.0917119 45.6975,47.1292571 40.3515,47.7256117 C41.2125,48.4695491 41.9805,49.9393525 41.9805,52.1877301 C41.9805,55.4089489 41.9505,58.0067059 41.9505,58.7973276 C41.9505,59.4418726 42.3825,60.1918338 43.6005,59.9554002 C53.13,56.7627944 60,47.7376593 60,37.096644 C60,23.7870921 49.254,13 35.9985,13" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://www.instagram.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+  <rect width="28" height="28" fill="#bbbbbb" rx="5"/>
+  <path fill="white" d="M19.2 8.5C19.2 9.32843 18.5284 10 17.7 10C16.8716 10 16.2 9.32843 16.2 8.5C16.2 7.67157 16.8716 7 17.7 7C18.5284 7 19.2 7.67157 19.2 8.5Z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M14 18C16.7614 18 19 15.7614 19 13C19 10.2386 16.7614 8 14 8C11.2386 8 9 10.2386 9 13C9 15.7614 11.2386 18 14 18ZM14 16C15.6569 16 17 14.6569 17 13C17 11.3431 15.6569 10 14 10C12.3431 10 11 11.3431 11 13C11 14.6569 12.3431 16 14 16Z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M5 12.6C5 9.23966 5 7.55945 5.65396 6.27606C6.2292 5.14708 7.14708 4.2292 8.27606 3.65396C9.55945 3 11.2397 3 14.6 3H15.4C18.7603 3 20.4405 3 21.7239 3.65396C22.8529 4.2292 23.7708 5.14708 24.346 6.27606C25 7.55945 25 9.23966 25 12.6V13.4C25 16.7603 25 18.4405 24.346 19.7239C23.7708 20.8529 22.8529 21.7708 21.7239 22.346C20.4405 23 18.7603 23 15.4 23H14.6C11.2397 23 9.55945 23 8.27606 22.346C7.14708 21.7708 6.2292 20.8529 5.65396 19.7239C5 18.4405 5 16.7603 5 13.4V12.6ZM14.6 6H15.4C17.1132 6 18.2777 6.00156 19.1779 6.0751C20.0548 6.14674 20.5032 6.27659 20.816 6.43597C21.5686 6.81947 22.1805 7.43139 22.564 8.184C22.7234 8.4968 22.8533 8.9452 22.9249 9.8221C22.9984 10.7223 23 11.8868 23 13.6V14.4C23 16.1132 22.9984 17.2777 22.9249 18.1779C22.8533 19.0548 22.7234 19.5032 22.564 19.816C22.1805 20.5686 21.5686 21.1805 20.816 21.564C20.5032 21.7234 20.0548 21.8533 19.1779 21.9249C18.2777 21.9984 17.1132 22 15.4 22H14.6C12.8868 22 11.7223 21.9984 10.8221 21.9249C9.9452 21.8533 9.4968 21.7234 9.184 21.564C8.43139 21.1805 7.81947 20.5686 7.43597 19.816C7.27659 19.5032 7.14674 19.0548 7.0751 18.1779C7.00156 17.2777 7 16.1132 7 14.4V13.6C7 11.8868 7.00156 10.7223 7.0751 9.8221C7.14674 8.9452 7.27659 8.4968 7.43597 8.184C7.81947 7.43139 8.43139 6.81947 9.184 6.43597C9.4968 6.27659 9.9452 6.14674 10.8221 6.0751C11.7223 6.00156 12.8868 6 14.6 6Z"/>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://www.linkedin.com/in/juliafmorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 500 500">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="500" height="500" fill="#bbbbbb" rx="50"/>
+    <path fill="#FFF" d="M154.703 100.183c-19.121 0-34.689 15.565-34.703 34.701 0 19.136 15.568 34.704 34.703 34.704 19.128 0 34.688-15.568 34.688-34.704 0-19.134-15.561-34.701-34.688-34.701zm26.045 83.348h-52.094a4.488 4.488 0 0 0-4.488 4.489v167.675a4.488 4.488 0 0 0 4.488 4.488h52.093a4.49 4.49 0 0 0 4.489-4.488V188.02a4.486 4.486 0 0 0-4.488-4.489zm133.176-1.974c-19.064 0-35.817 5.805-46.04 15.271v-8.808c0-2.48-2.01-4.489-4.489-4.489h-49.971a4.489 4.489 0 0 0-4.489 4.489v167.675a4.488 4.488 0 0 0 4.489 4.488h52.044a4.49 4.49 0 0 0 4.489-4.488v-82.957c0-23.802 4.378-38.555 26.227-38.555 21.526.026 23.137 15.846 23.137 39.977v81.535a4.489 4.489 0 0 0 4.49 4.488h52.068a4.489 4.489 0 0 0 4.488-4.488v-91.977c-.001-38.253-7.553-82.161-66.443-82.161z"/>
+  </g>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://twitter.com/juliafmorgado" rel="me" target="_blank">
+        
+        <svg fill="#bbbbbb" width="28" height="28" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="438.536px" height="438.536px" viewBox="0 0 438.536 438.536" style="enable-background:new 0 0 438.536 438.536;"
+	 xml:space="preserve">
+<g>
+	<path d="M414.41,24.123C398.333,8.042,378.963,0,356.315,0H82.228C59.58,0,40.21,8.042,24.126,24.123
+		C8.045,40.207,0.003,59.576,0.003,82.225v274.084c0,22.647,8.042,42.018,24.123,58.102c16.084,16.084,35.454,24.126,58.102,24.126
+		h274.084c22.648,0,42.018-8.042,58.095-24.126c16.084-16.084,24.126-35.454,24.126-58.102V82.225
+		C438.532,59.576,430.49,40.204,414.41,24.123z M335.471,168.735c0.191,1.713,0.288,4.278,0.288,7.71
+		c0,15.989-2.334,32.025-6.995,48.104c-4.661,16.087-11.8,31.504-21.416,46.254c-9.606,14.749-21.074,27.791-34.396,39.115
+		c-13.325,11.32-29.311,20.365-47.968,27.117c-18.648,6.762-38.637,10.143-59.953,10.143c-33.116,0-63.76-8.952-91.931-26.836
+		c4.568,0.568,9.329,0.855,14.275,0.855c27.6,0,52.439-8.565,74.519-25.7c-12.941-0.185-24.506-4.179-34.688-11.991
+		c-10.185-7.803-17.273-17.699-21.271-29.691c4.947,0.76,8.658,1.137,11.132,1.137c4.187,0,9.042-0.76,14.56-2.279
+		c-13.894-2.669-25.598-9.562-35.115-20.697c-9.519-11.136-14.277-23.84-14.277-38.114v-0.571
+		c10.085,4.755,19.602,7.229,28.549,7.422c-17.321-11.613-25.981-28.265-25.981-49.963c0-10.66,2.758-20.747,8.278-30.264
+		c15.035,18.464,33.311,33.213,54.816,44.252c21.507,11.038,44.54,17.227,69.092,18.558c-0.95-3.616-1.427-8.186-1.427-13.704
+		c0-16.562,5.853-30.692,17.56-42.399c11.703-11.706,25.837-17.561,42.394-17.561c17.515,0,32.079,6.283,43.688,18.846
+		c13.134-2.474,25.892-7.33,38.26-14.56c-4.757,14.652-13.613,25.788-26.55,33.402c12.368-1.716,23.88-4.95,34.537-9.708
+		C357.458,149.793,347.462,160.166,335.471,168.735z"/>
+</g>
+</svg>
+
+    </a>
+
+    <a class="symbol" href="https://www.youtube.com/c/JuliaFMorgado" rel="me" target="_blank">
+        
+        <svg width="28" height="28" fill="#bbbbbb" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+    <rect width="28" height="28" fill="#bbbbbb" rx="5"/>
+    <g transform="scale(0.061, 0.061) translate(0, 0)">
+        <path fill="white" d="M370.257,67.393H100.744C47.866,67.393,5,110.259,5,163.137v134.728c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137C465.001,110.259,422.135,67.393,370.257,67.393z M305.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C309.363,229.873,309.298,235.248,305.506,237.056z"/>
+    </g>
+</svg>
+
+    </a>
+
+
+</div>
+
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       Julia Furst Morgado
+    
+    </div>
+
+    
+</footer>
+
+
+
+  </body>
+</html>

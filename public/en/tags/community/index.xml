@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community on Julia Furst Morgado</title>
+    <link>//localhost:1313/tags/community/</link>
+    <description>Recent content in Community on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 08 Jan 2023 10:34:21 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/community/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech communities you should join! (online and in person)</title>
+      <link>//localhost:1313/posts/tech-communities-you-should-join-online-and-in-person/</link>
+      <pubDate>Thu, 29 Sep 2022 12:25:54 +0000</pubDate>
+      <guid>//localhost:1313/posts/tech-communities-you-should-join-online-and-in-person/</guid>
+      <description>Software development is such a challenging field that it’s almost impossible to succeed in it without having some sort of support system.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EKS on Julia Furst Morgado</title>
+    <link>http://localhost:1313/tags/eks/</link>
+    <description>Recent content in EKS on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 30 Mar 2024 06:46:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/eks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up a Kubernetes cluster on AWS EKS with eksctl and Deploying an App</title>
+      <link>http://localhost:1313/posts/setting-up-a-kubernetes-cluster-on-aws-eks-with-eksctl-and-deploying-an-app/</link>
+      <pubDate>Sat, 30 Mar 2024 06:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/posts/setting-up-a-kubernetes-cluster-on-aws-eks-with-eksctl-and-deploying-an-app/</guid>
+      <description>It might come as a surprise, but not too long ago, configuring a Kubernetes cluster on Amazon EKS was quite challenging since you had to create all the components manually by yourself.</description>
+    </item>
+  </channel>
+</rss>

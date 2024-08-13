@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codewars on Julia Furst Morgado</title>
+    <link>//localhost:1313/tags/codewars/</link>
+    <description>Recent content in Codewars on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 08 Jan 2023 10:34:03 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/codewars/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Filter out the geese (Codewars — 8kyu)</title>
+      <link>//localhost:1313/posts/filter-out-the-geese-codewars-8kyu/</link>
+      <pubDate>Thu, 07 Jul 2022 17:47:55 +0000</pubDate>
+      <guid>//localhost:1313/posts/filter-out-the-geese-codewars-8kyu/</guid>
+      <description>Here’s a link to the Codewars Kata: codewars.</description>
+    </item>
+    <item>
+      <title>Converting strings into camelCased strings</title>
+      <link>//localhost:1313/posts/converting-strings-into-camelcased-strings/</link>
+      <pubDate>Mon, 04 Jul 2022 17:42:38 +0000</pubDate>
+      <guid>//localhost:1313/posts/converting-strings-into-camelcased-strings/</guid>
+      <description>While doing my homework, I encountered an exciting exercise.</description>
+    </item>
+  </channel>
+</rss>

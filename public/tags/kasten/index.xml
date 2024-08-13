@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kasten on Julia Furst Morgado</title>
+    <link>http://localhost:1313/tags/kasten/</link>
+    <description>Recent content in Kasten on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 01 Jul 2024 06:48:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/kasten/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Veeam Kasten on an Amazon EKS cluster</title>
+      <link>http://localhost:1313/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</link>
+      <pubDate>Mon, 01 Jul 2024 06:48:05 +0000</pubDate>
+      <guid>http://localhost:1313/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</guid>
+      <description>In this guide, we will walk through the process of installing Veeam Kasten on an Amazon EKS cluster.</description>
+    </item>
+    <item>
+      <title>Install Veeam Kasten on a Kubernetes cluster running on kind</title>
+      <link>http://localhost:1313/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</link>
+      <pubDate>Mon, 24 Jun 2024 07:46:05 +0000</pubDate>
+      <guid>http://localhost:1313/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</guid>
+      <description>In this guide, we&amp;rsquo;ll walk through the process of installing Veeam Kasten on a Kubernetes cluster running on kind (Kubernetes in Docker).</description>
+    </item>
+  </channel>
+</rss>

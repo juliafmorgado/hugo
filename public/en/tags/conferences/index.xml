@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conferences on Julia Furst Morgado</title>
+    <link>//localhost:1313/tags/conferences/</link>
+    <description>Recent content in Conferences on Julia Furst Morgado</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 08 Jan 2023 10:34:22 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From KubeCon to my first keynote as a DevRel</title>
+      <link>//localhost:1313/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</link>
+      <pubDate>Mon, 14 Nov 2022 13:47:21 +0000</pubDate>
+      <guid>//localhost:1313/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</guid>
+      <description>Last month I went to Detroit for my first big open source conference — KubeCon.</description>
+    </item>
+  </channel>
+</rss>
