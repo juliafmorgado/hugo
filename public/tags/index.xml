@@ -2,248 +2,248 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 12 Aug 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DevOps</title>
-      <link>https://juliafmorgado.com/tags/devops/</link>
+      <link>http://localhost:1313/tags/devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/devops/</guid>
+      <guid>http://localhost:1313/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://juliafmorgado.com/tags/docker/</link>
+      <link>http://localhost:1313/tags/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/docker/</guid>
+      <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes</title>
-      <link>https://juliafmorgado.com/tags/kubernetes/</link>
+      <link>http://localhost:1313/tags/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/kubernetes/</guid>
+      <guid>http://localhost:1313/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Tutorial</title>
-      <link>https://juliafmorgado.com/tags/tutorial/</link>
+      <link>http://localhost:1313/tags/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/tutorial/</guid>
+      <guid>http://localhost:1313/tags/tutorial/</guid>
       <description></description>
     </item>
     <item>
       <title>Veeam</title>
-      <link>https://juliafmorgado.com/tags/veeam/</link>
+      <link>http://localhost:1313/tags/veeam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/veeam/</guid>
+      <guid>http://localhost:1313/tags/veeam/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud Native</title>
-      <link>https://juliafmorgado.com/tags/cloud-native/</link>
+      <link>http://localhost:1313/tags/cloud-native/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/cloud-native/</guid>
+      <guid>http://localhost:1313/tags/cloud-native/</guid>
       <description></description>
     </item>
     <item>
       <title>Databases</title>
-      <link>https://juliafmorgado.com/tags/databases/</link>
+      <link>http://localhost:1313/tags/databases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/databases/</guid>
+      <guid>http://localhost:1313/tags/databases/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>https://juliafmorgado.com/tags/aws/</link>
+      <link>http://localhost:1313/tags/aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/aws/</guid>
+      <guid>http://localhost:1313/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>Tips</title>
-      <link>https://juliafmorgado.com/tags/tips/</link>
+      <link>http://localhost:1313/tags/tips/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/tips/</guid>
+      <guid>http://localhost:1313/tags/tips/</guid>
       <description></description>
     </item>
     <item>
       <title>Conferences</title>
-      <link>https://juliafmorgado.com/tags/conferences/</link>
+      <link>http://localhost:1313/tags/conferences/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/conferences/</guid>
+      <guid>http://localhost:1313/tags/conferences/</guid>
       <description></description>
     </item>
     <item>
       <title>KubeCon</title>
-      <link>https://juliafmorgado.com/tags/kubecon/</link>
+      <link>http://localhost:1313/tags/kubecon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/kubecon/</guid>
+      <guid>http://localhost:1313/tags/kubecon/</guid>
       <description></description>
     </item>
     <item>
       <title>Career</title>
-      <link>https://juliafmorgado.com/tags/career/</link>
+      <link>http://localhost:1313/tags/career/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/career/</guid>
+      <guid>http://localhost:1313/tags/career/</guid>
       <description></description>
     </item>
     <item>
       <title>Public Speaking</title>
-      <link>https://juliafmorgado.com/tags/public-speaking/</link>
+      <link>http://localhost:1313/tags/public-speaking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/public-speaking/</guid>
+      <guid>http://localhost:1313/tags/public-speaking/</guid>
       <description></description>
     </item>
     <item>
       <title>Certifications</title>
-      <link>https://juliafmorgado.com/tags/certifications/</link>
+      <link>http://localhost:1313/tags/certifications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/certifications/</guid>
+      <guid>http://localhost:1313/tags/certifications/</guid>
       <description></description>
     </item>
     <item>
       <title>Containers</title>
-      <link>https://juliafmorgado.com/tags/containers/</link>
+      <link>http://localhost:1313/tags/containers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/containers/</guid>
+      <guid>http://localhost:1313/tags/containers/</guid>
       <description></description>
     </item>
     <item>
       <title>Open Source</title>
-      <link>https://juliafmorgado.com/tags/open-source/</link>
+      <link>http://localhost:1313/tags/open-source/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/open-source/</guid>
+      <guid>http://localhost:1313/tags/open-source/</guid>
       <description></description>
     </item>
     <item>
       <title>Communities</title>
-      <link>https://juliafmorgado.com/tags/communities/</link>
+      <link>http://localhost:1313/tags/communities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/communities/</guid>
+      <guid>http://localhost:1313/tags/communities/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>https://juliafmorgado.com/tags/automation/</link>
+      <link>http://localhost:1313/tags/automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/automation/</guid>
+      <guid>http://localhost:1313/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Terraform</title>
-      <link>https://juliafmorgado.com/tags/terraform/</link>
+      <link>http://localhost:1313/tags/terraform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/terraform/</guid>
+      <guid>http://localhost:1313/tags/terraform/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>https://juliafmorgado.com/tags/git/</link>
+      <link>http://localhost:1313/tags/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/git/</guid>
+      <guid>http://localhost:1313/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>GitHub</title>
-      <link>https://juliafmorgado.com/tags/github/</link>
+      <link>http://localhost:1313/tags/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/github/</guid>
+      <guid>http://localhost:1313/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Guides</title>
-      <link>https://juliafmorgado.com/tags/guides/</link>
+      <link>http://localhost:1313/tags/guides/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/guides/</guid>
+      <guid>http://localhost:1313/tags/guides/</guid>
       <description></description>
     </item>
     <item>
       <title>Motivation</title>
-      <link>https://juliafmorgado.com/tags/motivation/</link>
+      <link>http://localhost:1313/tags/motivation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/motivation/</guid>
+      <guid>http://localhost:1313/tags/motivation/</guid>
       <description></description>
     </item>
     <item>
       <title>JavaScript</title>
-      <link>https://juliafmorgado.com/tags/javascript/</link>
+      <link>http://localhost:1313/tags/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/javascript/</guid>
+      <guid>http://localhost:1313/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>https://juliafmorgado.com/tags/networking/</link>
+      <link>http://localhost:1313/tags/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/networking/</guid>
+      <guid>http://localhost:1313/tags/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>Mistakes</title>
-      <link>https://juliafmorgado.com/tags/mistakes/</link>
+      <link>http://localhost:1313/tags/mistakes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/mistakes/</guid>
+      <guid>http://localhost:1313/tags/mistakes/</guid>
       <description></description>
     </item>
     <item>
       <title>NodeJS</title>
-      <link>https://juliafmorgado.com/tags/nodejs/</link>
+      <link>http://localhost:1313/tags/nodejs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/nodejs/</guid>
+      <guid>http://localhost:1313/tags/nodejs/</guid>
       <description></description>
     </item>
     <item>
       <title>CSS</title>
-      <link>https://juliafmorgado.com/tags/css/</link>
+      <link>http://localhost:1313/tags/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/css/</guid>
+      <guid>http://localhost:1313/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Tech Writing</title>
-      <link>https://juliafmorgado.com/tags/tech-writing/</link>
+      <link>http://localhost:1313/tags/tech-writing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/tech-writing/</guid>
+      <guid>http://localhost:1313/tags/tech-writing/</guid>
       <description></description>
     </item>
     <item>
       <title>Codewars</title>
-      <link>https://juliafmorgado.com/tags/codewars/</link>
+      <link>http://localhost:1313/tags/codewars/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/codewars/</guid>
+      <guid>http://localhost:1313/tags/codewars/</guid>
       <description></description>
     </item>
     <item>
       <title>Productivity</title>
-      <link>https://juliafmorgado.com/tags/productivity/</link>
+      <link>http://localhost:1313/tags/productivity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/productivity/</guid>
+      <guid>http://localhost:1313/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>https://juliafmorgado.com/tags/tools/</link>
+      <link>http://localhost:1313/tags/tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/tools/</guid>
+      <guid>http://localhost:1313/tags/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>100Devs</title>
-      <link>https://juliafmorgado.com/tags/100devs/</link>
+      <link>http://localhost:1313/tags/100devs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/100devs/</guid>
+      <guid>http://localhost:1313/tags/100devs/</guid>
       <description></description>
     </item>
     <item>
       <title>Coding Bootcamp</title>
-      <link>https://juliafmorgado.com/tags/coding-bootcamp/</link>
+      <link>http://localhost:1313/tags/coding-bootcamp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/tags/coding-bootcamp/</guid>
+      <guid>http://localhost:1313/tags/coding-bootcamp/</guid>
       <description></description>
     </item>
   </channel>

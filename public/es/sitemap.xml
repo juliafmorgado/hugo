@@ -2,380 +2,380 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://juliafmorgado.com/es/posts/despliegue-f%C3%A1cilmente-wordpress-y-mysql-en-amazon-eks/</loc>
+    <loc>http://localhost:1313/es/posts/despliegue-f%C3%A1cilmente-wordpress-y-mysql-en-amazon-eks/</loc>
     <lastmod>2024-07-01T06:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/</loc>
-    <lastmod>2024-07-01T06:46:05+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://juliafmorgado.com/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://juliafmorgado.com/es/"
-                />
-  </url><url>
-    <loc>https://juliafmorgado.com/es/tags/kubernetes/</loc>
+    <loc>http://localhost:1313/es/</loc>
     <lastmod>2024-07-01T06:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/tags/kubernetes/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/tags/kubernetes/"
+                href="http://localhost:1313/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/kubernetes/"
+                href="http://localhost:1313/pt/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/kubernetes/"
+                href="http://localhost:1313/es/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/</loc>
+    <loc>http://localhost:1313/es/tags/kubernetes/</loc>
     <lastmod>2024-07-01T06:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/posts/"
+                href="http://localhost:1313/tags/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/posts/"
+                href="http://localhost:1313/fr/tags/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/posts/"
+                href="http://localhost:1313/pt/tags/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/posts/"
+                href="http://localhost:1313/es/tags/kubernetes/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/</loc>
+    <loc>http://localhost:1313/es/posts/</loc>
     <lastmod>2024-07-01T06:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/tags/"
+                href="http://localhost:1313/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/tags/"
+                href="http://localhost:1313/fr/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/"
+                href="http://localhost:1313/pt/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/"
+                href="http://localhost:1313/es/posts/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/desplegando-wordpress-y-mysql-en-kubernetes-con-kind-una-gu%C3%ADa-paso-a-paso/</loc>
+    <loc>http://localhost:1313/es/tags/</loc>
+    <lastmod>2024-07-01T06:46:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="http://localhost:1313/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/pt/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="http://localhost:1313/es/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/posts/desplegando-wordpress-y-mysql-en-kubernetes-con-kind-una-gu%C3%ADa-paso-a-paso/</loc>
     <lastmod>2024-06-24T06:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/el-qu%C3%A9-qui%C3%A9n-por-qu%C3%A9-d%C3%B3nde-y-c%C3%B3mo-de-la-oratoria/</loc>
+    <loc>http://localhost:1313/es/posts/el-qu%C3%A9-qui%C3%A9n-por-qu%C3%A9-d%C3%B3nde-y-c%C3%B3mo-de-la-oratoria/</loc>
     <lastmod>2024-03-11T06:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/oratoria/</loc>
+    <loc>http://localhost:1313/es/tags/oratoria/</loc>
     <lastmod>2024-03-11T06:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/aws/</loc>
+    <loc>http://localhost:1313/es/tags/aws/</loc>
     <lastmod>2024-03-01T06:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/tags/aws/"
+                href="http://localhost:1313/tags/aws/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/tags/aws/"
+                href="http://localhost:1313/fr/tags/aws/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/aws/"
+                href="http://localhost:1313/pt/tags/aws/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/aws/"
+                href="http://localhost:1313/es/tags/aws/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/categories/</loc>
+    <loc>http://localhost:1313/es/categories/</loc>
     <lastmod>2024-03-01T06:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/categories/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/categories/"
+                href="http://localhost:1313/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/categories/"
+                href="http://localhost:1313/pt/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/categories/"
+                href="http://localhost:1313/es/categories/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/despliega-tu-primera-aplicaci%C3%B3n-web-en-aws-con-aws-amplify-lambda-dynamodb-y-api-gateway/</loc>
+    <loc>http://localhost:1313/es/posts/despliega-tu-primera-aplicaci%C3%B3n-web-en-aws-con-aws-amplify-lambda-dynamodb-y-api-gateway/</loc>
     <lastmod>2024-03-01T06:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/categories/tecnolog%C3%ADa/</loc>
+    <loc>http://localhost:1313/es/categories/tecnolog%C3%ADa/</loc>
     <lastmod>2024-03-01T06:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/como-actualizar-rapidamente-veeam-backup-and-replication-12.0-a-12.1/</loc>
+    <loc>http://localhost:1313/es/posts/como-actualizar-rapidamente-veeam-backup-and-replication-12.0-a-12.1/</loc>
     <lastmod>2024-02-08T10:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/categories/tech/</loc>
-    <lastmod>2024-02-08T10:46:05+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://juliafmorgado.com/categories/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/categories/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/categories/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://juliafmorgado.com/es/categories/tech/"
-                />
-  </url><url>
-    <loc>https://juliafmorgado.com/es/tags/veeam/</loc>
+    <loc>http://localhost:1313/es/categories/tech/</loc>
     <lastmod>2024-02-08T10:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/tags/veeam/"
+                href="http://localhost:1313/categories/tech/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/tags/veeam/"
+                href="http://localhost:1313/fr/categories/tech/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/veeam/"
+                href="http://localhost:1313/pt/categories/tech/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/veeam/"
+                href="http://localhost:1313/es/categories/tech/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/como-pasar-la-kcna-kubernetes-and-cloud-native-associate/</loc>
+    <loc>http://localhost:1313/es/tags/veeam/</loc>
+    <lastmod>2024-02-08T10:46:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/veeam/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="http://localhost:1313/fr/tags/veeam/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/pt/tags/veeam/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="http://localhost:1313/es/tags/veeam/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/posts/como-pasar-la-kcna-kubernetes-and-cloud-native-associate/</loc>
     <lastmod>2024-02-05T10:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/devops/</loc>
+    <loc>http://localhost:1313/es/tags/devops/</loc>
     <lastmod>2024-02-05T10:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/tags/devops/"
+                href="http://localhost:1313/tags/devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/tags/devops/"
+                href="http://localhost:1313/fr/tags/devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/devops/"
+                href="http://localhost:1313/pt/tags/devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/devops/"
+                href="http://localhost:1313/es/tags/devops/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/cncf/</loc>
+    <loc>http://localhost:1313/es/tags/cncf/</loc>
     <lastmod>2023-09-26T11:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/tags/cncf/"
+                href="http://localhost:1313/fr/tags/cncf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/cncf/"
+                href="http://localhost:1313/pt/tags/cncf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/cncf/"
+                href="http://localhost:1313/es/tags/cncf/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/</loc>
-    <lastmod>2023-09-26T11:46:05+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://juliafmorgado.com/posts/how-to-contribute-to-cncf-glossary-localization-no-code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/posts/comment-contribuer-%C3%A0-la-localisation-du-glossaire-cncf-pas-de-code-n%C3%A9cessaire/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/posts/como-contribuir-%C3%A0-localiza%C3%A7%C3%A3o-do-gloss%C3%A1rio-da-cncf-sem-ter-que-codar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://juliafmorgado.com/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/"
-                />
-  </url><url>
-    <loc>https://juliafmorgado.com/es/tags/open-source/</loc>
+    <loc>http://localhost:1313/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/</loc>
     <lastmod>2023-09-26T11:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/tags/open-source/"
+                href="http://localhost:1313/posts/how-to-contribute-to-cncf-glossary-localization-no-code/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/tags/open-source/"
+                href="http://localhost:1313/fr/posts/comment-contribuer-%C3%A0-la-localisation-du-glossaire-cncf-pas-de-code-n%C3%A9cessaire/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/open-source/"
+                href="http://localhost:1313/pt/posts/como-contribuir-%C3%A0-localiza%C3%A7%C3%A3o-do-gloss%C3%A1rio-da-cncf-sem-ter-que-codar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/open-source/"
+                href="http://localhost:1313/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/tutorial/</loc>
+    <loc>http://localhost:1313/es/tags/open-source/</loc>
     <lastmod>2023-09-26T11:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/tags/tutorial/"
+                href="http://localhost:1313/tags/open-source/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="http://localhost:1313/fr/tags/open-source/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/tutorial/"
+                href="http://localhost:1313/pt/tags/open-source/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/tutorial/"
+                href="http://localhost:1313/es/tags/open-source/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/el-mundo-de-los-esports-mi-experiencia-en-el-campeonato-de-valorant-con-aws-2023/</loc>
+    <loc>http://localhost:1313/es/tags/tutorial/</loc>
+    <lastmod>2023-09-26T11:46:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/tags/tutorial/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/pt/tags/tutorial/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="http://localhost:1313/es/tags/tutorial/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/posts/el-mundo-de-los-esports-mi-experiencia-en-el-campeonato-de-valorant-con-aws-2023/</loc>
     <lastmod>2023-09-07T07:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/esports/</loc>
+    <loc>http://localhost:1313/es/tags/esports/</loc>
     <lastmod>2023-09-07T07:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/tags/esports/"
+                href="http://localhost:1313/fr/tags/esports/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/tags/esports/"
+                href="http://localhost:1313/pt/tags/esports/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/esports/"
+                href="http://localhost:1313/es/tags/esports/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/juegos/</loc>
+    <loc>http://localhost:1313/es/tags/juegos/</loc>
     <lastmod>2023-09-07T07:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/tags/automation/</loc>
+    <loc>http://localhost:1313/es/tags/automation/</loc>
     <lastmod>2023-07-11T17:46:05+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/tags/automation/"
+                href="http://localhost:1313/tags/automation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/tags/automation/"
+                href="http://localhost:1313/es/tags/automation/"
                 />
   </url><url>
-    <loc>https://juliafmorgado.com/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</loc>
+    <loc>http://localhost:1313/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</loc>
     <lastmod>2023-07-11T17:46:05+00:00</lastmod>
   </url><url>
-    <loc>https://juliafmorgado.com/es/about/</loc>
+    <loc>http://localhost:1313/es/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://juliafmorgado.com/about/"
+                href="http://localhost:1313/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://juliafmorgado.com/fr/about/"
+                href="http://localhost:1313/fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://juliafmorgado.com/pt/about/"
+                href="http://localhost:1313/pt/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="https://juliafmorgado.com/es/about/"
+                href="http://localhost:1313/es/about/"
                 />
   </url>
 </urlset>

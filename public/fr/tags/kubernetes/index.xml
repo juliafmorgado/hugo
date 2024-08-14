@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/fr/tags/kubernetes/</link>
+    <link>http://localhost:1313/fr/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
     <lastBuildDate>Mon, 01 Jul 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/fr/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fr/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Déployez Facilement WordPress et MySQL sur Amazon EKS</title>
-      <link>https://juliafmorgado.com/fr/posts/d%C3%A9ployez-facilement-wordpress-et-mysql-sur-amazon-eks/</link>
+      <link>http://localhost:1313/fr/posts/d%C3%A9ployez-facilement-wordpress-et-mysql-sur-amazon-eks/</link>
       <pubDate>Mon, 01 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/d%C3%A9ployez-facilement-wordpress-et-mysql-sur-amazon-eks/</guid>
+      <guid>http://localhost:1313/fr/posts/d%C3%A9ployez-facilement-wordpress-et-mysql-sur-amazon-eks/</guid>
       <description>Amazon Elastic Kubernetes Service (EKS) est un service Kubernetes géré qui facilite l&amp;rsquo;exécution de Kubernetes sur AWS sans avoir à installer et à gérer votre propre plan de contrôle Kubernetes ou vos nœuds.</description>
     </item>
     <item>
       <title>Déploiement de WordPress et MySQL sur Kubernetes avec Kind : Guide étape par étape</title>
-      <link>https://juliafmorgado.com/fr/posts/d%C3%A9ploiement-de-wordpress-et-mysql-sur-kubernetes-avec-kind-guide-%C3%A9tape-par-%C3%A9tape/</link>
+      <link>http://localhost:1313/fr/posts/d%C3%A9ploiement-de-wordpress-et-mysql-sur-kubernetes-avec-kind-guide-%C3%A9tape-par-%C3%A9tape/</link>
       <pubDate>Mon, 24 Jun 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/d%C3%A9ploiement-de-wordpress-et-mysql-sur-kubernetes-avec-kind-guide-%C3%A9tape-par-%C3%A9tape/</guid>
+      <guid>http://localhost:1313/fr/posts/d%C3%A9ploiement-de-wordpress-et-mysql-sur-kubernetes-avec-kind-guide-%C3%A9tape-par-%C3%A9tape/</guid>
       <description>Ce blog est inspiré par un article du site Kubernetes qui explique comment déployer WordPress et MySQL sur Minikube, mais comme je l&amp;rsquo;ai trouvé très confus et que je voulais utiliser Kind, j&amp;rsquo;ai rédigé ce guide étape par étape.</description>
     </item>
     <item>
       <title>Comment Passer la KCNA - Kubernetes And Cloud Native Associate</title>
-      <link>https://juliafmorgado.com/fr/posts/comment-passer-la-kcna-kubernetes-and-cloud-native-associate/</link>
+      <link>http://localhost:1313/fr/posts/comment-passer-la-kcna-kubernetes-and-cloud-native-associate/</link>
       <pubDate>Mon, 05 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/comment-passer-la-kcna-kubernetes-and-cloud-native-associate/</guid>
+      <guid>http://localhost:1313/fr/posts/comment-passer-la-kcna-kubernetes-and-cloud-native-associate/</guid>
       <description>Hier, j&amp;rsquo;ai passé l&amp;rsquo;examen de certification Kubernetes and Cloud Native Associate Exam (KCNA), et ce matin, j&amp;rsquo;ai reçu les résultats comme quoi j&amp;rsquo;ai réussi, youpi !</description>
     </item>
   </channel>

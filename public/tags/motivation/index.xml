@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Motivation on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/motivation/</link>
+    <link>http://localhost:1313/tags/motivation/</link>
     <description>Recent content in Motivation on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 08 Jan 2023 10:34:26 -0500</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/motivation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/motivation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I am Remarkable, and so are You!</title>
-      <link>https://juliafmorgado.com/posts/i-am-remarkable-and-so-are-you/</link>
+      <link>http://localhost:1313/posts/i-am-remarkable-and-so-are-you/</link>
       <pubDate>Mon, 21 Nov 2022 17:01:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/i-am-remarkable-and-so-are-you/</guid>
+      <guid>http://localhost:1313/posts/i-am-remarkable-and-so-are-you/</guid>
       <description>On November 9th, I went to a workshop at Google called #IamRemarkable for “Women in Cloud”, facilitated by Gautami Nadkarni and Naomi Klamen.</description>
     </item>
     <item>
       <title>How Waiting Tables Set Me Up for Success</title>
-      <link>https://juliafmorgado.com/posts/how-waiting-tables-set-me-up-for-success/</link>
+      <link>http://localhost:1313/posts/how-waiting-tables-set-me-up-for-success/</link>
       <pubDate>Sat, 09 Jul 2022 17:53:04 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/how-waiting-tables-set-me-up-for-success/</guid>
+      <guid>http://localhost:1313/posts/how-waiting-tables-set-me-up-for-success/</guid>
       <description>I believe everyone should spend some time working in the service industry at some point in their lives.</description>
     </item>
     <item>
       <title>Want To Be a Programmer? Stop Overthinking It.</title>
-      <link>https://juliafmorgado.com/posts/want-to-be-a-programmer-stop-overthinking-it./</link>
+      <link>http://localhost:1313/posts/want-to-be-a-programmer-stop-overthinking-it./</link>
       <pubDate>Wed, 06 Jul 2022 17:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/want-to-be-a-programmer-stop-overthinking-it./</guid>
+      <guid>http://localhost:1313/posts/want-to-be-a-programmer-stop-overthinking-it./</guid>
       <description>Which path to take?</description>
     </item>
   </channel>

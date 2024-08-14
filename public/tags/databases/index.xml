@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Databases on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/databases/</link>
+    <link>http://localhost:1313/tags/databases/</link>
     <description>Recent content in Databases on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 08 Jul 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/databases/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/databases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Challenge 3 - Creating Real-Time Web Applications with Docker and PostgreSQL</title>
-      <link>https://juliafmorgado.com/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</link>
+      <link>http://localhost:1313/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</link>
       <pubDate>Mon, 08 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</guid>
+      <guid>http://localhost:1313/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</guid>
       <description>Welcome to Challenge 3 in our cloud-native application development journey, where we integrate real-time interactions using Docker and PostgreSQL!</description>
     </item>
     <item>
       <title>Easily Deploy WordPress and MySQL on Amazon EKS</title>
-      <link>https://juliafmorgado.com/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/</link>
+      <link>http://localhost:1313/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/</link>
       <pubDate>Mon, 01 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/</guid>
+      <guid>http://localhost:1313/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/</guid>
       <description>Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service that makes it easy to run Kubernetes on AWS without needing to install and operate your own Kubernetes control plane or nodes.</description>
     </item>
     <item>
       <title>Deploying WordPress and MySQL on Kubernetes with Kind: A Step-by-Step Guide</title>
-      <link>https://juliafmorgado.com/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</link>
+      <link>http://localhost:1313/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</link>
       <pubDate>Mon, 24 Jun 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</guid>
+      <guid>http://localhost:1313/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</guid>
       <description>This blog is inspired by an article from the Kubernetes website teaching how to deploy WordPress and MySQL on Minikube, but since I found it very confusing and wanted to use Kind, I&amp;rsquo;m writing this step-by-step guide.</description>
     </item>
     <item>
       <title>Challenge 2 - Application Persistence with FS and SQL DB</title>
-      <link>https://juliafmorgado.com/posts/challenge-2-application-persistence-with-fs-and-sql-db/</link>
+      <link>http://localhost:1313/posts/challenge-2-application-persistence-with-fs-and-sql-db/</link>
       <pubDate>Thu, 04 Apr 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/challenge-2-application-persistence-with-fs-and-sql-db/</guid>
+      <guid>http://localhost:1313/posts/challenge-2-application-persistence-with-fs-and-sql-db/</guid>
       <description>Ok let&amp;rsquo;s continue with our Cloud Native Dev challenges.</description>
     </item>
     <item>
       <title>Connecting MongoDB to your app using Node.js</title>
-      <link>https://juliafmorgado.com/posts/connecting-mongodb-to-your-app-using-node.js/</link>
+      <link>http://localhost:1313/posts/connecting-mongodb-to-your-app-using-node.js/</link>
       <pubDate>Mon, 12 Sep 2022 17:42:30 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/connecting-mongodb-to-your-app-using-node.js/</guid>
+      <guid>http://localhost:1313/posts/connecting-mongodb-to-your-app-using-node.js/</guid>
       <description>MongoDB is an open source NoSQL database management program.</description>
     </item>
     <item>
       <title>See what’s new with MongoDB 6.0</title>
-      <link>https://juliafmorgado.com/posts/see-whats-new-with-mongodb-6.0/</link>
+      <link>http://localhost:1313/posts/see-whats-new-with-mongodb-6.0/</link>
       <pubDate>Fri, 09 Sep 2022 15:17:02 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/see-whats-new-with-mongodb-6.0/</guid>
+      <guid>http://localhost:1313/posts/see-whats-new-with-mongodb-6.0/</guid>
       <description>MongoDB 6.</description>
     </item>
   </channel>

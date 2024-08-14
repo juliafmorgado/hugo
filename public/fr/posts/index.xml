@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/fr/posts/</link>
+    <link>http://localhost:1313/fr/posts/</link>
     <description>Recent content in Posts on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
     <lastBuildDate>Mon, 01 Jul 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/fr/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fr/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Déployez Facilement WordPress et MySQL sur Amazon EKS</title>
-      <link>https://juliafmorgado.com/fr/posts/d%C3%A9ployez-facilement-wordpress-et-mysql-sur-amazon-eks/</link>
+      <link>http://localhost:1313/fr/posts/d%C3%A9ployez-facilement-wordpress-et-mysql-sur-amazon-eks/</link>
       <pubDate>Mon, 01 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/d%C3%A9ployez-facilement-wordpress-et-mysql-sur-amazon-eks/</guid>
+      <guid>http://localhost:1313/fr/posts/d%C3%A9ployez-facilement-wordpress-et-mysql-sur-amazon-eks/</guid>
       <description>Amazon Elastic Kubernetes Service (EKS) est un service Kubernetes géré qui facilite l&amp;rsquo;exécution de Kubernetes sur AWS sans avoir à installer et à gérer votre propre plan de contrôle Kubernetes ou vos nœuds.</description>
     </item>
     <item>
       <title>Déploiement de WordPress et MySQL sur Kubernetes avec Kind : Guide étape par étape</title>
-      <link>https://juliafmorgado.com/fr/posts/d%C3%A9ploiement-de-wordpress-et-mysql-sur-kubernetes-avec-kind-guide-%C3%A9tape-par-%C3%A9tape/</link>
+      <link>http://localhost:1313/fr/posts/d%C3%A9ploiement-de-wordpress-et-mysql-sur-kubernetes-avec-kind-guide-%C3%A9tape-par-%C3%A9tape/</link>
       <pubDate>Mon, 24 Jun 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/d%C3%A9ploiement-de-wordpress-et-mysql-sur-kubernetes-avec-kind-guide-%C3%A9tape-par-%C3%A9tape/</guid>
+      <guid>http://localhost:1313/fr/posts/d%C3%A9ploiement-de-wordpress-et-mysql-sur-kubernetes-avec-kind-guide-%C3%A9tape-par-%C3%A9tape/</guid>
       <description>Ce blog est inspiré par un article du site Kubernetes qui explique comment déployer WordPress et MySQL sur Minikube, mais comme je l&amp;rsquo;ai trouvé très confus et que je voulais utiliser Kind, j&amp;rsquo;ai rédigé ce guide étape par étape.</description>
     </item>
     <item>
       <title>Les Quoi, Qui, Pourquoi, Où et Comment de la Prise de Parole en Public</title>
-      <link>https://juliafmorgado.com/fr/posts/les-quoi-qui-pourquoi-o%C3%B9-et-comment-de-la-prise-de-parole-en-public/</link>
+      <link>http://localhost:1313/fr/posts/les-quoi-qui-pourquoi-o%C3%B9-et-comment-de-la-prise-de-parole-en-public/</link>
       <pubDate>Mon, 11 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/les-quoi-qui-pourquoi-o%C3%B9-et-comment-de-la-prise-de-parole-en-public/</guid>
+      <guid>http://localhost:1313/fr/posts/les-quoi-qui-pourquoi-o%C3%B9-et-comment-de-la-prise-de-parole-en-public/</guid>
       <description>Bien bien bien, envisagez-vous de vous lancer dans le monde de la prise de parole en public ?</description>
     </item>
     <item>
       <title>Déployez votre première application web sur AWS avec AWS Amplify, Lambda, DynamoDB et API Gateway</title>
-      <link>https://juliafmorgado.com/fr/posts/d%C3%A9ployez-votre-premi%C3%A8re-application-web-sur-aws-avec-aws-amplify-lambda-dynamodb-et-api-gateway/</link>
+      <link>http://localhost:1313/fr/posts/d%C3%A9ployez-votre-premi%C3%A8re-application-web-sur-aws-avec-aws-amplify-lambda-dynamodb-et-api-gateway/</link>
       <pubDate>Fri, 01 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/d%C3%A9ployez-votre-premi%C3%A8re-application-web-sur-aws-avec-aws-amplify-lambda-dynamodb-et-api-gateway/</guid>
+      <guid>http://localhost:1313/fr/posts/d%C3%A9ployez-votre-premi%C3%A8re-application-web-sur-aws-avec-aws-amplify-lambda-dynamodb-et-api-gateway/</guid>
       <description>Salut !</description>
     </item>
     <item>
       <title>Comment Mettre à Niveau Veeam Backup and Replication du 12.0 au 12.1</title>
-      <link>https://juliafmorgado.com/fr/posts/comment-mettre-%C3%A0-niveau-veeam-backup-and-replication-du-12.0-au-12.1/</link>
+      <link>http://localhost:1313/fr/posts/comment-mettre-%C3%A0-niveau-veeam-backup-and-replication-du-12.0-au-12.1/</link>
       <pubDate>Thu, 08 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/comment-mettre-%C3%A0-niveau-veeam-backup-and-replication-du-12.0-au-12.1/</guid>
+      <guid>http://localhost:1313/fr/posts/comment-mettre-%C3%A0-niveau-veeam-backup-and-replication-du-12.0-au-12.1/</guid>
       <description>Veeam Backup and Replication a publié la version 12.</description>
     </item>
     <item>
       <title>Comment Passer la KCNA - Kubernetes And Cloud Native Associate</title>
-      <link>https://juliafmorgado.com/fr/posts/comment-passer-la-kcna-kubernetes-and-cloud-native-associate/</link>
+      <link>http://localhost:1313/fr/posts/comment-passer-la-kcna-kubernetes-and-cloud-native-associate/</link>
       <pubDate>Mon, 05 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/comment-passer-la-kcna-kubernetes-and-cloud-native-associate/</guid>
+      <guid>http://localhost:1313/fr/posts/comment-passer-la-kcna-kubernetes-and-cloud-native-associate/</guid>
       <description>Hier, j&amp;rsquo;ai passé l&amp;rsquo;examen de certification Kubernetes and Cloud Native Associate Exam (KCNA), et ce matin, j&amp;rsquo;ai reçu les résultats comme quoi j&amp;rsquo;ai réussi, youpi !</description>
     </item>
     <item>
       <title>Comment contribuer à la localisation du Glossaire CNCF - Pas de code nécessaire!</title>
-      <link>https://juliafmorgado.com/fr/posts/comment-contribuer-%C3%A0-la-localisation-du-glossaire-cncf-pas-de-code-n%C3%A9cessaire/</link>
+      <link>http://localhost:1313/fr/posts/comment-contribuer-%C3%A0-la-localisation-du-glossaire-cncf-pas-de-code-n%C3%A9cessaire/</link>
       <pubDate>Tue, 26 Sep 2023 11:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/comment-contribuer-%C3%A0-la-localisation-du-glossaire-cncf-pas-de-code-n%C3%A9cessaire/</guid>
+      <guid>http://localhost:1313/fr/posts/comment-contribuer-%C3%A0-la-localisation-du-glossaire-cncf-pas-de-code-n%C3%A9cessaire/</guid>
       <description>Introduction 🔗Le Glossaire de la Cloud Native Computing Foundation (CNCF) est une ressource précieuse qui aide à clarifier la terminologie et le jargon utilisés dans le domaine Cloud Native.</description>
     </item>
     <item>
       <title>L&#39;Ultime Expérience eSport: Dans les Coulisses du Championnat de VALORANT avec AWS 2023</title>
-      <link>https://juliafmorgado.com/fr/posts/lultime-exp%C3%A9rience-esport-dans-les-coulisses-du-championnat-de-valorant-avec-aws-2023/</link>
+      <link>http://localhost:1313/fr/posts/lultime-exp%C3%A9rience-esport-dans-les-coulisses-du-championnat-de-valorant-avec-aws-2023/</link>
       <pubDate>Thu, 07 Sep 2023 11:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/fr/posts/lultime-exp%C3%A9rience-esport-dans-les-coulisses-du-championnat-de-valorant-avec-aws-2023/</guid>
+      <guid>http://localhost:1313/fr/posts/lultime-exp%C3%A9rience-esport-dans-les-coulisses-du-championnat-de-valorant-avec-aws-2023/</guid>
       <description>Si vous pensez que Los Angeles se résume uniquement aux célébrités d&amp;rsquo;Hollywood et aux palmiers, détrompez-vous.</description>
     </item>
   </channel>

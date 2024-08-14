@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/pt/tags/</link>
+    <link>http://localhost:1313/pt/tags/</link>
     <description>Recent content in Tags on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
     <lastBuildDate>Mon, 01 Jul 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/pt/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes</title>
-      <link>https://juliafmorgado.com/pt/tags/kubernetes/</link>
+      <link>http://localhost:1313/pt/tags/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/kubernetes/</guid>
+      <guid>http://localhost:1313/pt/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>https://juliafmorgado.com/pt/tags/aws/</link>
+      <link>http://localhost:1313/pt/tags/aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/aws/</guid>
+      <guid>http://localhost:1313/pt/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>Veeam</title>
-      <link>https://juliafmorgado.com/pt/tags/veeam/</link>
+      <link>http://localhost:1313/pt/tags/veeam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/veeam/</guid>
+      <guid>http://localhost:1313/pt/tags/veeam/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>https://juliafmorgado.com/pt/tags/devops/</link>
+      <link>http://localhost:1313/pt/tags/devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/devops/</guid>
+      <guid>http://localhost:1313/pt/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>CNCF</title>
-      <link>https://juliafmorgado.com/pt/tags/cncf/</link>
+      <link>http://localhost:1313/pt/tags/cncf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/cncf/</guid>
+      <guid>http://localhost:1313/pt/tags/cncf/</guid>
       <description></description>
     </item>
     <item>
       <title>Open Source</title>
-      <link>https://juliafmorgado.com/pt/tags/open-source/</link>
+      <link>http://localhost:1313/pt/tags/open-source/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/open-source/</guid>
+      <guid>http://localhost:1313/pt/tags/open-source/</guid>
       <description></description>
     </item>
     <item>
       <title>Tutorial</title>
-      <link>https://juliafmorgado.com/pt/tags/tutorial/</link>
+      <link>http://localhost:1313/pt/tags/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/tutorial/</guid>
+      <guid>http://localhost:1313/pt/tags/tutorial/</guid>
       <description></description>
     </item>
     <item>
       <title>ESports</title>
-      <link>https://juliafmorgado.com/pt/tags/esports/</link>
+      <link>http://localhost:1313/pt/tags/esports/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/esports/</guid>
+      <guid>http://localhost:1313/pt/tags/esports/</guid>
       <description></description>
     </item>
     <item>
       <title>Jogos</title>
-      <link>https://juliafmorgado.com/pt/tags/jogos/</link>
+      <link>http://localhost:1313/pt/tags/jogos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://juliafmorgado.com/pt/tags/jogos/</guid>
+      <guid>http://localhost:1313/pt/tags/jogos/</guid>
       <description></description>
     </item>
   </channel>

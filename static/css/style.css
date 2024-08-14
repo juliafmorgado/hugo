@@ -95,6 +95,7 @@ pre {
   cursor: zoom-in; /* Pointer cursor on hover */
   transition: transform 300ms cubic-bezier(.2,0,.2,1); /* Smooth zoom effect */
 }
+
 /* Enlarge effect when clicked */
 .markdown-image img.enlarged {
   transform: scale(1.9); /* Scales the image to 190% of its original size */

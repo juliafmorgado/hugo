@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud Native on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/cloud-native/</link>
+    <link>http://localhost:1313/tags/cloud-native/</link>
     <description>Recent content in Cloud Native on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 08 Jul 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/cloud-native/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cloud-native/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Challenge 3 - Creating Real-Time Web Applications with Docker and PostgreSQL</title>
-      <link>https://juliafmorgado.com/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</link>
+      <link>http://localhost:1313/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</link>
       <pubDate>Mon, 08 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</guid>
+      <guid>http://localhost:1313/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</guid>
       <description>Welcome to Challenge 3 in our cloud-native application development journey, where we integrate real-time interactions using Docker and PostgreSQL!</description>
     </item>
     <item>
       <title>Install Veeam Kasten on a Kubernetes cluster running on kind</title>
-      <link>https://juliafmorgado.com/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</link>
+      <link>http://localhost:1313/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</link>
       <pubDate>Mon, 24 Jun 2024 07:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</guid>
+      <guid>http://localhost:1313/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</guid>
       <description>In this guide, we&amp;rsquo;ll walk through the process of installing Veeam Kasten on a Kubernetes cluster running on kind (Kubernetes in Docker).</description>
     </item>
     <item>
       <title>Deploying WordPress and MySQL on Kubernetes with Kind: A Step-by-Step Guide</title>
-      <link>https://juliafmorgado.com/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</link>
+      <link>http://localhost:1313/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</link>
       <pubDate>Mon, 24 Jun 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</guid>
+      <guid>http://localhost:1313/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</guid>
       <description>This blog is inspired by an article from the Kubernetes website teaching how to deploy WordPress and MySQL on Minikube, but since I found it very confusing and wanted to use Kind, I&amp;rsquo;m writing this step-by-step guide.</description>
     </item>
     <item>
       <title>Understanding Load Balancer vs. Ingress in Kubernetes</title>
-      <link>https://juliafmorgado.com/posts/understanding-load-balancer-vs.-ingress-in-kubernetes/</link>
+      <link>http://localhost:1313/posts/understanding-load-balancer-vs.-ingress-in-kubernetes/</link>
       <pubDate>Thu, 20 Jun 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/understanding-load-balancer-vs.-ingress-in-kubernetes/</guid>
+      <guid>http://localhost:1313/posts/understanding-load-balancer-vs.-ingress-in-kubernetes/</guid>
       <description>In the world of Kubernetes, managing traffic flow and exposing applications externally is a crucial aspect of application deployment.</description>
     </item>
     <item>
       <title>My Adventure at KubeConEU 2024</title>
-      <link>https://juliafmorgado.com/posts/my-adventure-at-kubeconeu-2024/</link>
+      <link>http://localhost:1313/posts/my-adventure-at-kubeconeu-2024/</link>
       <pubDate>Mon, 25 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/my-adventure-at-kubeconeu-2024/</guid>
+      <guid>http://localhost:1313/posts/my-adventure-at-kubeconeu-2024/</guid>
       <description>Well well well, it looks like I made it back from another epic KubeCon + CloudNativeCon adventure in Paris, France!</description>
     </item>
     <item>
       <title>How to Pass the KCNA - Kubernetes And Cloud Native Associate</title>
-      <link>https://juliafmorgado.com/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</link>
+      <link>http://localhost:1313/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</link>
       <pubDate>Mon, 05 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</guid>
+      <guid>http://localhost:1313/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</guid>
       <description>Yesterday I took the Kubernetes and Cloud Native Associate Exam (KCNA) certification exam, and this morning I got the results that I passed, yey!</description>
     </item>
     <item>
       <title>On-Premises, IaaS, PaaS, SaaS, or FaaS: A Car Analogy</title>
-      <link>https://juliafmorgado.com/posts/on-premises-iaas-paas-saas-or-faas-a-car-analogy/</link>
+      <link>http://localhost:1313/posts/on-premises-iaas-paas-saas-or-faas-a-car-analogy/</link>
       <pubDate>Mon, 29 Jan 2024 10:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/on-premises-iaas-paas-saas-or-faas-a-car-analogy/</guid>
+      <guid>http://localhost:1313/posts/on-premises-iaas-paas-saas-or-faas-a-car-analogy/</guid>
       <description>In today&amp;rsquo;s digital landscape, businesses have a wide range of options when it comes to deploying and managing their IT infrastructure.</description>
     </item>
     <item>
       <title>15 Options To Build A Kubernetes Playground</title>
-      <link>https://juliafmorgado.com/posts/15-options-to-build-a-kubernetes-playground/</link>
+      <link>http://localhost:1313/posts/15-options-to-build-a-kubernetes-playground/</link>
       <pubDate>Thu, 25 Jan 2024 10:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/15-options-to-build-a-kubernetes-playground/</guid>
+      <guid>http://localhost:1313/posts/15-options-to-build-a-kubernetes-playground/</guid>
       <description>Why a Kubernetes Playground 🔗As a beginner, having a playground environment is crucial for experimenting and learning about Kubernetes without the fear of breaking anything.</description>
     </item>
     <item>
       <title>Choose Your Tech Career: Software Engineering or DevOps?</title>
-      <link>https://juliafmorgado.com/posts/choose-your-tech-career-software-engineering-or-devops/</link>
+      <link>http://localhost:1313/posts/choose-your-tech-career-software-engineering-or-devops/</link>
       <pubDate>Wed, 18 Oct 2023 17:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/choose-your-tech-career-software-engineering-or-devops/</guid>
+      <guid>http://localhost:1313/posts/choose-your-tech-career-software-engineering-or-devops/</guid>
       <description>Are you struggling to decide between two exciting tech career paths: software engineering and DevOps engineering?</description>
     </item>
     <item>
       <title>An Easy Way to Understand Docker</title>
-      <link>https://juliafmorgado.com/posts/an-easy-way-to-understand-docker/</link>
+      <link>http://localhost:1313/posts/an-easy-way-to-understand-docker/</link>
       <pubDate>Sat, 30 Sep 2023 17:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/an-easy-way-to-understand-docker/</guid>
+      <guid>http://localhost:1313/posts/an-easy-way-to-understand-docker/</guid>
       <description>Docker is renowned worldwide as an open-source container service provider, that excels in packaging applications and their components, along with dependencies, simplifying the deployment process.</description>
     </item>
     <item>
       <title>How to Contribute to CNCF Glossary Localization - No Code!</title>
-      <link>https://juliafmorgado.com/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</link>
+      <link>http://localhost:1313/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</link>
       <pubDate>Tue, 26 Sep 2023 11:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</guid>
+      <guid>http://localhost:1313/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</guid>
       <description>Introduction 🔗The Cloud Native Computing Foundation (CNCF) Glossary is a valuable resource that helps clarify the terminology and jargon used in the world of cloud-native computing.</description>
     </item>
     <item>
       <title>Kubernetes Knowledge Hub</title>
-      <link>https://juliafmorgado.com/posts/kubernetes-knowledge-hub/</link>
+      <link>http://localhost:1313/posts/kubernetes-knowledge-hub/</link>
       <pubDate>Tue, 15 Aug 2023 17:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/kubernetes-knowledge-hub/</guid>
+      <guid>http://localhost:1313/posts/kubernetes-knowledge-hub/</guid>
       <description>I&amp;rsquo;ll keep updating it every day with new resources!</description>
     </item>
     <item>
       <title>From KubeCon to my first keynote as a DevRel</title>
-      <link>https://juliafmorgado.com/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</link>
+      <link>http://localhost:1313/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</link>
       <pubDate>Mon, 14 Nov 2022 13:47:21 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</guid>
+      <guid>http://localhost:1313/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</guid>
       <description>Last month I went to Detroit for my first big open source conference — KubeCon.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oratoria on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/es/tags/oratoria/</link>
+    <link>http://localhost:1313/es/tags/oratoria/</link>
     <description>Recent content in Oratoria on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 11 Mar 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/es/tags/oratoria/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/es/tags/oratoria/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>El Qué, Quién, Por Qué, Dónde y Cómo de la Oratoria</title>
-      <link>https://juliafmorgado.com/es/posts/el-qu%C3%A9-qui%C3%A9n-por-qu%C3%A9-d%C3%B3nde-y-c%C3%B3mo-de-la-oratoria/</link>
+      <link>http://localhost:1313/es/posts/el-qu%C3%A9-qui%C3%A9n-por-qu%C3%A9-d%C3%B3nde-y-c%C3%B3mo-de-la-oratoria/</link>
       <pubDate>Mon, 11 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/es/posts/el-qu%C3%A9-qui%C3%A9n-por-qu%C3%A9-d%C3%B3nde-y-c%C3%B3mo-de-la-oratoria/</guid>
+      <guid>http://localhost:1313/es/posts/el-qu%C3%A9-qui%C3%A9n-por-qu%C3%A9-d%C3%B3nde-y-c%C3%B3mo-de-la-oratoria/</guid>
       <description>Bien bien, ¿estás pensando en adentrarte en el mundo de la oratoria?</description>
     </item>
   </channel>

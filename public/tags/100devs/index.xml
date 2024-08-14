@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>100Devs on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/100devs/</link>
+    <link>http://localhost:1313/tags/100devs/</link>
     <description>Recent content in 100Devs on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 08 Jan 2023 10:34:02 -0500</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/100devs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/100devs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>#100Devs Software Engineering Bootcamp</title>
-      <link>https://juliafmorgado.com/posts/%23100devs-software-engineering-bootcamp/</link>
+      <link>http://localhost:1313/posts/%23100devs-software-engineering-bootcamp/</link>
       <pubDate>Mon, 28 Feb 2022 17:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/%23100devs-software-engineering-bootcamp/</guid>
+      <guid>http://localhost:1313/posts/%23100devs-software-engineering-bootcamp/</guid>
       <description>Check out my Youtube videos about 100Devs: How to join 100Devs and What is 100Devs</description>
     </item>
   </channel>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AWS on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/es/tags/aws/</link>
+    <link>http://localhost:1313/es/tags/aws/</link>
     <description>Recent content in AWS on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Fri, 01 Mar 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/es/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/es/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Despliega tu primera aplicación web en AWS con AWS Amplify, Lambda, DynamoDB y API Gateway</title>
-      <link>https://juliafmorgado.com/es/posts/despliega-tu-primera-aplicaci%C3%B3n-web-en-aws-con-aws-amplify-lambda-dynamodb-y-api-gateway/</link>
+      <link>http://localhost:1313/es/posts/despliega-tu-primera-aplicaci%C3%B3n-web-en-aws-con-aws-amplify-lambda-dynamodb-y-api-gateway/</link>
       <pubDate>Fri, 01 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/es/posts/despliega-tu-primera-aplicaci%C3%B3n-web-en-aws-con-aws-amplify-lambda-dynamodb-y-api-gateway/</guid>
+      <guid>http://localhost:1313/es/posts/despliega-tu-primera-aplicaci%C3%B3n-web-en-aws-con-aws-amplify-lambda-dynamodb-y-api-gateway/</guid>
       <description>¡Hola!</description>
     </item>
     <item>
       <title>El mundo de los eSports: Mi experiencia en el campeonato de VALORANT con AWS 2023</title>
-      <link>https://juliafmorgado.com/es/posts/el-mundo-de-los-esports-mi-experiencia-en-el-campeonato-de-valorant-con-aws-2023/</link>
+      <link>http://localhost:1313/es/posts/el-mundo-de-los-esports-mi-experiencia-en-el-campeonato-de-valorant-con-aws-2023/</link>
       <pubDate>Thu, 07 Sep 2023 07:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/es/posts/el-mundo-de-los-esports-mi-experiencia-en-el-campeonato-de-valorant-con-aws-2023/</guid>
+      <guid>http://localhost:1313/es/posts/el-mundo-de-los-esports-mi-experiencia-en-el-campeonato-de-valorant-con-aws-2023/</guid>
       <description>Si crees que Los Ángeles se reduce solo a celebridades de Hollywood y palmeras, estás equivocado.</description>
     </item>
     <item>
       <title>Veeam Backup para AWS: Protege tus datos en la nube de manera sencilla</title>
-      <link>https://juliafmorgado.com/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</link>
+      <link>http://localhost:1313/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</link>
       <pubDate>Tue, 11 Jul 2023 17:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</guid>
+      <guid>http://localhost:1313/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</guid>
       <description>Introducción 🔗En el mundo actual, donde la computación en la nube desempeña un papel fundamental en la infraestructura de muchas empresas, la protección de datos se vuelve cada vez más crítica.</description>
     </item>
   </channel>

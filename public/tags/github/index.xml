@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GitHub on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/github/</link>
+    <link>http://localhost:1313/tags/github/</link>
     <description>Recent content in GitHub on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 05 Jun 2023 17:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git and GitHub Terms Glossary</title>
-      <link>https://juliafmorgado.com/posts/git-and-github-terms-glossary/</link>
+      <link>http://localhost:1313/posts/git-and-github-terms-glossary/</link>
       <pubDate>Mon, 05 Jun 2023 17:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/git-and-github-terms-glossary/</guid>
+      <guid>http://localhost:1313/posts/git-and-github-terms-glossary/</guid>
       <description>This is the beginning of a glossary I&amp;rsquo;m building with easier explanations about Git and GitHub terms.</description>
     </item>
   </channel>

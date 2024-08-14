@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/docker/</link>
+    <link>http://localhost:1313/tags/docker/</link>
     <description>Recent content in Docker on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 12 Aug 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Multi-Architecture Images with a Docker Driver</title>
-      <link>https://juliafmorgado.com/posts/building-multi-architecture-images-with-a-docker-driver/</link>
+      <link>http://localhost:1313/posts/building-multi-architecture-images-with-a-docker-driver/</link>
       <pubDate>Mon, 12 Aug 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/building-multi-architecture-images-with-a-docker-driver/</guid>
+      <guid>http://localhost:1313/posts/building-multi-architecture-images-with-a-docker-driver/</guid>
       <description>As we were working on getting our app up and running with Kubernetes on Challenge 4, we built a Docker image, but it was only for ARM architecture.</description>
     </item>
   </channel>

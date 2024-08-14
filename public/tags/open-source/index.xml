@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open Source on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/open-source/</link>
+    <link>http://localhost:1313/tags/open-source/</link>
     <description>Recent content in Open Source on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 26 Sep 2023 11:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Contribute to CNCF Glossary Localization - No Code!</title>
-      <link>https://juliafmorgado.com/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</link>
+      <link>http://localhost:1313/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</link>
       <pubDate>Tue, 26 Sep 2023 11:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</guid>
+      <guid>http://localhost:1313/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</guid>
       <description>Introduction 🔗The Cloud Native Computing Foundation (CNCF) Glossary is a valuable resource that helps clarify the terminology and jargon used in the world of cloud-native computing.</description>
     </item>
     <item>
       <title>How can I become an Open Source contributor? (The ultimate guide)</title>
-      <link>https://juliafmorgado.com/posts/how-can-i-become-an-open-source-contributor-the-ultimate-guide/</link>
+      <link>http://localhost:1313/posts/how-can-i-become-an-open-source-contributor-the-ultimate-guide/</link>
       <pubDate>Mon, 26 Dec 2022 11:36:55 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/how-can-i-become-an-open-source-contributor-the-ultimate-guide/</guid>
+      <guid>http://localhost:1313/posts/how-can-i-become-an-open-source-contributor-the-ultimate-guide/</guid>
       <description>If you&amp;rsquo;re asking yourself this 👆question (I know many of you are), you&amp;rsquo;ve come to the right place.</description>
     </item>
   </channel>

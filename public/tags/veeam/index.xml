@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Veeam on Julia Furst Morgado</title>
-    <link>https://juliafmorgado.com/tags/veeam/</link>
+    <link>http://localhost:1313/tags/veeam/</link>
     <description>Recent content in Veeam on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 09 Jul 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="https://juliafmorgado.com/tags/veeam/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/veeam/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Upgrade to Veeam Backup for AWS v8.0</title>
-      <link>https://juliafmorgado.com/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</link>
+      <link>http://localhost:1313/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</link>
       <pubDate>Tue, 09 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</guid>
+      <guid>http://localhost:1313/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</guid>
       <description>How and Why to Update Veeam Backup for AWS to Version 8 🔗With the recent launch of Veeam Backup for AWS (VB for AWS) version 8 on July 2nd, it&amp;rsquo;s time to update your setup to take advantage of the latest features and improvements.</description>
     </item>
     <item>
       <title>Install Veeam Kasten on an Amazon EKS cluster</title>
-      <link>https://juliafmorgado.com/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</link>
+      <link>http://localhost:1313/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</link>
       <pubDate>Mon, 01 Jul 2024 06:48:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</guid>
+      <guid>http://localhost:1313/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</guid>
       <description>In this guide, we will walk through the process of installing Veeam Kasten on an Amazon EKS cluster.</description>
     </item>
     <item>
       <title>Install Veeam Kasten on a Kubernetes cluster running on kind</title>
-      <link>https://juliafmorgado.com/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</link>
+      <link>http://localhost:1313/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</link>
       <pubDate>Mon, 24 Jun 2024 07:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</guid>
+      <guid>http://localhost:1313/posts/install-veeam-kasten-on-a-kubernetes-cluster-running-on-kind/</guid>
       <description>In this guide, we&amp;rsquo;ll walk through the process of installing Veeam Kasten on a Kubernetes cluster running on kind (Kubernetes in Docker).</description>
     </item>
     <item>
       <title>Easily Upgrade Veeam Backup and Replication from 12.0 to 12.1</title>
-      <link>https://juliafmorgado.com/posts/easily-upgrade-veeam-backup-and-replication-from-12.0-to-12.1/</link>
+      <link>http://localhost:1313/posts/easily-upgrade-veeam-backup-and-replication-from-12.0-to-12.1/</link>
       <pubDate>Thu, 08 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/easily-upgrade-veeam-backup-and-replication-from-12.0-to-12.1/</guid>
+      <guid>http://localhost:1313/posts/easily-upgrade-veeam-backup-and-replication-from-12.0-to-12.1/</guid>
       <description>Veeam Backup and Replication has released version 12.</description>
     </item>
     <item>
       <title>Secure Your AWS Environments with Terraform, Vault, and Veeam</title>
-      <link>https://juliafmorgado.com/posts/secure-your-aws-environments-with-terraform-vault-and-veeam/</link>
+      <link>http://localhost:1313/posts/secure-your-aws-environments-with-terraform-vault-and-veeam/</link>
       <pubDate>Thu, 20 Jul 2023 09:06:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/secure-your-aws-environments-with-terraform-vault-and-veeam/</guid>
+      <guid>http://localhost:1313/posts/secure-your-aws-environments-with-terraform-vault-and-veeam/</guid>
       <description>I&amp;rsquo;m thrilled to present the first post in my blog series focused on optimizing cloud infrastructure management, data security, and backup automation in your AWS environment.</description>
     </item>
     <item>
       <title>A Technical Deep Dive into Veeam Backup for AWS</title>
-      <link>https://juliafmorgado.com/posts/a-technical-deep-dive-into-veeam-backup-for-aws/</link>
+      <link>http://localhost:1313/posts/a-technical-deep-dive-into-veeam-backup-for-aws/</link>
       <pubDate>Mon, 17 Jul 2023 10:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/a-technical-deep-dive-into-veeam-backup-for-aws/</guid>
+      <guid>http://localhost:1313/posts/a-technical-deep-dive-into-veeam-backup-for-aws/</guid>
       <description>Introduction 🔗Veeam Backup for AWS introduces advanced backup protection for Amazon Web Services (AWS) environments.</description>
     </item>
     <item>
       <title>My VeeamON 2023 Experience</title>
-      <link>https://juliafmorgado.com/posts/my-veeamon-2023-experience/</link>
+      <link>http://localhost:1313/posts/my-veeamon-2023-experience/</link>
       <pubDate>Tue, 30 May 2023 17:46:05 +0000</pubDate>
-      <guid>https://juliafmorgado.com/posts/my-veeamon-2023-experience/</guid>
+      <guid>http://localhost:1313/posts/my-veeamon-2023-experience/</guid>
       <description>Reflections on My First VeeamON 🔗Attending my first VeeamON was an exhilarating experience that exceeded all my expectations.</description>
     </item>
   </channel>
