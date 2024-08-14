@@ -32,7 +32,7 @@ You need to create a profile for each AWS account. You can do this in your termi
 2. Then set up your professional for your company's AWS account: `aws configure --profile company`. Similarly, provide the access key, secret key, region, and output format for your company AWS account.
 
 ## Step 2: Use Environment Variables to Switch Profiles
-Instead of specifying the profile with every command, you can set an environment variable to use a specific profile for the duration of your terminal session.
+Instead of specifying the profile with every command, you can set an environment variable to specify which AWS profile you want to use for your AWS CLI commands. This way, you only need to set the profile once per session, and all subsequent commands will use that profile until you change it.
 
 ### Set the environment variable (Unix/Linux/macOS):
 
