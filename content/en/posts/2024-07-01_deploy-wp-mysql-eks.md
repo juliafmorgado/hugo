@@ -20,9 +20,8 @@ slug: /easily-deploy-wordpress-mysql-on-amazon-eks
 
 **Pre-requisites**
 
-- You should have AWS account created: [LINK](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
-- IAM user in AWS with admin powers: [LINK](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)
-- For accessing AWS account from CLI, you should have AWS CLI installed on your machine. To install AWS CLI follow this documentation: [LINK](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+- You should have AWS account created and an IAM user/role: [LINK](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+- For accessing the AWS account from the CLI, you should have AWS CLI installed on your machine. To install AWS CLI follow this documentation: [LINK](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
 - To manage kubernetes, you need `kubectl` command: [LINK](https://kubernetes.io/docs/tasks/tools/install-kubectl/) or [LINK](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 - Install `eksctl` command in your local machine to manage EKS clusters: [LINK](https://eksctl.io/installation/)
 - Helm installed for Kubernetes package management: [LINK](https://formulae.brew.sh/formula/helm) or [LINK](https://helm.sh/docs/intro/install/)
