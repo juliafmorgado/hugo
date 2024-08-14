@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gaming on Julia Furst Morgado</title>
-    <link>http://localhost:1313/fr/tags/gaming/</link>
+    <link>https://juliafmorgado.com/fr/tags/gaming/</link>
     <description>Recent content in Gaming on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
     <lastBuildDate>Thu, 07 Sep 2023 11:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/fr/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/fr/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L&#39;Ultime Expérience eSport: Dans les Coulisses du Championnat de VALORANT avec AWS 2023</title>
-      <link>http://localhost:1313/fr/posts/lultime-exp%C3%A9rience-esport-dans-les-coulisses-du-championnat-de-valorant-avec-aws-2023/</link>
+      <link>https://juliafmorgado.com/fr/posts/lultime-exp%C3%A9rience-esport-dans-les-coulisses-du-championnat-de-valorant-avec-aws-2023/</link>
       <pubDate>Thu, 07 Sep 2023 11:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/fr/posts/lultime-exp%C3%A9rience-esport-dans-les-coulisses-du-championnat-de-valorant-avec-aws-2023/</guid>
+      <guid>https://juliafmorgado.com/fr/posts/lultime-exp%C3%A9rience-esport-dans-les-coulisses-du-championnat-de-valorant-avec-aws-2023/</guid>
       <description>Si vous pensez que Los Angeles se résume uniquement aux célébrités d&amp;rsquo;Hollywood et aux palmiers, détrompez-vous.</description>
     </item>
   </channel>

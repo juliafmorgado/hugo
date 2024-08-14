@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conferences on Julia Furst Morgado</title>
-    <link>http://localhost:1313/tags/conferences/</link>
+    <link>https://juliafmorgado.com/tags/conferences/</link>
     <description>Recent content in Conferences on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 25 Mar 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Adventure at KubeConEU 2024</title>
-      <link>http://localhost:1313/posts/my-adventure-at-kubeconeu-2024/</link>
+      <link>https://juliafmorgado.com/posts/my-adventure-at-kubeconeu-2024/</link>
       <pubDate>Mon, 25 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-adventure-at-kubeconeu-2024/</guid>
+      <guid>https://juliafmorgado.com/posts/my-adventure-at-kubeconeu-2024/</guid>
       <description>Well well well, it looks like I made it back from another epic KubeCon + CloudNativeCon adventure in Paris, France!</description>
     </item>
     <item>
       <title>The Ultimate eSports Experience: Inside the AWS VALORANT Champions VIP Hospitality 2023</title>
-      <link>http://localhost:1313/posts/the-ultimate-esports-experience-inside-the-aws-valorant-champions-vip-hospitality-2023/</link>
+      <link>https://juliafmorgado.com/posts/the-ultimate-esports-experience-inside-the-aws-valorant-champions-vip-hospitality-2023/</link>
       <pubDate>Thu, 07 Sep 2023 11:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/the-ultimate-esports-experience-inside-the-aws-valorant-champions-vip-hospitality-2023/</guid>
+      <guid>https://juliafmorgado.com/posts/the-ultimate-esports-experience-inside-the-aws-valorant-champions-vip-hospitality-2023/</guid>
       <description>If you think Los Angeles is only about Hollywood celebrities and palm trees, think again.</description>
     </item>
     <item>
       <title>My VeeamON 2023 Experience</title>
-      <link>http://localhost:1313/posts/my-veeamon-2023-experience/</link>
+      <link>https://juliafmorgado.com/posts/my-veeamon-2023-experience/</link>
       <pubDate>Tue, 30 May 2023 17:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-veeamon-2023-experience/</guid>
+      <guid>https://juliafmorgado.com/posts/my-veeamon-2023-experience/</guid>
       <description>Reflections on My First VeeamON 🔗Attending my first VeeamON was an exhilarating experience that exceeded all my expectations.</description>
     </item>
     <item>
       <title>From KubeCon to my first keynote as a DevRel</title>
-      <link>http://localhost:1313/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</link>
+      <link>https://juliafmorgado.com/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</link>
       <pubDate>Mon, 14 Nov 2022 13:47:21 +0000</pubDate>
-      <guid>http://localhost:1313/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</guid>
+      <guid>https://juliafmorgado.com/posts/from-kubecon-to-my-first-keynote-as-a-devrel/</guid>
       <description>Last month I went to Detroit for my first big open source conference — KubeCon.</description>
     </item>
   </channel>

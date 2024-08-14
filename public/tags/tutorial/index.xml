@@ -2,143 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Julia Furst Morgado</title>
-    <link>http://localhost:1313/tags/tutorial/</link>
+    <link>https://juliafmorgado.com/tags/tutorial/</link>
     <description>Recent content in Tutorial on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 08 Aug 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Challenge 4 - Getting Your App to Kubernetes with KinD</title>
-      <link>http://localhost:1313/posts/challenge-4-getting-your-app-to-kubernetes-with-kind/</link>
-      <pubDate>Thu, 08 Aug 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/challenge-4-getting-your-app-to-kubernetes-with-kind/</guid>
-      <description>Welcome to the challenge 4 in our series!</description>
-    </item>
+    <lastBuildDate>Tue, 09 Jul 2024 06:46:05 +0000</lastBuildDate>
+    <atom:link href="https://juliafmorgado.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Upgrade to Veeam Backup for AWS v8.0</title>
-      <link>http://localhost:1313/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</link>
+      <link>https://juliafmorgado.com/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</link>
       <pubDate>Tue, 09 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</guid>
+      <guid>https://juliafmorgado.com/posts/how-to-upgrade-to-veeam-backup-for-aws-v8.0/</guid>
       <description>How and Why to Update Veeam Backup for AWS to Version 8 🔗With the recent launch of Veeam Backup for AWS (VB for AWS) version 8 on July 2nd, it&amp;rsquo;s time to update your setup to take advantage of the latest features and improvements.</description>
     </item>
     <item>
       <title>Challenge 3 - Creating Real-Time Web Applications with Docker and PostgreSQL</title>
-      <link>http://localhost:1313/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</link>
+      <link>https://juliafmorgado.com/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</link>
       <pubDate>Mon, 08 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</guid>
+      <guid>https://juliafmorgado.com/posts/challenge-3-creating-real-time-web-applications-with-docker-and-postgresql/</guid>
       <description>Welcome to Challenge 3 in our cloud-native application development journey, where we integrate real-time interactions using Docker and PostgreSQL!</description>
     </item>
     <item>
       <title>Install Veeam Kasten on an Amazon EKS cluster</title>
-      <link>http://localhost:1313/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</link>
+      <link>https://juliafmorgado.com/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</link>
       <pubDate>Mon, 01 Jul 2024 06:48:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</guid>
+      <guid>https://juliafmorgado.com/posts/install-veeam-kasten-on-an-amazon-eks-cluster/</guid>
       <description>In this guide, we will walk through the process of installing Veeam Kasten on an Amazon EKS cluster.</description>
     </item>
     <item>
       <title>Easily Deploy WordPress and MySQL on Amazon EKS</title>
-      <link>http://localhost:1313/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/</link>
+      <link>https://juliafmorgado.com/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/</link>
       <pubDate>Mon, 01 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/</guid>
+      <guid>https://juliafmorgado.com/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/</guid>
       <description>Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service that makes it easy to run Kubernetes on AWS without needing to install and operate your own Kubernetes control plane or nodes.</description>
     </item>
     <item>
       <title>Deploying WordPress and MySQL on Kubernetes with Kind: A Step-by-Step Guide</title>
-      <link>http://localhost:1313/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</link>
+      <link>https://juliafmorgado.com/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</link>
       <pubDate>Mon, 24 Jun 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</guid>
+      <guid>https://juliafmorgado.com/posts/deploying-wordpress-and-mysql-on-kubernetes-with-kind-a-step-by-step-guide/</guid>
       <description>This blog is inspired by an article from the Kubernetes website teaching how to deploy WordPress and MySQL on Minikube, but since I found it very confusing and wanted to use Kind, I&amp;rsquo;m writing this step-by-step guide.</description>
     </item>
     <item>
       <title>Challenge 2 - Application Persistence with FS and SQL DB</title>
-      <link>http://localhost:1313/posts/challenge-2-application-persistence-with-fs-and-sql-db/</link>
+      <link>https://juliafmorgado.com/posts/challenge-2-application-persistence-with-fs-and-sql-db/</link>
       <pubDate>Thu, 04 Apr 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/challenge-2-application-persistence-with-fs-and-sql-db/</guid>
+      <guid>https://juliafmorgado.com/posts/challenge-2-application-persistence-with-fs-and-sql-db/</guid>
       <description>Ok let&amp;rsquo;s continue with our Cloud Native Dev challenges.</description>
     </item>
     <item>
       <title>Challenge 1 - Create a simple app with HTTP endpoints and host in GitHub</title>
-      <link>http://localhost:1313/posts/challenge-1-create-a-simple-app-with-http-endpoints-and-host-in-github/</link>
+      <link>https://juliafmorgado.com/posts/challenge-1-create-a-simple-app-with-http-endpoints-and-host-in-github/</link>
       <pubDate>Wed, 03 Apr 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/challenge-1-create-a-simple-app-with-http-endpoints-and-host-in-github/</guid>
+      <guid>https://juliafmorgado.com/posts/challenge-1-create-a-simple-app-with-http-endpoints-and-host-in-github/</guid>
       <description>It&amp;rsquo;s been a while since I last caught up with Mauricio Salatino, known as Salaboy, to delve deeper into enhancing my Cloud Native skills.</description>
     </item>
     <item>
       <title>Setting up a Kubernetes cluster on AWS EKS with eksctl and Deploying an App</title>
-      <link>http://localhost:1313/posts/setting-up-a-kubernetes-cluster-on-aws-eks-with-eksctl-and-deploying-an-app/</link>
+      <link>https://juliafmorgado.com/posts/setting-up-a-kubernetes-cluster-on-aws-eks-with-eksctl-and-deploying-an-app/</link>
       <pubDate>Sat, 30 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/setting-up-a-kubernetes-cluster-on-aws-eks-with-eksctl-and-deploying-an-app/</guid>
+      <guid>https://juliafmorgado.com/posts/setting-up-a-kubernetes-cluster-on-aws-eks-with-eksctl-and-deploying-an-app/</guid>
       <description>It might come as a surprise, but not too long ago, configuring a Kubernetes cluster on Amazon EKS was quite challenging since you had to create all the components manually by yourself.</description>
     </item>
     <item>
       <title>Deploy Your First Web App on AWS with AWS Amplify, Lambda, DynamoDB and API Gateway</title>
-      <link>http://localhost:1313/posts/deploy-your-first-web-app-on-aws-with-aws-amplify-lambda-dynamodb-and-api-gateway/</link>
+      <link>https://juliafmorgado.com/posts/deploy-your-first-web-app-on-aws-with-aws-amplify-lambda-dynamodb-and-api-gateway/</link>
       <pubDate>Fri, 01 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/deploy-your-first-web-app-on-aws-with-aws-amplify-lambda-dynamodb-and-api-gateway/</guid>
+      <guid>https://juliafmorgado.com/posts/deploy-your-first-web-app-on-aws-with-aws-amplify-lambda-dynamodb-and-api-gateway/</guid>
       <description>Hey there!</description>
     </item>
     <item>
       <title>Easily Upgrade Veeam Backup and Replication from 12.0 to 12.1</title>
-      <link>http://localhost:1313/posts/easily-upgrade-veeam-backup-and-replication-from-12.0-to-12.1/</link>
+      <link>https://juliafmorgado.com/posts/easily-upgrade-veeam-backup-and-replication-from-12.0-to-12.1/</link>
       <pubDate>Thu, 08 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/easily-upgrade-veeam-backup-and-replication-from-12.0-to-12.1/</guid>
+      <guid>https://juliafmorgado.com/posts/easily-upgrade-veeam-backup-and-replication-from-12.0-to-12.1/</guid>
       <description>Veeam Backup and Replication has released version 12.</description>
     </item>
     <item>
       <title>How to Contribute to CNCF Glossary Localization - No Code!</title>
-      <link>http://localhost:1313/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</link>
+      <link>https://juliafmorgado.com/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</link>
       <pubDate>Tue, 26 Sep 2023 11:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</guid>
+      <guid>https://juliafmorgado.com/posts/how-to-contribute-to-cncf-glossary-localization-no-code/</guid>
       <description>Introduction 🔗The Cloud Native Computing Foundation (CNCF) Glossary is a valuable resource that helps clarify the terminology and jargon used in the world of cloud-native computing.</description>
     </item>
     <item>
       <title>Expand Your Blog&#39;s Reach with this AWS Automation Tool</title>
-      <link>http://localhost:1313/posts/expand-your-blogs-reach-with-this-aws-automation-tool/</link>
+      <link>https://juliafmorgado.com/posts/expand-your-blogs-reach-with-this-aws-automation-tool/</link>
       <pubDate>Mon, 03 Jul 2023 17:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/expand-your-blogs-reach-with-this-aws-automation-tool/</guid>
+      <guid>https://juliafmorgado.com/posts/expand-your-blogs-reach-with-this-aws-automation-tool/</guid>
       <description>Hurrah!! If you&amp;rsquo;re reading this post on Hashnode or Dev.</description>
     </item>
     <item>
       <title>Build a Website with HUGO on AWS Amplify</title>
-      <link>http://localhost:1313/posts/build-a-website-with-hugo-on-aws-amplify/</link>
+      <link>https://juliafmorgado.com/posts/build-a-website-with-hugo-on-aws-amplify/</link>
       <pubDate>Wed, 15 Mar 2023 17:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/build-a-website-with-hugo-on-aws-amplify/</guid>
+      <guid>https://juliafmorgado.com/posts/build-a-website-with-hugo-on-aws-amplify/</guid>
       <description>A while ago I decided to start publishing post on my own blog and move away from Medium/Hashnode/Dev, so I could have more ownership over my posts.</description>
     </item>
     <item>
       <title>Automatically Embed Latest Youtube Videos on your Website with JavaScript (step by step)</title>
-      <link>http://localhost:1313/posts/automatically-embed-latest-youtube-videos-on-your-website-with-javascript-step-by-step/</link>
+      <link>https://juliafmorgado.com/posts/automatically-embed-latest-youtube-videos-on-your-website-with-javascript-step-by-step/</link>
       <pubDate>Mon, 03 Oct 2022 17:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/automatically-embed-latest-youtube-videos-on-your-website-with-javascript-step-by-step/</guid>
+      <guid>https://juliafmorgado.com/posts/automatically-embed-latest-youtube-videos-on-your-website-with-javascript-step-by-step/</guid>
       <description>In this tutorial, you’ll learn how to make an HTTP request to Youtube with the JavaScript fetch() method to dynamically embed new video on your website as you publish it on youtube.</description>
     </item>
     <item>
       <title>How To Remove The HTML Extension From a URL on Netlify</title>
-      <link>http://localhost:1313/posts/how-to-remove-the-html-extension-from-a-url-on-netlify/</link>
+      <link>https://juliafmorgado.com/posts/how-to-remove-the-html-extension-from-a-url-on-netlify/</link>
       <pubDate>Wed, 14 Sep 2022 17:46:35 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-remove-the-html-extension-from-a-url-on-netlify/</guid>
+      <guid>https://juliafmorgado.com/posts/how-to-remove-the-html-extension-from-a-url-on-netlify/</guid>
       <description>Recently, I was asked how to get rid of the HTML prefix from a URL on a website hosted on Netlify.</description>
     </item>
     <item>
       <title>Connecting MongoDB to your app using Node.js</title>
-      <link>http://localhost:1313/posts/connecting-mongodb-to-your-app-using-node.js/</link>
+      <link>https://juliafmorgado.com/posts/connecting-mongodb-to-your-app-using-node.js/</link>
       <pubDate>Mon, 12 Sep 2022 17:42:30 +0000</pubDate>
-      <guid>http://localhost:1313/posts/connecting-mongodb-to-your-app-using-node.js/</guid>
+      <guid>https://juliafmorgado.com/posts/connecting-mongodb-to-your-app-using-node.js/</guid>
       <description>MongoDB is an open source NoSQL database management program.</description>
     </item>
     <item>
       <title>Filter out the geese (Codewars — 8kyu)</title>
-      <link>http://localhost:1313/posts/filter-out-the-geese-codewars-8kyu/</link>
+      <link>https://juliafmorgado.com/posts/filter-out-the-geese-codewars-8kyu/</link>
       <pubDate>Thu, 07 Jul 2022 17:47:55 +0000</pubDate>
-      <guid>http://localhost:1313/posts/filter-out-the-geese-codewars-8kyu/</guid>
+      <guid>https://juliafmorgado.com/posts/filter-out-the-geese-codewars-8kyu/</guid>
       <description>Here’s a link to the Codewars Kata: codewars.</description>
     </item>
     <item>
       <title>6 Ways to Make Sure You’re Using the Right Array Method</title>
-      <link>http://localhost:1313/posts/6-ways-to-make-sure-youre-using-the-right-array-method/</link>
+      <link>https://juliafmorgado.com/posts/6-ways-to-make-sure-youre-using-the-right-array-method/</link>
       <pubDate>Tue, 05 Jul 2022 17:46:02 +0000</pubDate>
-      <guid>http://localhost:1313/posts/6-ways-to-make-sure-youre-using-the-right-array-method/</guid>
+      <guid>https://juliafmorgado.com/posts/6-ways-to-make-sure-youre-using-the-right-array-method/</guid>
       <description>Understanding arrays is an important part of coding with JavaScript but array methods are what make JavaScript arrays so powerful.</description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Certifications on Julia Furst Morgado</title>
-    <link>http://localhost:1313/tags/certifications/</link>
+    <link>https://juliafmorgado.com/tags/certifications/</link>
     <description>Recent content in Certifications on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 05 Feb 2024 10:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/certifications/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/tags/certifications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Pass the KCNA - Kubernetes And Cloud Native Associate</title>
-      <link>http://localhost:1313/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</link>
+      <link>https://juliafmorgado.com/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</link>
       <pubDate>Mon, 05 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</guid>
+      <guid>https://juliafmorgado.com/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</guid>
       <description>Yesterday I took the Kubernetes and Cloud Native Associate Exam (KCNA) certification exam, and this morning I got the results that I passed, yey!</description>
     </item>
     <item>
       <title>Why I failed the Microsoft exam AZ-204 - Developing Solutions for Microsoft Azure</title>
-      <link>http://localhost:1313/posts/why-i-failed-the-microsoft-exam-az-204-developing-solutions-for-microsoft-azure/</link>
+      <link>https://juliafmorgado.com/posts/why-i-failed-the-microsoft-exam-az-204-developing-solutions-for-microsoft-azure/</link>
       <pubDate>Sun, 01 Jan 2023 17:46:41 +0000</pubDate>
-      <guid>http://localhost:1313/posts/why-i-failed-the-microsoft-exam-az-204-developing-solutions-for-microsoft-azure/</guid>
+      <guid>https://juliafmorgado.com/posts/why-i-failed-the-microsoft-exam-az-204-developing-solutions-for-microsoft-azure/</guid>
       <description>Last week I failed my first Microsoft certification exam.</description>
     </item>
   </channel>

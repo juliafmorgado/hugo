@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Veeam on Julia Furst Morgado</title>
-    <link>http://localhost:1313/pt/tags/veeam/</link>
+    <link>https://juliafmorgado.com/pt/tags/veeam/</link>
     <description>Recent content in Veeam on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
     <lastBuildDate>Thu, 08 Feb 2024 10:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/pt/tags/veeam/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/pt/tags/veeam/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como Atualizar Veeam Backup and Replication 12.0 ao 12.1</title>
-      <link>http://localhost:1313/pt/posts/como-atualizar-veeam-backup-and-replication-12.0-ao-12.1/</link>
+      <link>https://juliafmorgado.com/pt/posts/como-atualizar-veeam-backup-and-replication-12.0-ao-12.1/</link>
       <pubDate>Thu, 08 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/pt/posts/como-atualizar-veeam-backup-and-replication-12.0-ao-12.1/</guid>
+      <guid>https://juliafmorgado.com/pt/posts/como-atualizar-veeam-backup-and-replication-12.0-ao-12.1/</guid>
       <description>Veeam Backup and Replication lançou a versão 12.</description>
     </item>
   </channel>

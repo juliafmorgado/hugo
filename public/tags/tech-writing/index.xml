@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech Writing on Julia Furst Morgado</title>
-    <link>http://localhost:1313/tags/tech-writing/</link>
+    <link>https://juliafmorgado.com/tags/tech-writing/</link>
     <description>Recent content in Tech Writing on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 08 Jan 2023 10:34:06 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tech-writing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/tags/tech-writing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Get paid to write technical articles</title>
-      <link>http://localhost:1313/posts/get-paid-to-write-technical-articles/</link>
+      <link>https://juliafmorgado.com/posts/get-paid-to-write-technical-articles/</link>
       <pubDate>Thu, 08 Sep 2022 13:03:57 +0000</pubDate>
-      <guid>http://localhost:1313/posts/get-paid-to-write-technical-articles/</guid>
+      <guid>https://juliafmorgado.com/posts/get-paid-to-write-technical-articles/</guid>
       <description>The internet is a place with endless possibilities to make money.</description>
     </item>
   </channel>

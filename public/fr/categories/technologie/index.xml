@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technologie on Julia Furst Morgado</title>
-    <link>http://localhost:1313/fr/categories/technologie/</link>
+    <link>https://juliafmorgado.com/fr/categories/technologie/</link>
     <description>Recent content in Technologie on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
     <lastBuildDate>Fri, 01 Mar 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/fr/categories/technologie/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/fr/categories/technologie/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Déployez votre première application web sur AWS avec AWS Amplify, Lambda, DynamoDB et API Gateway</title>
-      <link>http://localhost:1313/fr/posts/d%C3%A9ployez-votre-premi%C3%A8re-application-web-sur-aws-avec-aws-amplify-lambda-dynamodb-et-api-gateway/</link>
+      <link>https://juliafmorgado.com/fr/posts/d%C3%A9ployez-votre-premi%C3%A8re-application-web-sur-aws-avec-aws-amplify-lambda-dynamodb-et-api-gateway/</link>
       <pubDate>Fri, 01 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/fr/posts/d%C3%A9ployez-votre-premi%C3%A8re-application-web-sur-aws-avec-aws-amplify-lambda-dynamodb-et-api-gateway/</guid>
+      <guid>https://juliafmorgado.com/fr/posts/d%C3%A9ployez-votre-premi%C3%A8re-application-web-sur-aws-avec-aws-amplify-lambda-dynamodb-et-api-gateway/</guid>
       <description>Salut !</description>
     </item>
   </channel>

@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech on Julia Furst Morgado</title>
-    <link>http://localhost:1313/es/categories/tech/</link>
+    <link>https://juliafmorgado.com/es/categories/tech/</link>
     <description>Recent content in Tech on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Thu, 08 Feb 2024 10:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/es/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/es/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como Actualizar Rapidamente Veeam Backup and Replication 12.0 a 12.1</title>
-      <link>http://localhost:1313/es/posts/como-actualizar-rapidamente-veeam-backup-and-replication-12.0-a-12.1/</link>
+      <link>https://juliafmorgado.com/es/posts/como-actualizar-rapidamente-veeam-backup-and-replication-12.0-a-12.1/</link>
       <pubDate>Thu, 08 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/es/posts/como-actualizar-rapidamente-veeam-backup-and-replication-12.0-a-12.1/</guid>
+      <guid>https://juliafmorgado.com/es/posts/como-actualizar-rapidamente-veeam-backup-and-replication-12.0-a-12.1/</guid>
       <description>Veeam Backup and Replication ha lanzado la versión 12.</description>
     </item>
     <item>
       <title>Como Pasar la KCNA - Kubernetes And Cloud Native Associate</title>
-      <link>http://localhost:1313/es/posts/como-pasar-la-kcna-kubernetes-and-cloud-native-associate/</link>
+      <link>https://juliafmorgado.com/es/posts/como-pasar-la-kcna-kubernetes-and-cloud-native-associate/</link>
       <pubDate>Mon, 05 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/es/posts/como-pasar-la-kcna-kubernetes-and-cloud-native-associate/</guid>
+      <guid>https://juliafmorgado.com/es/posts/como-pasar-la-kcna-kubernetes-and-cloud-native-associate/</guid>
       <description>Ayer realicé el examen de certificación Kubernetes and Cloud Native Associate Exam (KCNA), y esta mañana recibí los resultados de que aprobé, ¡yey!</description>
     </item>
     <item>
       <title>Como contribuir a la localización del glosario de la CNCF - sin código!</title>
-      <link>http://localhost:1313/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/</link>
+      <link>https://juliafmorgado.com/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/</link>
       <pubDate>Tue, 26 Sep 2023 11:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/</guid>
+      <guid>https://juliafmorgado.com/es/posts/como-contribuir-a-la-localizaci%C3%B3n-del-glosario-de-la-cncf-sin-c%C3%B3digo/</guid>
       <description>Introducción 🔗El Glosario de la Fundación de Computación Nativa en la Nube (CNCF) es un recurso valioso que ayuda a aclarar la terminología y el argot utilizados en el mundo de la informática nativa en la nube.</description>
     </item>
     <item>
       <title>Veeam Backup para AWS: Protege tus datos en la nube de manera sencilla</title>
-      <link>http://localhost:1313/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</link>
+      <link>https://juliafmorgado.com/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</link>
       <pubDate>Tue, 11 Jul 2023 17:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</guid>
+      <guid>https://juliafmorgado.com/es/posts/veeam-backup-para-aws-protege-tus-datos-en-la-nube-de-manera-sencilla/</guid>
       <description>Introducción 🔗En el mundo actual, donde la computación en la nube desempeña un papel fundamental en la infraestructura de muchas empresas, la protección de datos se vuelve cada vez más crítica.</description>
     </item>
   </channel>

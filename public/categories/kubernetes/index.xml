@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on Julia Furst Morgado</title>
-    <link>http://localhost:1313/categories/kubernetes/</link>
+    <link>https://juliafmorgado.com/categories/kubernetes/</link>
     <description>Recent content in Kubernetes on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 22 Jul 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Kubernetes Backup Solutions Are Essential for Modern Infrastructure</title>
-      <link>http://localhost:1313/posts/why-kubernetes-backup-solutions-are-essential-for-modern-infrastructure/</link>
+      <link>https://juliafmorgado.com/posts/why-kubernetes-backup-solutions-are-essential-for-modern-infrastructure/</link>
       <pubDate>Mon, 22 Jul 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/why-kubernetes-backup-solutions-are-essential-for-modern-infrastructure/</guid>
+      <guid>https://juliafmorgado.com/posts/why-kubernetes-backup-solutions-are-essential-for-modern-infrastructure/</guid>
       <description>As Kubernetes becomes the cornerstone of modern infrastructure, implementing a robust, Kubernetes-native backup solution is no longer optional—it&amp;rsquo;s imperative.</description>
     </item>
   </channel>

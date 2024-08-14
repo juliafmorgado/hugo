@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tips on Julia Furst Morgado</title>
-    <link>http://localhost:1313/tags/tips/</link>
+    <link>https://juliafmorgado.com/tags/tips/</link>
     <description>Recent content in Tips on Julia Furst Morgado</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 20 Jun 2024 06:46:05 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://juliafmorgado.com/tags/tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding Load Balancer vs. Ingress in Kubernetes</title>
-      <link>http://localhost:1313/posts/understanding-load-balancer-vs.-ingress-in-kubernetes/</link>
+      <link>https://juliafmorgado.com/posts/understanding-load-balancer-vs.-ingress-in-kubernetes/</link>
       <pubDate>Thu, 20 Jun 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/understanding-load-balancer-vs.-ingress-in-kubernetes/</guid>
+      <guid>https://juliafmorgado.com/posts/understanding-load-balancer-vs.-ingress-in-kubernetes/</guid>
       <description>In the world of Kubernetes, managing traffic flow and exposing applications externally is a crucial aspect of application deployment.</description>
     </item>
     <item>
       <title>The What, Who, Why, Where and How of Public Speaking</title>
-      <link>http://localhost:1313/posts/the-what-who-why-where-and-how-of-public-speaking/</link>
+      <link>https://juliafmorgado.com/posts/the-what-who-why-where-and-how-of-public-speaking/</link>
       <pubDate>Mon, 11 Mar 2024 06:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/the-what-who-why-where-and-how-of-public-speaking/</guid>
+      <guid>https://juliafmorgado.com/posts/the-what-who-why-where-and-how-of-public-speaking/</guid>
       <description>Alright alright, are you thinking about stepping into the world of public speaking?</description>
     </item>
     <item>
       <title>How to Pass the KCNA - Kubernetes And Cloud Native Associate</title>
-      <link>http://localhost:1313/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</link>
+      <link>https://juliafmorgado.com/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</link>
       <pubDate>Mon, 05 Feb 2024 10:46:05 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</guid>
+      <guid>https://juliafmorgado.com/posts/how-to-pass-the-kcna-kubernetes-and-cloud-native-associate/</guid>
       <description>Yesterday I took the Kubernetes and Cloud Native Associate Exam (KCNA) certification exam, and this morning I got the results that I passed, yey!</description>
     </item>
     <item>
       <title>How can I become an Open Source contributor? (The ultimate guide)</title>
-      <link>http://localhost:1313/posts/how-can-i-become-an-open-source-contributor-the-ultimate-guide/</link>
+      <link>https://juliafmorgado.com/posts/how-can-i-become-an-open-source-contributor-the-ultimate-guide/</link>
       <pubDate>Mon, 26 Dec 2022 11:36:55 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-can-i-become-an-open-source-contributor-the-ultimate-guide/</guid>
+      <guid>https://juliafmorgado.com/posts/how-can-i-become-an-open-source-contributor-the-ultimate-guide/</guid>
       <description>If you&amp;rsquo;re asking yourself this 👆question (I know many of you are), you&amp;rsquo;ve come to the right place.</description>
     </item>
     <item>
       <title>6 Steps to Land a Remote Job &amp; List of Remote-First Companies</title>
-      <link>http://localhost:1313/posts/6-steps-to-land-a-remote-job-list-of-remote-first-companies/</link>
+      <link>https://juliafmorgado.com/posts/6-steps-to-land-a-remote-job-list-of-remote-first-companies/</link>
       <pubDate>Thu, 22 Dec 2022 13:18:55 +0000</pubDate>
-      <guid>http://localhost:1313/posts/6-steps-to-land-a-remote-job-list-of-remote-first-companies/</guid>
+      <guid>https://juliafmorgado.com/posts/6-steps-to-land-a-remote-job-list-of-remote-first-companies/</guid>
       <description>So, you’re on the hunt for a remote job?</description>
     </item>
     <item>
       <title>The difference between encodeURI() and encodeURIComponent()</title>
-      <link>http://localhost:1313/posts/the-difference-between-encodeuri-and-encodeuricomponent/</link>
+      <link>https://juliafmorgado.com/posts/the-difference-between-encodeuri-and-encodeuricomponent/</link>
       <pubDate>Wed, 28 Sep 2022 23:59:13 +0000</pubDate>
-      <guid>http://localhost:1313/posts/the-difference-between-encodeuri-and-encodeuricomponent/</guid>
+      <guid>https://juliafmorgado.com/posts/the-difference-between-encodeuri-and-encodeuricomponent/</guid>
       <description>What is a URI and how is it different from a URL?</description>
     </item>
     <item>
       <title>How To Craft Your Career Change Story</title>
-      <link>http://localhost:1313/posts/how-to-craft-your-career-change-story/</link>
+      <link>https://juliafmorgado.com/posts/how-to-craft-your-career-change-story/</link>
       <pubDate>Tue, 13 Sep 2022 17:42:27 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-craft-your-career-change-story/</guid>
+      <guid>https://juliafmorgado.com/posts/how-to-craft-your-career-change-story/</guid>
       <description>There’s no sugarcoating the fact that changing careers is challenging.</description>
     </item>
     <item>
       <title>The Ultimate List of CSS Code Generators For Web Development</title>
-      <link>http://localhost:1313/posts/the-ultimate-list-of-css-code-generators-for-web-development/</link>
+      <link>https://juliafmorgado.com/posts/the-ultimate-list-of-css-code-generators-for-web-development/</link>
       <pubDate>Sat, 10 Sep 2022 15:22:48 +0000</pubDate>
-      <guid>http://localhost:1313/posts/the-ultimate-list-of-css-code-generators-for-web-development/</guid>
+      <guid>https://juliafmorgado.com/posts/the-ultimate-list-of-css-code-generators-for-web-development/</guid>
       <description>If you’ve been using CSS and creating websites for some time, there’s a strong probability that you’ve had the following thought: 🔗 How do I do that again?</description>
     </item>
     <item>
       <title>Filter out the geese (Codewars — 8kyu)</title>
-      <link>http://localhost:1313/posts/filter-out-the-geese-codewars-8kyu/</link>
+      <link>https://juliafmorgado.com/posts/filter-out-the-geese-codewars-8kyu/</link>
       <pubDate>Thu, 07 Jul 2022 17:47:55 +0000</pubDate>
-      <guid>http://localhost:1313/posts/filter-out-the-geese-codewars-8kyu/</guid>
+      <guid>https://juliafmorgado.com/posts/filter-out-the-geese-codewars-8kyu/</guid>
       <description>Here’s a link to the Codewars Kata: codewars.</description>
     </item>
     <item>
       <title>Anki — Cloze and Image Occlusion Features</title>
-      <link>http://localhost:1313/posts/anki-cloze-and-image-occlusion-features/</link>
+      <link>https://juliafmorgado.com/posts/anki-cloze-and-image-occlusion-features/</link>
       <pubDate>Sun, 03 Jul 2022 17:42:41 +0000</pubDate>
-      <guid>http://localhost:1313/posts/anki-cloze-and-image-occlusion-features/</guid>
+      <guid>https://juliafmorgado.com/posts/anki-cloze-and-image-occlusion-features/</guid>
       <description>First of all, if you’d rather watch a video, go check “Learn to Code with ANKI (flashcards technique)” on Youtube.</description>
     </item>
     <item>
       <title>The Complete Guide to Ace Your Next Networking Coffee Chat</title>
-      <link>http://localhost:1313/posts/the-complete-guide-to-ace-your-next-networking-coffee-chat/</link>
+      <link>https://juliafmorgado.com/posts/the-complete-guide-to-ace-your-next-networking-coffee-chat/</link>
       <pubDate>Sat, 02 Jul 2022 00:20:56 +0000</pubDate>
-      <guid>http://localhost:1313/posts/the-complete-guide-to-ace-your-next-networking-coffee-chat/</guid>
+      <guid>https://juliafmorgado.com/posts/the-complete-guide-to-ace-your-next-networking-coffee-chat/</guid>
       <description>We all have fears about networking and reaching out to new people.</description>
     </item>
   </channel>

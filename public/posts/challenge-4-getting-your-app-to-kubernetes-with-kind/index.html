@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <title>Challenge 4 - Getting Your App to Kubernetes with KinD | Julia Furst Morgado</title>
 
     <meta charset="utf-8">
@@ -15,6 +15,11 @@
 
 <link rel="stylesheet" href="/css/style.css">
 
+
+  
+    
+    <link rel="stylesheet" href="https://juliafmorgado.com/css/style.css">
+  
 
 
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
@@ -138,14 +143,10 @@
       <p>Welcome to the <a href="https://github.com/juliafmorgado/cloudnative-dev/tree/main/challenge-4" target="_blank" rel="noopener">challenge 4</a> in our series! In this challenge, we’re taking the leap from running our applications locally to deploying them in a Kubernetes cluster. For this blog, I&rsquo;ll use a local cluster with KinD (Kubernetes in Docker) and will guide you through the deployment process and help you ensure everything is up and running smoothly.</p>
 <p>Check the Challenge 4 <a href="https://github.com/salaboy/cloud-native-dev/tree/main/4" target="_blank" rel="noopener">instructions</a> from Salaboy.</p>
 <h2 id="step-1-copy-the-files">Step 1: Copy the Files <a href="#step-1-copy-the-files" class="anchor">🔗</a></h2><p>First things first, let’s set up our working directory for this challenge.</p>
-<ol>
-<li>Create a New Directory:</li>
-</ol>
+<p><strong>1. Create a New Directory:</strong></p>
 <p>Open your terminal or command prompt and run the following command to create a new directory for Challenge 4:
 <code>mkdir challenge-4</code></p>
-<ol start="2">
-<li>Copy Files</li>
-</ol>
+<p><strong>2. Copy Files</strong></p>
 <p>We need to copy the files from Challenge 3 to our new directory. You can copy them using:
 <code>cp -r challenge-3/* challenge-4/</code></p>
 <blockquote>
@@ -164,6 +165,9 @@
 <p>If you’re working with a remote cluster, make sure you have access and the necessary permissions to deploy your applications.</p>
 </blockquote>
 <h2 id="step-3-build-your-docker-images">Step 3: Build Your Docker Images <a href="#step-3-build-your-docker-images" class="anchor">🔗</a></h2><p>Next, we need to build Docker images for our <code>app</code> and <code>dashboard</code>. Docker images are like snapshots of our applications, which we’ll deploy to the cluster.</p>
+<blockquote>
+<p><strong>Recommended:</strong> If you want to build and push multi-architecture images follow these <a href="https://www.juliafmorgado.com/posts/building-multi-architecture-images-docker-builder/" target="_blank" rel="noopener">quick steps</a>.</p>
+</blockquote>
 <p>Go to the <code>app</code> directory and build the Docker image:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd challenge-4/app
 </span></span><span style="display:flex;"><span>docker build -t dockerhub-username/challenge-4-app .
@@ -175,20 +179,15 @@
 <p>Since we didn&rsquo;t specify a tag, the <code>latest</code> tag will be applied by default.</p>
 </blockquote>
 <h2 id="step-4-push-docker-images-to-a-registry">Step 4: Push Docker Images to a Registry <a href="#step-4-push-docker-images-to-a-registry" class="anchor">🔗</a></h2><p>If you want to share your Docker images with others or need a centralized repository, you can push them to a registry, such as <a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a> or <a href="https://aws.amazon.com/ecr/" target="_blank" rel="noopener">Amazon ECR</a>. We&rsquo;ll push our images to Docker Hub.</p>
-<ol>
-<li>
-<p>Log In to Docker Hub
+<p><strong>1. Log In to Docker Hub</strong>
 <code>docker login</code></p>
-</li>
-<li>
-<p>Push the Images</p>
-</li>
-</ol>
+<p><strong>2. Push the Images</strong></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker push dockerhub-username/challenge-4-app:latest
 </span></span><span style="display:flex;"><span>docker push dockerhub-username/challenge-4-dashboard:latest
 </span></span></code></pre></div><p><p class="markdown-image">
   <img src="https://blog-imgs-23.s3.amazonaws.com/ch4-docker-push.png" alt=""  />
 </p></p>
+<p>You can check the App Docker Image <a href="https://hub.docker.com/repository/docker/juliafmorgado/challenge-4-app/general" target="_blank" rel="noopener">here</a>, and the Dashboard Docker Image <a href="https://hub.docker.com/repository/docker/juliafmorgado/challenge-4-dashboard/general" target="_blank" rel="noopener">here</a>.</p>
 <h2 id="step-5-load-docker-images-into-kind">Step 5: Load Docker Images into KinD <a href="#step-5-load-docker-images-into-kind" class="anchor">🔗</a></h2><p>If you have pushed your images to Docker Hub or another registry, you can pull them directly into your Kind cluster.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>kind <span style="color:#a2f">load</span> docker<span style="color:#666">-</span>image dockerhub<span style="color:#666">-</span>username<span style="color:#666">/</span>challenge<span style="color:#666">-</span><span style="color:#666">4</span><span style="color:#666">-</span>app:latest
 </span></span><span style="display:flex;"><span>kind <span style="color:#a2f">load</span> docker<span style="color:#666">-</span>image dockerhub<span style="color:#666">-</span>username<span style="color:#666">/</span>challenge<span style="color:#666">-</span><span style="color:#666">4</span><span style="color:#666">-</span>dashboard:latest
@@ -203,10 +202,8 @@
   <img src="https://blog-imgs-23.s3.amazonaws.com/ch4-k8s-dir.png" alt=""  />
 </p></p>
 <h3 id="app-manifests">App Manifests <a href="#app-manifests" class="anchor">🔗</a></h3><p>Let&rsquo;s create the Deployment and Service files for the app. Remember to replace <code>dockerhub-username</code> with your Docker Hub username.</p>
-<ol>
-<li>App Deployment File
-Create a file named <code>app-deployment.yaml</code> inside the <code>k8s</code> directory. This file defines how to deploy your app:</li>
-</ol>
+<p><strong>1. App Deployment File</strong>
+Create a file named <code>app-deployment.yaml</code> inside the <code>k8s</code> directory. This file defines how to deploy your app:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apiVersion: apps/v1
 </span></span><span style="display:flex;"><span>kind: Deployment
 </span></span><span style="display:flex;"><span>metadata:
@@ -229,10 +226,8 @@ Create a file named <code>app-deployment.yaml</code> inside the <code>k8s</code>
 </span></span><span style="display:flex;"><span>          value: postgres://postgres:password@postgres:5432/challenge4
 </span></span><span style="display:flex;"><span>        ports:
 </span></span><span style="display:flex;"><span>        - containerPort: 3000
-</span></span></code></pre></div><ol start="2">
-<li>App Service File
-Create a file named <code>app-service.yaml</code> in the <code>k8s</code> directory. This file defines how to expose your app so it can be accessed from outside the cluster:</li>
-</ol>
+</span></span></code></pre></div><p><strong>2. App Service File</strong>
+Create a file named <code>app-service.yaml</code> in the <code>k8s</code> directory. This file defines how to expose your app so it can be accessed from outside the cluster:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apiVersion: v1
 </span></span><span style="display:flex;"><span>kind: Service
 </span></span><span style="display:flex;"><span>metadata:
@@ -246,9 +241,7 @@ Create a file named <code>app-service.yaml</code> in the <code>k8s</code> direct
 </span></span><span style="display:flex;"><span>      nodePort: 30000
 </span></span><span style="display:flex;"><span>  type: NodePort
 </span></span></code></pre></div><h3 id="dashboard-manifests">Dashboard Manifests <a href="#dashboard-manifests" class="anchor">🔗</a></h3><p>Let&rsquo;s create the Deployment and Service files for the dashboard. Remember to replace <code>dockerhub-username</code> with your Docker Hub username.</p>
-<ol>
-<li>Dashboard Deployment File</li>
-</ol>
+<p><strong>1. Dashboard Deployment File</strong></p>
 <p>Create a <code>dashboard-deployment.yaml</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apiVersion: apps/v1
 </span></span><span style="display:flex;"><span>kind: Deployment
@@ -272,9 +265,7 @@ Create a file named <code>app-service.yaml</code> in the <code>k8s</code> direct
 </span></span><span style="display:flex;"><span>          value: postgres://postgres:password@postgres:5432/challenge4
 </span></span><span style="display:flex;"><span>        ports:
 </span></span><span style="display:flex;"><span>        - containerPort: 3001
-</span></span></code></pre></div><ol start="2">
-<li>Dashboard Service File</li>
-</ol>
+</span></span></code></pre></div><p><strong>2. Dashboard Service File</strong></p>
 <p>Create a <code>dashboard-service.yaml</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apiVersion: v1
 </span></span><span style="display:flex;"><span>kind: Service
@@ -289,9 +280,7 @@ Create a file named <code>app-service.yaml</code> in the <code>k8s</code> direct
 </span></span><span style="display:flex;"><span>      nodePort: 30001
 </span></span><span style="display:flex;"><span>  type: NodePort
 </span></span></code></pre></div><h3 id="database-manifests">Database Manifests <a href="#database-manifests" class="anchor">🔗</a></h3><p>Let&rsquo;s create the Deployment, ConfigMap and Service files for the PostgreSQL database.</p>
-<ol>
-<li>Database Deployment and ConfigMap File</li>
-</ol>
+<p><strong>1. Database Deployment and ConfigMap File</strong></p>
 <p>Create a <code>db-deployment.yaml</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apiVersion: apps/v1
 </span></span><span style="display:flex;"><span>kind: Deployment
@@ -342,10 +331,8 @@ Create a file named <code>app-service.yaml</code> in the <code>k8s</code> direct
 </span></span></code></pre></div><p>In the <code>Deployment</code> configuration for PostgreSQL, we’ve included a <code>ConfigMap</code> to manage the database initialization. While we could have used a separate file for this, embedding the <code>ConfigMap</code> directly in the <code>Deployment</code> simplifies the setup.</p>
 <p>The <code>ConfigMap</code> holds the SQL commands from <code>init.sql</code>, which is used to initialize our PostgreSQL database schema. By mounting this <code>ConfigMap</code> to <code>/docker-entrypoint-initdb.d</code>, PostgreSQL automatically executes these SQL scripts when it starts up.</p>
 <p>Using a <code>ConfigMap</code> is a standard practice in Kubernetes for managing configuration data, such as initialization scripts. It allows us to easily inject and manage configuration within our containers, ensuring that our database is properly set up each time it starts.</p>
-<ol start="2">
-<li>Database Service File
-Create a <code>db-service.yaml</code>:</li>
-</ol>
+<p><strong>2. Database Service File</strong>
+Create a <code>db-service.yaml</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apiVersion: v1
 </span></span><span style="display:flex;"><span>kind: Service
 </span></span><span style="display:flex;"><span>metadata:
@@ -411,13 +398,7 @@ Create a <code>db-service.yaml</code>:</li>
     
         <div class="tags">
             
-                <a href="http://localhost:1313/tags/kubernetes">Kubernetes</a>
-            
-                <a href="http://localhost:1313/tags/cloud-native">Cloud Native</a>
-            
-                <a href="http://localhost:1313/tags/tutorial">Tutorial</a>
-            
-                <a href="http://localhost:1313/tags/devops">DevOps</a>
+                <a href="https://juliafmorgado.com/tags/kubernetes">Kubernetes</a>
             
         </div>
     
@@ -531,6 +512,11 @@ Create a <code>db-service.yaml</code>:</li>
     
 </footer>
 
+
+    
+        
+        <script src="https://juliafmorgado.com/js/custom.js"></script>
+    
 
 
   </body>
