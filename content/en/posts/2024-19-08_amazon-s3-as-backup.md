@@ -86,52 +86,66 @@ Once your S3 bucket is configured, you can integrate it with Veeam Backup & Repl
 
 2. **Add a New Repository:**
    - Right-click "Backup Repositories" and select "Add Backup Repository".
-   ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-storage-vbr.png)
+   ![](https://blog-imgs-23.s3.amazonaws.com/vbr-add-backuprepo.png)
    - Choose "Object storage" and then "Amazon S3".
    ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-storage-vbr.png)
    - Select the type of Amazon storage you want to use as a backup repository.
 
 3. **Configure Repository Settings:**
    - **Bucket Configuration:** Enter your S3 bucket name.
-        ![](https://blog-imgs-23.s3.amazonaws.com/vbr-add-backuprepo.png)
+     
    - **Authentication:** Enter your IAM User Access Key ID and Secret Access Key to establish a connection with your bucket.
    ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-repo-account.png)
+
    - **Region:** Default to a global region setting unless your operations require specific regions like GovCloud or China.
-   - **Connection Mode:** Connection mode: Connect to your object storage repository either directly or through a gateway server, depending on your network preferences and security requirements.
+     
+   - **Connection Mode:** Select the appropriate option to determine how Veeam Backup & Replication will transfer data to the object storage repository:
+       - **Direct:** Opt for this option to instantly move data from processed VMs or file shares to object storage repositories. The method used depends on the job type, utilizing either a backup proxy or a gateway server.
+       - **Through gateway server:** Choose this option if you prefer Veeam Backup & Replication to utilize a gateway server for transferring data from processed VMs or file shares to object storage repositories. From the Name list, designate the gateway servers for data transfer operations.
    ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-vbr-connectionmode.png)
+
    - **Data Center:** Choose the data center location where your S3 bucket is hosted to optimize latency and compliance with data residency requirements.
+     
    - **Bucket and Folder:** Navigate and select your desired bucket and folder. If necessary, create a new folder within your bucket for organized storage.
    ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-vbr-selectbucket.png)
+
    - **Bucket Settings:**
-     - **Limit Object Storage Consumption:** Set a soft limit for object storage consumption to manage storage costs effectively without compromising data availability.
-     - **Immutability:** Specify the immutability period to prevent the deletion of backup data blocks.
+     - **Limit Object Storage Consumption:** Check the box to limit object storage consumption, allowing you to set a soft limit. If this limit is surpassed during a job run, Veeam Backup & Replication will permit job completion. However, a new job won’t initiate until you address the excess data by either removing it or adjusting the soft limit settings. Specify the value in TB or PB.
+     - **Immutability:** Check the box to prevent the deletion of data blocks from object storage. Specify the immutability period, noting that the UI allows a maximum immutability period of 90 days. For longer periods, utilize the Set-VBRAmazonS3CompatibleRepository cmdlet.
      > **Note:** Implementing immutability incurs additional API costs associated with maintaining data integrity. These costs are equivalent to conducting a full backup every 10 days, irrespective of the immutability period set (e.g., 3, 14, or 30 days). This frequency is necessary to ensure all relevant data blocks remain protected, optimizing the operation to balance disk space usage against cost.
+     
      - **Infrequent Access Storage Class:** If backups are accessed infrequently, select this option to reduce storage costs. Be aware of potential costs for early data deletion. If you choose S3 One Zone-IA, backups will be stored in a single availability zone.
      > **Note:** S3 IA is suitable for long-term storage of GFS full backups. Avoid using it for short-term storage of recent backups due to minimum retention and deletion charges. For GFS backups, large block sizes can help reduce costs, though they increase storage and reduce granularity.
+     
       ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-vbr-bucketsettings.png)
-     - **Mount Server**: Here, specify settings for the mount server used for restore operations and configure a helper appliance. The helper appliance is a temporary EC2 instance that Veeam Backup & Replication deploys in Amazon EC2 to check backup file health and apply retention to unstructured data. It will be removed after operations are complete.
-
-To specify mount server settings:
-1. From the **Mount Server** drop-down list, select a server for mount operations. This server will mount VM disks directly from object storage repositories during restores.
-2. If the server is not listed, click **"Add New"** to open the **New Windows Server wizard**.
+     
+   - **Mount Server**: At the Mount Server step of the wizard, define settings for the mount server intended for restore operations and set up a helper appliance. This temporary host, deployed by Veeam Backup & Replication on the Amazon S3 storage, performs health checks on backup files and applies retention to unstructured data backup files. Once these operations are completed, Veeam Backup & Replication automatically removes the helper appliance from the Amazon S3 storage. To configure the mount server settings, follow these steps:
+       - **Mount Server Selection:** From the Mount Server drop-down list, choose a server designated as the mount server. This server is utilized during restore operations to directly mount VM disks from objects within object storage repositories.
+       >**Note:** The Mount Server list displays only Microsoft Windows servers added to the backup infrastructure. If the server is not yet added, click “Add New” on the right to open the New Windows Server wizard.
+       - **Instant Recovery Write Cache Folder:** Specify a folder for the Instant Recovery write cache, where cache data is stored during mount operations.
+       - **Enable vPower NFS Service:**
+           - Check the box to enable the Veeam vPower NFS Service on the mount server, granting access to the object storage repository. Veeam Backup & Replication will automatically activate the Veeam vPower NFS Service on the designated mount server.
+           - Click “Ports” to customize network ports used by the Veeam vPower NFS Service. In the vPower NFS Port Settings window, specify the mount port and vPower NFS port settings.
+       - **Helper Appliance Configuration:** To specify helper appliance settings, click “Configure.” From the Managed server drop-down list, choose a server designated as the helper appliance.
+       > **IMPORTANT:** Avoid enabling Microsoft Windows NFS services on the machine where you install the Veeam vPower NFS Service. Enabling both Microsoft NFS services and Veeam vPower NFS Service on the same machine may lead to issues with both services functioning correctly.
 
    ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-vbr-mountserver.png)
     
 4. **Review Components**
 
-In the **Review** step, check the components processed on the mount server and their status.
+At the Review step of the wizard, carefully examine the components slated for processing on the mount server and their current status.
 
-- If the backup repository contains backups, select **"Search the repository for existing backups and import them automatically."** Veeam Backup & Replication will detect and display existing backup files under **Backups > Object Storage (Imported)**.
-- If the repository has guest file system index files, select **"Import guest file system index data to the catalog."** This enables search for guest OS files inside imported backups. For more information, see the [Guest OS File Restore](https://helpcenter.veeam.com/docs/backup/em/searching_restoring_vm_guest_files.html?ver=120) section.
+If your backup repository already holds backups, consider selecting the **“Search the repository for existing backups and import them automatically”** checkbox. Enabling this option prompts Veeam Backup & Replication to conduct a thorough scan of the backup repository, identifying and automatically displaying existing backup files in the Veeam Backup & Replication console under the “Backups > Object Storage (Imported)” node.
+
+For repositories containing guest file system index files, you can choose the **“Import guest file system index data to the catalog”** checkbox. This enables Veeam Backup & Replication to import index files alongside backup files so you can search for guest OS files inside imported backups, enhancing overall accessibility and search functionalities. For more information, see the [Guest OS File Restore](https://helpcenter.veeam.com/docs/backup/em/searching_restoring_vm_guest_files.html?ver=120) section.
 
    ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-vbr-review.png)
-
-
 
 6. **Apply Settings**
 In the **Apply** step, wait for Veeam Backup & Replication to save your settings to the configuration database and create backup infrastructure objects.
    ![](https://blog-imgs-23.s3.amazonaws.com/amazons3-vbr-finish.png)
 
+Upon completion, you will see a message indicating that the Amazon S3 object storage has been added as a Veeam backup repository.
 
 # 3. Best Practices and Considerations
 
