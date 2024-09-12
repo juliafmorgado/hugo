@@ -20,15 +20,16 @@ slug: /easily-deploy-wordpress-mysql-on-amazon-eks
 
 **Pre-requisites**
 
-- You should have AWS account created and an IAM user/role: [LINK](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
-- For accessing the AWS account from the CLI, you should have AWS CLI installed on your machine. To install AWS CLI follow this documentation: [LINK](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
-- To manage kubernetes, you need `kubectl` command: [LINK](https://kubernetes.io/docs/tasks/tools/install-kubectl/) or [LINK](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
-- Install `eksctl` command in your local machine to manage EKS clusters: [LINK](https://eksctl.io/installation/)
-- Helm installed for Kubernetes package management: [LINK](https://formulae.brew.sh/formula/helm) or [LINK](https://helm.sh/docs/intro/install/)
+- Ensure you have an AWS account set up with an IAM user or role: [LINK](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+- To access your AWS account via the Command Line Interface (CLI), make sure AWS CLI is installed on your machine. Follow the installation guide here: [LINK](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- Configure environment variables for your IAM user to enable CLI access to your AWS account: [LINK](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+- Install the `kubectl` command-line tool to manage Kubernetes clusters: [LINK](https://kubernetes.io/docs/tasks/tools/install-kubectl/) or [LINK](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
+- Install the `eksctl` CLI to manage EKS clusters: [LINK](https://eksctl.io/installation/)
+- Ensure Helm is installed for Kubernetes package management: [LINK](https://formulae.brew.sh/formula/helm) or [LINK](https://helm.sh/docs/intro/install/)
 
-## Step 1. Create EKS cluster
+## Step 1. Create an EKS cluster
 
-Create your Kubernetes cluster through `eksctl` with the following commands:
+Create your Kubernetes cluster on Amazon EKS through `eksctl` with the following commands:
 
 ```
 eksctl create cluster \
