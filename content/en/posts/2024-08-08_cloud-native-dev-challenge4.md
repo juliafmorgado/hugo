@@ -45,7 +45,7 @@ For this tutorial, we'll be using KinD (Kubernetes in Docker), and you can follo
 ## Step 3: Build Your Docker Images
 Next, we need to build Docker images for our `app` and `dashboard`. Docker images are like snapshots of our applications, which we’ll deploy to the cluster.
 
-> **Recommended:** If you want to build and push multi-architecture images follow these [quick steps](https://www.juliafmorgado.com/posts/building-multi-architecture-images-docker-builder/).
+> **Recommended:** If you want to build and push multi-architecture images follow these [quick steps](https://www.juliafmorgado.com/posts/building-multi-architecture-images-with-a-docker-driver/).
 
 Go to the `app` directory and build the Docker image:
 ```
