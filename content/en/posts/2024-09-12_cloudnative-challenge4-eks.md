@@ -50,11 +50,11 @@ eksctl create cluster \
 
 Once your cluster is deployed, you can check the connectivity with the command: `kubectl cluster-info`
 
-To see the nodes: `kubectl get nodes`
+To view the nodes: `kubectl get nodes`
 
-To see the pods that are already running: `kubectl get pods -A`
+To list all running pods: `kubectl get pods -A`
 
-To get detailed information on the instances on which the pods are running: `kubectl get pods -o wide -A`
+To get more detailed information on the nodes (instances) hosting the pods: `kubectl get pods -o wide -A`
 
 ## Step 2. Deploy the App
 
@@ -62,17 +62,19 @@ Here we should have the already-created files so we only need to deploy all the 
 
 `kubectl apply -f k8s/`
 
+This will deploy all the necessary services and pods for the app, dashboard, and database.
+
 ![](https://blog-imgs-23.s3.amazonaws.com/ch4-applyk8s.png)
 
 
 ## Step 3. Access the App
 
-Now comes the tricky part. Since my services are of type NodePort, I expected to access it using the public IP address of the node. With NodePort, the services are exposed on the node’s IP addresses at specific ports. 
+Now comes the tricky part. Since our services are of type NodePort, we should be able to access them using the public IP addresses of the nodes. With NodePort, the services are exposed on the node’s IP addresses at specific ports. 
 
 - **App Service:** The app service is exposed on NodePort `30000`.
 - **Dashboard Service:** The dashboard service is exposed on NodePort `30001`.
 
-Here’s how you should be able to access the services externally:
+Here’s how we should be able to access the services externally:
 
 1. Find the public IP of the EKS worker nodes (EC2 instances). We can get these from the AWS console under the EC2 section or use the AWS CLI to retrieve them:
 
@@ -83,7 +85,7 @@ Here’s how you should be able to access the services externally:
 `http://<public-ip>:30000 for the app`
 `http://<public-ip>:30001 for the dashboard`
 
-### Debugging
+### **Debugging Access Issues**
 
 Unfortunately, this didn’t work for me. I suspected that the issue was with the security group settings on the EKS nodes. By default, security groups might block traffic on the NodePort range (30000-32767).
 
@@ -93,7 +95,7 @@ And added an inbound rule to allow traffic on the NodePort range (30000-32767) f
 
 However, even after fixing the security group, I still couldn’t access the services!
 
-### Using a LoadBalancer Instead of NodePort
+### **Using a LoadBalancer Instead of NodePort**
 Next I tried changing the service type from NodePort to LoadBalancer. This will automatically create an external load balancer (usually an AWS ELB) and assign a public IP that we can use to access the services externally.
 
 To do so I had to update the app and dashboard service YAML files:
@@ -141,17 +143,50 @@ After applying the changes, Kubernetes will create an AWS LoadBalancer. We can c
 
 Once the EXTERNAL-IP is available, a field is populated with a public IP or DNS name for our services. With that, we can copy and paste them into the web browser and see our app and dashboard.
 
-**HOWEVER**, now I had another issue: The dashboard isn’t showing data from the app, which likely means there’s a problem with the database.
+### **Debugging Connectivity Issues**
+
+Even after accessing the services, I ran into **ANOTHER** issue: the dashboard wasn’t showing any data from the app. This usually points to a problem with how the dashboard connects to the app.
 
 ![](https://blog-imgs-23.s3.amazonaws.com/ch4-app-eks.png)
 ![](https://blog-imgs-23.s3.amazonaws.com/ch4-dashboard-eks.png)
 
-### Questions
-1. Am I missing anything between Step 1 and Step 2? Should I have created an IAM OIDC Provider for the cluster, add an IAM service account, install EBS CSI Driver and deploy the Amazon EBS CSI Driver to the cluster like I did here: https://www.juliafmorgado.com/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/
-  What is the purpose of these steps?
-2. How should I manage the database secrets? In this current blog post, I put the db credentials directly on the deployment.yaml file, but on the other blog (mentioned above), I created a kustomization file with the db secret.  Which approach is better? What are the best practices?
-3. What should I do about the database issue? How can I debug it?
+Honestly I was a little bit tired mentally so I asked Salaboy for help. Upon inspecting the developer tools console, he found that the dashboard was still trying to connect to `localhost:3001`, which won’t work in a remote environment because now it should connect to the external IP address.
 
+![](https://blog-imgs-23.s3.amazonaws.com/dev-tools-ch4-connection.png)
+
+The issue was in the `index.html` of the dashboard, where the socket connection was hardcoded (`const socket = io('http://localhost:3001');`)
+
+![](https://blog-imgs-23.s3.amazonaws.com/ch4-dashboard-html.png)
+
+**How To Fix It**
+We need to create an environment variable so we can parameterize that, or a variable for the client. Remember that the HTML is sent from the server to the client. An alternative is to use the browser to detect the URL where the page is hosted.
+
+
+To resolve this, we need to **dynamically set the server address** in the HTML, instead of hardcoding `localhost`. Because remember that the loadbalancer will always change so we need to write a variable that retrieves the loadbalancer every time. This way, the connection will always use the correct address, even when the load balancer IP changes.
+
+Here’s how we could approach it:
+
+1. **Environment Variables:**
+Create an environment variable that stores the app’s address, which will be passed to the HTML at runtime. This allows flexibility in different environments.
+
+```
+const socket = io(window.location.origin); // Dynamically use the host where the app is deployed
+```
+
+2. **Browser-Based Detection:**
+Alternatively, you can use JavaScript in the browser to detect the server’s address and automatically adjust the connection string:
+
+```
+const socket = io(`${window.location.protocol}//${window.location.hostname}:${window.location.port}`);
+```
+
+Now once we change the code, **remember** that we need to:
+- Create a new [multi-architecture docker image](https://www.juliafmorgado.com/posts/building-multi-architecture-images-with-a-docker-driver/)
+- [Push it to docker hub](https://www.juliafmorgado.com/posts/challenge-4-getting-your-app-to-kubernetes-with-kind/#step-4-push-docker-images-to-a-registry)
+- Update the `dashboard-deployment.yaml` with the new docker image name
+- Apply the file
+
+If you follow all these steps you should get your dashboard working!!
 
 ## Step 4. Clean up your environment
 
@@ -167,6 +202,13 @@ To clean up your environment, follow these steps:
 
 ![](https://blog-imgs-23.s3.amazonaws.com/eks-wp-cluster-deleted.png)
 
+
+## Questions
+1. Am I missing anything between Step 1 and Step 2? Should I have created an IAM OIDC Provider for the cluster, add an IAM service account, install EBS CSI Driver and deploy the Amazon EBS CSI Driver to the cluster like I did here: https://www.juliafmorgado.com/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/
+  What is the purpose of these steps?
+2. How should I manage the database secrets? In this current blog post, I put the db credentials directly on the deployment.yaml file, but on the other blog (mentioned above), I created a kustomization file with the db secret.  Which approach is better? What are the best practices?
+3. What should I do about the database issue? How can I debug it?
+   
 ***
 
 If you liked this article, follow me on [Twitter](https://twitter.com/juliafmorgado) (where I share my tech journey daily), connect with me on [LinkedIn](https://www.linkedin.com/in/juliafmorgado/), check out my [IG](https://www.instagram.com/juliafmorgado/), and make sure to subscribe to my [Youtube](https://www.youtube.com/c/JuliaFMorgado) channel for more amazing content!!
