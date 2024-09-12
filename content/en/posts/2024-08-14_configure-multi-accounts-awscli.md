@@ -22,14 +22,22 @@ To work with multiple AWS accounts using the AWS CLI, you need to set up named p
 
 You need to create a profile for each AWS account. You can do this in your terminal or command prompt using the `aws configure` command. 
 
-1. First set up a profile for your personal AWS account: `aws configure --profile personal`. You will be prompted to enter the following information:
+1. First set up a profile for your personal AWS account:
+
+   `aws configure --profile personal`
+
+You will be prompted to enter the following information:
 
 - AWS Access Key ID: Enter your personal AWS access key.
 - AWS Secret Access Key: Enter your personal AWS secret key.
 - Default region name: Enter your preferred AWS region (e.g., us-east-1).
 - Default output format: Choose the output format (e.g., json).
 
-2. Then set up your professional for your company's AWS account: `aws configure --profile company`. Similarly, provide the access key, secret key, region, and output format for your company AWS account.
+2. Then set up your professional for your company's AWS account:
+   
+   `aws configure --profile company`
+
+Similarly, provide the access key, secret key, region, and output format for your company AWS account.
 
 ## Step 2: Use Environment Variables to Switch Profiles
 Instead of specifying the profile with every command, you can set an environment variable to specify which AWS profile you want to use for your AWS CLI commands. This way, you only need to set the profile once per session, and all subsequent commands will use that profile until you change it.
