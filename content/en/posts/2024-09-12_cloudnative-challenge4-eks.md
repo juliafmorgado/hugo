@@ -159,6 +159,7 @@ The issue was in the `index.html` of the dashboard, where the socket connection 
 ![](https://blog-imgs-23.s3.amazonaws.com/ch4-dashboard-html.png)
 
 **How To Fix It**
+
 We need to create an environment variable so we can parameterize that, or a variable for the client. Remember that the HTML is sent from the server to the client. An alternative is to use the browser to detect the URL where the page is hosted.
 
 
@@ -184,9 +185,11 @@ Now once we change the code, **remember** that we need to:
 - Create a new [multi-architecture docker image](https://www.juliafmorgado.com/posts/building-multi-architecture-images-with-a-docker-driver/)
 - [Push it to docker hub](https://www.juliafmorgado.com/posts/challenge-4-getting-your-app-to-kubernetes-with-kind/#step-4-push-docker-images-to-a-registry)
 - Update the `dashboard-deployment.yaml` with the new docker image name
-- Apply the file
+- Apply the file: `kubectl apply -f dashboard-deployment.yaml`
 
 If you follow all these steps you should get your dashboard working!!
+
+![](https://blog-imgs-23.s3.amazonaws.com/yey.png)
 
 ## Step 4. Clean up your environment
 
@@ -203,11 +206,11 @@ To clean up your environment, follow these steps:
 ![](https://blog-imgs-23.s3.amazonaws.com/eks-wp-cluster-deleted.png)
 
 
-## Questions
+## Questions (answers coming soon)
 1. Am I missing anything between Step 1 and Step 2? Should I have created an IAM OIDC Provider for the cluster, add an IAM service account, install EBS CSI Driver and deploy the Amazon EBS CSI Driver to the cluster like I did here: https://www.juliafmorgado.com/posts/easily-deploy-wordpress-and-mysql-on-amazon-eks/
   What is the purpose of these steps?
 2. How should I manage the database secrets? In this current blog post, I put the db credentials directly on the deployment.yaml file, but on the other blog (mentioned above), I created a kustomization file with the db secret.  Which approach is better? What are the best practices?
-3. What should I do about the database issue? How can I debug it?
+
    
 ***
 
