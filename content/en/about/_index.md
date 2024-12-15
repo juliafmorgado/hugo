@@ -7,7 +7,7 @@ author = "Hugo Authors"
 enableComments = false
 +++
 
-# Hello there! I'm Julia.
+# Welcome!
 
 ![Julia on stage at VeeamOn 2023](https://blog-imgs-23.s3.amazonaws.com/veeamon23.jpeg)
 
