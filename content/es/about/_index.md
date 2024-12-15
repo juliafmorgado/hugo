@@ -8,16 +8,17 @@ enableComments = false
 +++
 
 
-# ¡Hola! Soy Julia :)
+# ¡Bienvenidos!
 
 ![Julia en el escenario en VeeamOn 2023](https://blog-imgs-23.s3.amazonaws.com/veeamon23.jpeg)
 
-Comencé mi carrera en Desarrollo Web, trabajando con Frontend, Backend y DevOps, mientras presenciaba la adopción masiva de Containers y prácticas Cloud Native. Este viaje me ha dado aprendizaje práctico en áreas como Entrega de Software, CI/CD, GitOps y Ingeniería de Plataformas.
+Julia comenzó su carrera como abogada en Brasil antes de mudarse a los Estados Unidos para estudiar negocios en UC Berkeley, donde desarrolló un gran interés por la estrategia de business y la resolución de problemas. Este interés la llevó a trabajar en marketing, ayudando a las empresas a refinar sus mensajes y conectarse con sus audiencias. En 2022, dio un giro audaz hacia la tecnología, enfocándose en tecnologías de la nube y DevOps. Desde entonces, ha sido reconocida como [CNCF Ambassador](https://www.cncf.io/people/ambassadors/?_sft_lf-country=us&_sft_lf-expertise=non-technical&p=julia-furst-morgado), [AWS Container Hero](https://aws.amazon.com/developer/community/heroes/julia-morgado/?did=dh_card&trk=dh_card), [Google Women Techmakers Ambassador](https://developers.google.com/womentechmakers), [Civo Ambassador](https://www.civo.com/ambassadors) y [Girl Code Ambassador](https://www.girl-code.co.uk/).
 
-En los últimos años, he trabajado como tecnóloga global, siempre enfocada en empoderar a los clientes para construir resiliencia, mejorar la eficiencia y escalar eficazmente. Como [CNCF Ambassador](https://www.cncf.io/people/ambassadors/?_sft_lf-country=us&_sft_lf-expertise=non-technical&p=julia-furst-morgado), [AWS Container Hero](https://aws.amazon.com/developer/community/heroes/julia-morgado/?did=dh_card&trk=dh_card), [Google Women Techmakers Ambassador](https://developers.google.com/womentechmakers), [Civo Ambassador](https://www.civo.com/ambassadors) y [Girl Code Ambassador](https://www.girl-code.co.uk/), siempre estoy aprendiendo y compartiendo ideas sobre las últimas tecnologías Cloud Native y las mejores prácticas.
+Ahora, como Global Technologist en el equipo de Estrategia de Producto en Veeam, Julia combina su experiencia interdisciplinaria para conectar la tecnología con los negocios. Ayuda a las organizaciones a adoptar soluciones cloud-native que mejoran la resiliencia, optimizan la eficiencia y permiten la escalabilidad. Su experiencia radica en traducir conceptos técnicos complejos en estrategias prácticas que generan resultados medibles para las empresas.
 
-Mi trayectoria profesional ha sido una aventura, abarcando el derecho, el marketing y ahora la tecnología. Como ingeniera autodidacta, combino resiliencia, adaptabilidad y una pasión por el autoaprendizaje para generar un impacto en el mundo tecnológico.
+Julia es una charlista experimentada que ha presentado [temas técnicos y de liderazgo](https://github.com/juliafmorgado/talks) en conferencias internacionales en cuatro idiomas. También organiza eventos como [Kubernetes Community Days NY](https://community.cncf.io/kcd-new-york/), [AWS Community Day New York](https://www.awscommunitynewyork.com/) y [CNCF Midtown Meetup NYC](https://community.cncf.io/cloud-native-midtown/), reuniendo a personas de diferentes orígenes para intercambiar ideas, colaborar e innovar.
 
-Hablo sobre [temas técnicos y de liderazgo](https://github.com/juliafmorgado/talks) en conferencias alrededor del mundo y tengo una amplia experiencia trabajando con proyectos Open Source y comunidades. También organizo el [KCD NY](https://community.cncf.io/kcd-new-york/), el [Cloud Native Midtown Community Group](https://community.cncf.io/cloud-native-midtown/) y el [AWS Community Day New York](https://www.awscommunitynewyork.com/).
+Desde su trayectoria profesional hasta su trabajo comunitario, Julia se enfoca en derribar barreras. Ya sea haciendo que la tecnología sea más accesible, apoyando transiciones de carrera o ayudando a los equipos a resolver desafíos complejos, prospera en la intersección de la tecnología, los negocios y las personas, siempre buscando generar un impacto significativo.
 
-Mi filosofía es simple: la tecnología debe servir a las personas, no al revés. Vamos a [conectar](mailto:contact@juliafmorgado.com) y explorar cómo podemos usar la tecnología para crear un impacto significativo, fomentar la innovación y promover la colaboración!
+Si deseas conectar con Julia para oportunidades de conferencias, colaboraciones o intercambiar ideas, no dudes en contactarla a través de [LinkedIn](https://www.linkedin.com/in/juliafmorgado/) o enviarle un correo electrónico a [contact@juliafmorgado.com](contact@juliafmorgado.com).
+
