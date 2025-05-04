@@ -91,7 +91,7 @@ pre {
   overflow-wrap: anywhere;
 }
 .markdown-image img {
-  max-width: 100%;
+  max-width: 60%;
   cursor: zoom-in; /* Pointer cursor on hover */
   transition: transform 300ms cubic-bezier(.2,0,.2,1); /* Smooth zoom effect */
 }
