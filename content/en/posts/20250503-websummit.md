@@ -34,7 +34,7 @@ The conference was a mix of everything: technology, business, politics, entertai
 
 ---
 
-## 😵‍💫 Everything Everywhere All At Once
+## Everything Everywhere All At Once
 
 I had no idea Web Summit was **this big**. I mean, I knew… but I didn’t *know*.
 
