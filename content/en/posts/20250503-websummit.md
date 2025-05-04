@@ -1,7 +1,7 @@
 ---
 title: "My First Web Summit Experience – Rio de Janeiro 2025"
 author: 'Julia Furst Morgado'
-date: 2025-05-3T06:46:05.964Z
+date: 2025-05-03T01:46:01.964Z
 draft: false
 image: https://blog-imgs-23.s3.amazonaws.com/x
 tags:
