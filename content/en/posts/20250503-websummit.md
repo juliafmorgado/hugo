@@ -95,7 +95,7 @@ What stood out the most was the lack of accessibility. On the main stage, the au
 
 Maybe. But next time I’d go with a much clearer plan.
 
-I’m really glad I went. It was inspiring. But it’s also the kind of event where, without defined goals or a network to plug into, you can easily feel overwhelmed.
+Don't get me wrong, I’m glad I went. It was very inspiring, but it’s also the kind of event where, without defined goals or a network to plug into, you can easily feel overwhelmed.
 
 The variety of topics made it harder to find my people. And while it was exciting to see big-name speakers, many of them just came, spoke, and left, no Q&A, no hallway conversations.
 
