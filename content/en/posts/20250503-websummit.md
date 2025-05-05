@@ -87,7 +87,7 @@ No complaints here. I mean, it was in Rio de Janeiro! The crowd had a completely
 
 It wasn’t perfect.
 
-What stood out the most was the lack of accessibility. On the main stage, audio wasn’t always clear, and there were no captions. O Web Summit precisa de ajustes para abranger diferentes públicos. Não vi Libras no palco principal, nem legendas ou tradução simultânea no telão (e com certeza já existe IA pra isso). Isso deixaria o evento mais inclusivo para o público surdo bilíngue e para tantas outras pessoas que não falam inglês.
+What stood out the most was the lack of accessibility. On the main stage, the audio wasn’t always clear, and there were no captions. Web Summit needs some adjustments to better serve diverse audiences. I didn’t see Brazilian Sign Language (Libras) on the main stage, nor captions or live translation on the screen (and we definitely have AI for that by now). This would make the event more inclusive for the bilingual deaf community and for so many others who don’t speak English.
 
 ---
 
