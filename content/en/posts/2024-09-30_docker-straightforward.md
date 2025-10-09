@@ -1,7 +1,7 @@
 ---
 title: "An Easy Way to Understand Docker"
 author: "Julia Furst Morgado"
-date: 2023-09-30T17:46:05.964Z
+date: 2024-09-30T17:46:05.964Z
 draft: false
 cover:
     image: https://blog-imgs-23.s3.amazonaws.com/dockerstraightforward.png
