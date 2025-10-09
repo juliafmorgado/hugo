@@ -1,7 +1,7 @@
 ---
 title: "Building Multi-Architecture Images with a Docker Driver"
 author: 'Julia Furst Morgado'
-date: 2024-08-12T06:46:05.964Z
+date: 2025-05-12T06:46:05.964Z
 draft: false
 image: https://blog-imgs-23.s3.amazonaws.com/x.png
 toc: true
