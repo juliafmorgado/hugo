@@ -1,7 +1,7 @@
 ---
 title: "Challenge 4 - Getting Your App to Kubernetes with Amazon EKS"
 author: 'Julia Furst Morgado'
-date: 2024-09-12T06:46:05.964Z
+date: 2025-04-12T06:46:05.964Z
 draft: false
 image: https://blog-imgs-23.s3.amazonaws.com/cloud-native-dev-challenge.png
 toc: true
