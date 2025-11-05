@@ -31,7 +31,7 @@ kind create cluster --name otel-lab
 kubectl cluster-info
 ```
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel1)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel1.png)
 
 ## 2) Install cert-manager
 Some Kubernetes operators (like the OpenTelemetry one we’ll install) use webhooks, which need TLS certificates to run securely.
@@ -43,7 +43,7 @@ kubectl -n cert-manager rollout status deploy/cert-manager-webhook
 
 Wait until it says “deployment successfully rolled out.”
 That means it’s ready!
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel2)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel2.png)
 
 ## 3) Install the OpenTelemetry Operator
 
@@ -58,7 +58,7 @@ helm upgrade --install opentelemetry-operator open-telemetry/opentelemetry-opera
 
 Check that the Operator pod is running: `kubectl get pods -n opentelemetry-operator-system`
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel3)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel3.png)
 
 ## 4) Deploy a minimal OpenTelemetry Collector
 
@@ -117,7 +117,7 @@ You should see a pod named like `otel-collector-...` running.
 
 You can also run `kubectl describe pod -l app.kubernetes.io/name=otel-collector` to see your first OpenTelemetry component.
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel4)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel4.png)
 
 ## 5) Create the Instrumentation resource
 
@@ -147,7 +147,7 @@ Apply it by running `kubectl apply -f instrumentation.yaml`.
 
 If you run `kubectl get instrumentation` you should see `detault` listed.
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel5)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel5.png)
 
 Now any app you deploy after this step that has the right OpenTelemetry annotation (coming in step 6) will be automatically instrumented and will send traces/metrics/logs to the collector at `:4317`.
 
@@ -179,7 +179,7 @@ docker build -t node-hello:local ./app-node
 kind load docker-image node-hello:local --name otel-lab
 ```
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel6)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel6.png)
 
 Now we'll deploy the app by creating a `demo-node.yaml` file.
 
@@ -231,7 +231,7 @@ You might have to wait a few seconds to see the `demo-node` pod. If needed rerun
 
 Once it’s running, our Node app is automatically instrumented!
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel7)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel7.png)
 
 ### 6b) Java demo app
 
@@ -370,7 +370,7 @@ kubectl apply -f demo-java.yaml
 kubectl get pods -l app=demo-java
 ```
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel8)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel8.png)
 
 ## 7) Generate some traffic (so telemetry exists)
 
@@ -388,7 +388,7 @@ Terminal B:
 kubectl port-forward svc/demo-java 8080:80
 ```
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel9)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel9.png)
 
 
 Now hit them in a new terminal or on the browser:
@@ -399,9 +399,9 @@ curl http://localhost:8080/
 ```
 You should see “hello from node” and “hello from java.”
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel10)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel10.png)
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel11)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel11.png)
 
 Run each a few times.
 
@@ -416,7 +416,7 @@ kubectl logs deploy/otel-collector
 
 You should see entries mentioning **traces**, **metrics**, or **logs** associated with `demo-node` and `demo-java`. That proves the Operator’s auto-instrumentation is working and your apps are sending data to the collector!
 
-![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel12)
+![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel12.png)
 
 ## 9) (Next blog) Send Telemetry to Dash0
 
