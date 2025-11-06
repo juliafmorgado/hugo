@@ -6,9 +6,8 @@ cover:
 tags: ["Observability", "Kubernetes", "Opentelemetry"]
 
 ---
-# OpenTelemetry on kind: Auto-Instrumentation for Node.js + Java
 
-Have you seen that I [started a new job at Dash0](https://www.linkedin.com/posts/juliafmorgado_observability-activity-7391081772215816192-lmcB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABsXKGgBmDBuKbyLGbiuM_w3SpSxj5mmX-w)?? I'm so excited to dive into this new world of **observability**! As part of my onboarding, I decided to go back to basics and start from scratch, to really *understand* how OpenTelemetry works inside Kubernetes.
+Big news!! If you missed it, I just [started a new role at Dash0](https://www.linkedin.com/posts/juliafmorgado_observability-activity-7391081772215816192-lmcB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABsXKGgBmDBuKbyLGbiuM_w3SpSxj5mmX-w)! I'm beyond excited to dive into this new world of **observability**, making it simpler, smarter, and fun! As part of my onboarding, I decided to go back to basics and start from scratch, to really *understand* how OpenTelemetry behaves inside Kubernetes.
 
 In this blog we'll spin up a local Kubernetes cluster using **kind** (Kubernetes in Docker), install the **OpenTelemetry Operator** and **Collector**, deploy two small apps (Node.js + Java), and watch telemetry appear all without touching the app code!
 
@@ -25,7 +24,7 @@ You need some basic tools installed on your local machine. These are what make i
 If you have all of these, you’re ready!
 
 ## 1) Create a local cluster with kind
-Let’s start by spinning up a small Kubernetes cluster right inside Docker. This is like creating a mini version of Kubernetes that runs locally in your machine.
+Let’s start by spinning up a lightweight Kubernetes cluster inside Docker. This is like creating a mini version of Kubernetes that runs locally in your machine.
 ```
 kind create cluster --name otel-lab
 kubectl cluster-info
@@ -34,8 +33,9 @@ kubectl cluster-info
 ![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel1.png)
 
 ## 2) Install cert-manager
-Some Kubernetes operators (like the OpenTelemetry one we’ll install) use webhooks, which need TLS certificates to run securely.
-Instead of creating those manually, we’ll install `cert-manager` because it handles certificates automatically.
+Many Kubernetes Operators (including the OpenTelemetry one we’ll use) rely on webhooks — and those require TLS certificates.
+Rather than handling that manually, we’ll use `cert-manager` to automate certificate generation and management.
+
 ```
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/latest/download/cert-manager.yaml
 kubectl -n cert-manager rollout status deploy/cert-manager-webhook
@@ -46,8 +46,7 @@ That means it’s ready!
 ![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel2.png)
 
 ## 3) Install the OpenTelemetry Operator
-
-This Operator is the magic piece that can auto-instrument your apps. So when you deploy an app, the Operator says, "Aha! You have a Node.js app!" and automatically injects the right OpenTelemetry code (called an "agent" or "SDK") into your app without you touching your app's code. This injected code is what starts collecting telemetry (traces, metrics, logs).
+This Operator is the magic piece that can auto-instrument your apps. So when you deploy an app, the Operator will detect what kind of app it is, and automatically injects the right OpenTelemetry code (called an "agent" or "SDK") into it without you touching your app's code. This injected code is what starts collecting telemetry (traces, metrics, logs).
 
 ```
 helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
@@ -61,10 +60,10 @@ Check that the Operator pod is running: `kubectl get pods -n opentelemetry-opera
 ![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel3.png)
 
 ## 4) Deploy a minimal OpenTelemetry Collector
+The Collector acts as a smart middle layer: it receives telemetry signals (traces, metrics, and logs) from your apps, processes them, and exports them either just to logs or to a powerful backend like [Dash0](https://www.dash0.com/).
+For now, we’ll use a simple “debug” exporter to print telemetry straight to the Collector’s logs.
 
-The collector is a “middleman” meaning your apps send telemetry (traces/metrics/logs) to the collector, and the collector can just log them (for learning) or forward them to a backend (for instance [Dash0](https://www.dash0.com/)). Right now, we'll just set the exporter to `debug`, which means it just prints the data to its own logs.
-
-Create `otel-collector.yaml`:
+Create a file called `otel-collector.yaml`:
 
 ```
 cat <<EOF >otel-collector.yaml
@@ -119,9 +118,9 @@ You can also run `kubectl describe pod -l app.kubernetes.io/name=otel-collector`
 
 ![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel4.png)
 
-## 5) Create the Instrumentation resource
+## 5) Create an Instrumentation resource
 
-This small file is the final piece of instruction for the Operator. It tells it how to instrument apps (aka how to inject telemetry) and where to send their telemetry (to the collector we just created).
+This small file is the final piece of instruction for the Operator. This defines how the Operator should inject telemetry and where that telemetry should go (in our case, the Collector).
 
 ```
 Create `instrumentation.yaml`:
@@ -418,11 +417,10 @@ You should see entries mentioning **traces**, **metrics**, or **logs** associate
 
 ![](https://blog-imgs-23.s3.amazonaws.com/onboarding-otel12.png)
 
-## 9) (Next blog) Send Telemetry to Dash0
+## 9) What’s Next — Sending Telemetry to Dash0
 
-Right now the collector just logs telemetry. In the next blog, we'll forward it to [Dash0](https://www.dash0.com/), a backend that gives us beautiful dashboards, traces, and insights automatically.
-
-> the Dash0 Operator sets up the pipeline to ship our telemetry to Dash0 and gives us out-of-the-box dashboards and analysis—no DIY wiring.
+Currently, everything is local, but the next step is where things get really exciting. 
+Next up, we’ll integrate the [Dash0](https://www.dash0.com/) Operator to automatically send your OpenTelemetry data to Dash0 and instantly visualize metrics, traces, and relationships across your entire stack — no extra configuration or complex wiring.
 
 ## 10) Clean up (optional)
 
@@ -431,16 +429,25 @@ kind delete cluster --name otel-lab
 ```
 
 ## Summary
-We did it! With kind, the OpenTelemetry Operator, and the Collector, we stood up end-to-end observability on a local cluster—without touching app code. The Operator injected the agents, the apps emitted telemetry, and the Collector received it.
+We did it! In this hands-on walkthrough, we:
 
-[App Pods] -> [Auto-injected OTel Agent / SDK] -> [Collector (OTLP receiver)] -> [Logs or Dash0 Backend]
+- Built a local Kubernetes cluster with kind
+- Installed the OpenTelemetry Operator & Collector
+- Deployed Node.js and Java apps
+- Verified auto-instrumentation — no code changes
+- Saw telemetry flow end-to-end
 
-From here, it only gets better: we’ll wire the Collector to Dash0, ship the same telemetry upstream, and explore real dashboards, traces, and metrics with no extra app edits.
+Stay tuned, in the next post, we’ll connect Dash0 and explore real dashboards, traces, and insights with zero manual instrumentation!
 
 See you soon!
 
 
 ***
-If you liked this article, go follow me on [X](https://twitter.com/juliafmorgado), connect with me on on [LinkedIn](https://www.linkedin.com/in/juliafmorgado/), check out my [IG](https://www.instagram.com/juliafmorgado/), and make sure to subscribe to my [Youtube](https://www.youtube.com/c/JuliaFMorgado) channel for more amazing content!!
+If you enjoyed this walkthrough:
+
+- Follow me on [X](https://twitter.com/juliafmorgado)
+- Connect on [LinkedIn](https://www.linkedin.com/in/juliafmorgado/)
+- Check out my [IG](https://www.instagram.com/juliafmorgado/)
+- Subscribe to my [Youtube](https://www.youtube.com/c/JuliaFMorgado) for more hands-on tech demos & DevRel adventures ❤️
 
 
