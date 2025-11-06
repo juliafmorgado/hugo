@@ -4,6 +4,7 @@ author: "Julia Furst Morgado"
 date: 2025-11-05T00:20:56.762Z
 cover:
 tags: ["Observability", "Kubernetes", "Opentelemetry"]
+slug: /opentelemetry-on-kind
 
 ---
 
